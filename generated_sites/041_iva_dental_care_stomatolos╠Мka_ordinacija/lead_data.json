@@ -1,0 +1,37 @@
+{
+  "company_name": "Iva Dental Care | Stomatološka ordinacija",
+  "category": "Health",
+  "archetype": "Local Business",
+  "website_style": "modern, professional, clean",
+  "website_goal": "call_now",
+  "phone": "063 1060411",
+  "email": "radosavljevicdusan012@gmail.com",
+  "address": "Lenke Dunđerski 19, Novi Sad, Serbia",
+  "services": [
+    "Professional Health Services"
+  ],
+  "usp": [
+    "Exceptional 4.7-star rating from customers",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Friendly, Recommend, Best, Expert",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Iva Dental Care | Stomatološka ordinacija",
+      "Health Novi Sad",
+      "Health health"
+    ],
+    "secondary": [
+      "best health in Novi Sad",
+      "health services Serbia",
+      "professional health"
+    ]
+  }
+}

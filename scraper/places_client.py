@@ -11,6 +11,8 @@ by Google at 5 per place regardless of max_reviews_per_business.
 
 import asyncio
 import logging
+import ssl
+import certifi
 
 import aiohttp
 
@@ -21,24 +23,46 @@ DETAILS_URL = "https://places.googleapis.com/v1/places/{place_id}"
 
 # Lean masks. Add fields here only if you actually use them downstream — every
 # extra field group can bump the request into a pricier SKU tier.
-SEARCH_MASK = ",".join([
-    "places.id",
-    "nextPageToken",
-])
-DETAILS_MASK = ",".join([
-    "id", "displayName", "formattedAddress", "location",
-    "primaryType", "primaryTypeDisplayName", "types",
-    "nationalPhoneNumber", "internationalPhoneNumber",
-    "websiteUri", "googleMapsUri",
-    "rating", "userRatingCount", "businessStatus",
-    "regularOpeningHours.weekdayDescriptions",
-    "editorialSummary", "photos", "reviews",
-])
+SEARCH_MASK = ",".join(
+    [
+        "places.id",
+        "nextPageToken",
+    ]
+)
+DETAILS_MASK = ",".join(
+    [
+        "id",
+        "displayName",
+        "formattedAddress",
+        "location",
+        "primaryType",
+        "primaryTypeDisplayName",
+        "types",
+        "nationalPhoneNumber",
+        "internationalPhoneNumber",
+        "websiteUri",
+        "googleMapsUri",
+        "rating",
+        "userRatingCount",
+        "businessStatus",
+        "regularOpeningHours.weekdayDescriptions",
+        "editorialSummary",
+        "photos",
+        "reviews",
+    ]
+)
 
 
 class PlacesClient:
-    def __init__(self, api_key, language_code="sr", region_code="RS",
-                 concurrency=5, request_delay=0.2, timeout=30):
+    def __init__(
+        self,
+        api_key,
+        language_code="sr",
+        region_code="RS",
+        concurrency=5,
+        request_delay=0.2,
+        timeout=30,
+    ):
         self.api_key = api_key
         self.language_code = language_code
         self.region_code = region_code
@@ -67,7 +91,7 @@ class PlacesClient:
                     if r.status == 200:
                         return await r.json()
                     if r.status in (429, 500, 502, 503):
-                        wait = 2 ** attempt
+                        wait = 2**attempt
                         LOG.warning("HTTP %s, backing off %ss", r.status, wait)
                         await asyncio.sleep(wait)
                         continue
@@ -76,7 +100,7 @@ class PlacesClient:
                     return None
             except aiohttp.ClientError as e:
                 LOG.warning("network error %s (attempt %s)", e, attempt + 1)
-                await asyncio.sleep(2 ** attempt)
+                await asyncio.sleep(2**attempt)
         return None
 
     async def _get(self, url, field_mask):
@@ -90,14 +114,14 @@ class PlacesClient:
                     if r.status == 200:
                         return await r.json()
                     if r.status in (429, 500, 502, 503):
-                        await asyncio.sleep(2 ** attempt)
+                        await asyncio.sleep(2**attempt)
                         continue
                     text = await r.text()
                     LOG.error("GET %s -> %s: %s", url, r.status, text[:300])
                     return None
             except aiohttp.ClientError as e:
                 LOG.warning("network error %s (attempt %s)", e, attempt + 1)
-                await asyncio.sleep(2 ** attempt)
+                await asyncio.sleep(2**attempt)
         return None
 
     async def search_ids(self, query, location_bias, max_pages=3):
@@ -168,8 +192,10 @@ def _normalize(d, place_id, max_reviews):
         if txt:
             review_texts.append(f"[{rating}* {author}] {txt}")
 
-    hours = "\n".join((d.get("regularOpeningHours") or {})
-                      .get("weekdayDescriptions", [])) or None
+    hours = (
+        "\n".join((d.get("regularOpeningHours") or {}).get("weekdayDescriptions", []))
+        or None
+    )
 
     return {
         "business_id": d.get("id") or place_id,

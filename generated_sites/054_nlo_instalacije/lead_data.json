@@ -1,0 +1,36 @@
+{
+  "company_name": "NLO Instalacije",
+  "category": "Plumber",
+  "archetype": "Local Service Provider",
+  "website_style": "trustworthy, straightforward, modern",
+  "website_goal": "call_now",
+  "phone": "060 1472056",
+  "email": "nlogamestudio@gmail.com",
+  "address": "Živojina Ćuluma 11, Novi Sad 21000, Serbia",
+  "services": [
+    "Professional Plumber Services"
+  ],
+  "usp": [
+    "Exceptional 5.0-star rating from customers"
+  ],
+  "review_summary": "",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "NLO Instalacije",
+      "Plumber Novi Sad",
+      "Plumber plumber"
+    ],
+    "secondary": [
+      "best plumber in Novi Sad",
+      "plumber services Serbia",
+      "professional plumber"
+    ]
+  }
+}

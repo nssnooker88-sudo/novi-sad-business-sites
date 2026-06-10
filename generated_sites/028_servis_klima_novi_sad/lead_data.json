@@ -1,0 +1,40 @@
+{
+  "company_name": "servis klima Novi Sad",
+  "category": "General Contractor",
+  "archetype": "Service Provider",
+  "website_style": "professional, reliable, modern",
+  "website_goal": "call_now",
+  "phone": "061 1140930",
+  "email": "nsklima@gmail.com",
+  "address": "Svetlane Vranić 18, Novi Sad 21000, Serbia",
+  "services": [
+    "Repair"
+  ],
+  "usp": [
+    "Exceptional 4.9-star rating from customers",
+    "Trusted by over 74 satisfied clients",
+    "Fast and efficient service",
+    "Professional and reliable service",
+    "Affordable pricing"
+  ],
+  "review_summary": "Professional, Recommend, Excellent, Fast, Reasonable",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "servis klima Novi Sad",
+      "General Contractor Novi Sad",
+      "General Contractor general_contractor"
+    ],
+    "secondary": [
+      "best general contractor in Novi Sad",
+      "general contractor services Serbia",
+      "professional general contractor"
+    ]
+  }
+}

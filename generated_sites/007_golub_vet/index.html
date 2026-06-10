@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golub Vet | Pet Store Novi Sad | Professional Pet Store Services</title>
+    <meta name="description" content="Golub Vet is a trusted pet store in Novi Sad, Serbia. Professional pet store services with a 4.8-star rating. Visit us at Bulevar kralja Petra I 28.">
+    <meta property="og:title" content="Golub Vet | Pet Store Novi Sad">
+    <meta property="og:description" content="Professional pet store services in Novi Sad. Trusted by over 416 satisfied clients. Visit us today!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://golubvet.rs">
+    <meta property="og:image" content="">
+    <meta name="keywords" content="Golub Vet, Pet Store Novi Sad, Pet Store pet_store, best pet store in Novi Sad, pet store services Serbia, professional pet store">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #faf9f6;
+            color: #1e1e1e;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Navigation */
+        .header {
+            background: #ffffff;
+            border-bottom: 1px solid #eae7e0;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #3b5e4a;
+            letter-spacing: -0.02em;
+        }
+
+        .logo span {
+            color: #d68c5c;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c3e35;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #d68c5c;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #2c3e35;
+            border-radius: 2px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, #f5efe8 0%, #e8f0ea 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: #1e3a2f;
+            letter-spacing: -0.03em;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: #3d5a4e;
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #d68c5c;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background 0.25s, transform 0.15s;
+            box-shadow: 0 4px 12px rgba(214, 140, 92, 0.3);
+        }
+
+        .hero-cta:hover {
+            background: #c47a4a;
+            transform: translateY(-2px);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-icon {
+            width: 100%;
+            max-width: 380px;
+            aspect-ratio: 1/1;
+            background: #d9e3db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            color: #3b5e4a;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+
+        /* Section titles */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1e3a2f;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-sub {
+            color: #5a6f62;
+            font-size: 1.05rem;
+            margin-bottom: 48px;
+            max-width: 600px;
+        }
+
+        /* Services */
+        .services {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .service-card {
+            background: #f8f6f2;
+            border-radius: 20px;
+            padding: 36px 28px;
+            transition: box-shadow 0.25s, transform 0.2s;
+            border: 1px solid #eae7e0;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            font-size: 2.4rem;
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e3a2f;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #4a5f54;
+            font-size: 0.95rem;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 80px 0;
+            background: #f5efe8;
+        }
+
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 28px;
+        }
+
+        .usp-item {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            border-left: 4px solid #d68c5c;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .usp-item h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e3a2f;
+            margin-bottom: 6px;
+        }
+
+        .usp-item p {
+            color: #4a5f54;
+            font-size: 0.95rem;
+        }
+
+        .usp-highlight {
+            background: #3b5e4a;
+            color: #fff;
+            border-left-color: #f0b88b;
+        }
+
+        .usp-highlight h4 {
+            color: #fff;
+        }
+
+        .usp-highlight p {
+            color: #d4e0d8;
+        }
+
+        /* Reviews */
+        .reviews {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .review-summary {
+            background: #f8f6f2;
+            border-radius: 20px;
+            padding: 40px 36px;
+            border: 1px solid #eae7e0;
+            max-width: 700px;
+        }
+
+        .review-stars {
+            font-size: 1.8rem;
+            color: #d68c5c;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+
+        .review-summary h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e3a2f;
+            margin-bottom: 8px;
+        }
+
+        .review-summary .rating {
+            font-size: 1.1rem;
+            color: #3b5e4a;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .review-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .review-tag {
+            background: #e8f0ea;
+            color: #1e3a2f;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 80px 0;
+            background: #1e3a2f;
+            color: #f0f3ef;
+        }
+
+        .contact .section-title {
+            color: #ffffff;
+        }
+
+        .contact .section-sub {
+            color: #b8cdc0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 28px 24px;
+            backdrop-filter: blur(4px);
+        }
+
+        .contact-item h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #b8cdc0;
+            margin-bottom: 8px;
+        }
+
+        .contact-item a {
+            color: #f0f3ef;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: #d68c5c;
+        }
+
+        .contact-item p {
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: #152b22;
+            color: #a0b8aa;
+            text-align: center;
+            padding: 28px 24px;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #ffffff;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                padding: 20px 24px;
+                border-bottom: 1px solid #eae7e0;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-icon {
+                max-width: 240px;
+                font-size: 4rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .usp-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .review-summary {
+                padding: 28px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 48px 0 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-cta {
+                padding: 14px 32px;
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">Golub<span>Vet</span></div>
+            <button class="hamburger" id="menuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navMenu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>Your Trusted Pet Store in Novi Sad</h1>
+                <p>Professional pet store services with a warm, welcoming touch. Rated 4.8 stars by over 416 happy clients. Come see why Golub Vet is the best pet store in Novi Sad.</p>
+                <a href="#contact" class="hero-cta">Visit Us</a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-icon">🐾</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-sub">Everything your pet needs, delivered with care and expertise.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛍️</div>
+                    <h3>Professional Pet Store Services</h3>
+                    <p>From premium pet food to accessories and expert advice — we provide everything for your pet under one roof. Fast, friendly, and professional service every time.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🐕</div>
+                    <h3>Pet Care Essentials</h3>
+                    <p>High-quality products for dogs, cats, and small animals. We carefully select each item to ensure the best for your furry friend.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🧴</div>
+                    <h3>Grooming &amp; Hygiene</h3>
+                    <p>Keep your pet clean and comfortable with our range of grooming supplies and hygiene products. Recommended by pet owners across Novi Sad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose" id="why">
+        <div class="container">
+            <h2 class="section-title">Why Choose Golub Vet</h2>
+            <p class="section-sub">We earn your trust with every visit.</p>
+            <div class="usp-grid">
+                <div class="usp-item usp-highlight">
+                    <h4>⭐ 4.8-Star Rating</h4>
+                    <p>Exceptional feedback from our community — we take pride in every review.</p>
+                </div>
+                <div class="usp-item">
+                    <h4>❤️ 416+ Happy Clients</h4>
+                    <p>Trusted by hundreds of pet owners across Novi Sad and Serbia.</p>
+                </div>
+                <div class="usp-item">
+                    <h4>⚡ Fast &amp; Efficient</h4>
+                    <p>We value your time. Quick service without compromising quality.</p>
+                </div>
+                <div class="usp-item">
+                    <h4>🤝 Professional &amp; Reliable</h4>
+                    <p>Consistent, dependable service you can count on, visit after visit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Clients Say</h2>
+            <p class="section-sub">Real feedback from real pet owners.</p>
+            <div class="review-summary">
+                <div class="review-stars">★★★★★</div>
+                <h3>Professional, Kind, Recommend</h3>
+                <div class="rating">4.8 out of 5 · 416+ reviews</div>
+                <p>Our customers consistently describe us as <strong>professional</strong>, <strong>kind</strong>, and the <strong>best</strong> pet store in Novi Sad. They appreciate our <strong>quick</strong> service and often say they would <strong>recommend</strong> us to friends and family. We're proud to be a trusted part of the local pet community.</p>
+                <div class="review-tags">
+                    <span class="review-tag">Professional</span>
+                    <span class="review-tag">Kind</span>
+                    <span class="review-tag">Recommend</span>
+                    <span class="review-tag">Best</span>
+                    <span class="review-tag">Quick</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Visit Our Store</h2>
+            <p class="section-sub">We're located in the heart of Novi Sad. Drop by anytime!</p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>Phone</h4>
+                    <a href="tel:0216610598">021 6610598</a>
+                </div>
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <a href="mailto:golubpetshop@gmail.com">golubpetshop@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4>Address</h4>
+                    <p>Bulevar kralja Petra I 28, Novi Sad, Serbia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Golub Vet · Pet Store Novi Sad</p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const toggle = document.getElementById('menuToggle');
+            const menu = document.getElementById('navMenu');
+
+            if (toggle && menu) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('open');
+                });
+
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+                        menu.classList.remove('open');
+                    }
+                });
+
+                const links = menu.querySelectorAll('a');
+                links.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        menu.classList.remove('open');
+                    });
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

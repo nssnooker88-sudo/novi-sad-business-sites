@@ -14,8 +14,8 @@ database/*.sqlite3
 
 logs/
 output/
-generated_sites/
 
 .env
 .env.*
 
+create_github_repo.py

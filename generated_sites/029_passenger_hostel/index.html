@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passenger Hostel | Best Hostel in Novi Sad</title>
+    <meta name="description" content="Passenger Hostel offers professional hostel services in Novi Sad, Serbia. Trusted by over 64 satisfied clients with a 4.6-star rating. Call now!">
+    <meta property="og:title" content="Passenger Hostel | Best Hostel in Novi Sad">
+    <meta property="og:description" content="Exceptional 4.6-star rated hostel in Novi Sad. Professional services, clean & modern. Call 062 9741175.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://passengerhostel.com">
+    <meta property="og:image" content="">
+    <meta property="og:locale" content="en_US">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #fafafa;
+            color: #1a1a2e;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ----- Hero ----- */
+        .hero {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.03) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            max-width: 750px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-bottom: 36px;
+        }
+
+        .hero .cta-btn {
+            display: inline-block;
+            background: #f5a623;
+            color: #1a1a2e;
+            padding: 16px 48px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 8px 24px rgba(245, 166, 35, 0.3);
+        }
+
+        .hero .cta-btn:hover {
+            background: #ffb84d;
+            transform: translateY(-2px);
+        }
+
+        .hero .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            margin-top: 32px;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero .rating-badge span {
+            font-weight: 600;
+        }
+
+        /* ----- Sections ----- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1a1a2e;
+        }
+
+        .section-subtitle {
+            color: #555;
+            max-width: 600px;
+            margin-bottom: 48px;
+            font-size: 1.05rem;
+        }
+
+        /* ----- Services ----- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+
+        .service-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 36px 32px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f5;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+        }
+
+        .service-card .icon {
+            width: 52px;
+            height: 52px;
+            background: #302b63;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 1.6rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #444;
+            font-size: 0.98rem;
+        }
+
+        /* ----- Why Choose Us ----- */
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .why-item {
+            background: #fff;
+            border-radius: 18px;
+            padding: 32px 28px;
+            border-left: 5px solid #f5a623;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+        }
+
+        .why-item h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .why-item p {
+            color: #555;
+        }
+
+        .why-item .highlight {
+            font-weight: 700;
+            color: #302b63;
+        }
+
+        /* ----- Reviews ----- */
+        .reviews-summary {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 36px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f5;
+        }
+
+        .reviews-summary .stars {
+            font-size: 1.8rem;
+            color: #f5a623;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+
+        .reviews-summary .score {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .reviews-summary .outof {
+            color: #777;
+            font-size: 1rem;
+        }
+
+        .review-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .review-keywords span {
+            background: #f0edff;
+            color: #302b63;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .review-note {
+            margin-top: 20px;
+            color: #666;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        /* ----- Contact ----- */
+        .contact-section {
+            background: #fff;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 36px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-item .icon {
+            width: 44px;
+            height: 44px;
+            background: #302b63;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item .label {
+            font-size: 0.85rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 下场0.5px;
+        }
+
+        .contact-item a {
+            color: #1a1a2e;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: #302b63;
+        }
+
+        .contact-item .address-text {
+            font-size: 1.05rem;
+            color: #1a1a2e;
+        }
+
+        .contact-cta {
+            margin-top: 16px;
+        }
+
+        .contact-cta .cta-btn {
+            display: inline-block;
+            background: #f5a623;
+            color: #1a1a2e;
+            padding: 16px 48px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s;
+            box-shadow: 0 8px 24px rgba(245, 166, 35, 0.25);
+        }
+
+        .contact-cta .cta-btn:hover {
+            background: #ffb84d;
+            transform: translateY(-2px);
+        }
+
+        /* ----- Footer ----- */
+        footer {
+            background: #1a1a2e;
+            color: #ccc;
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #f5a623;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ----- Responsive ----- */
+        @media (min-width: 600px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .hero h1 {
+                font-size: 3.8rem;
+            }
+            .hero p {
+                font-size: 1.3rem;
+            }
+            section {
+                padding: 100px 0;
+            }
+            .section-title {
+                font-size: 2.4rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .cta-btn {
+                padding: 14px 32px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <h1>Your Home Base in Novi Sad – Passenger Hostel</h1>
+            <p>Professional hostel services with a personal touch. Rated 4.6 stars by guests who value comfort, cleanliness and a warm welcome.</p>
+            <a href="tel:0629741175" class="cta-btn">Call Now</a>
+            <div class="rating-badge">
+                <span>★ 4.6</span> · Over 64 satisfied guests
+            </div>
+        </div>
+    </header>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">Professional Hostel Services</h2>
+            <p class="section-subtitle">Everything you need for a comfortable, hassle-free stay in the heart of Novi Sad.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">🛏️</div>
+                    <h3>Clean & Comfortable Rooms</h3>
+                    <p>Well-maintained dormitories and private rooms designed for rest. Fresh linens, secure lockers, and a peaceful atmosphere.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🌐</div>
+                    <h3>Fast Wi-Fi & Workspace</h3>
+                    <p>Reliable high-speed internet throughout the hostel. Quiet areas for remote work or planning your next adventure.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🧳</div>
+                    <h3>24/7 Reception & Luggage Storage</h3>
+                    <p>Our friendly team is always available. Store your bags safely before check-in or after checkout — travel freely.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" style="background: #f4f4fa;">
+        <div class="container">
+            <h2 class="section-title">Why Choose Passenger Hostel</h2>
+            <p class="section-subtitle">We focus on what matters most to our guests.</p>
+            <div class="why-grid">
+                <div class="why-item">
+                    <h3>⭐ Exceptional 4.6-Star Rating</h3>
+                    <p>Consistently rated highly by guests for cleanliness, location, and hospitality. Our team works hard to make every stay great.</p>
+                </div>
+                <div class="why-item">
+                    <h3>🤝 Trusted by <span class="highlight">64+</span> Satisfied Clients</h3>
+                    <p>From solo travelers to small groups, our guests return and recommend us. Your comfort is our reputation.</p>
+                </div>
+                <div class="why-item">
+                    <h3>📍 Prime Location in Novi Sad</h3>
+                    <p>Located at Braće Ribnikar 25, close to public transport, cafes, and the city’s main attractions. Explore with ease.</p>
+                </div>
+                <div class="why-item">
+                    <h3>🔒 Safe & Welcoming Environment</h3>
+                    <p>Secure entry, friendly staff, and a respectful atmosphere. We treat every guest like a friend.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+        <div class="container">
+            <h2 class="section-title">What Guests Say</h2>
+            <p class="section-subtitle">Real feedback from people who have stayed with us.</p>
+            <div class="reviews-summary">
+                <div class="stars">★★★★★</div>
+                <div class="score">4.6 <span class="outof">/ 5</span></div>
+                <p style="margin-top: 6px; color: #444;">Based on reviews from over 64 guests</p>
+                <div class="review-keywords">
+                    <span>Recommend</span>
+                    <span>Great</span>
+                    <span>Best</span>
+                    <span>Helpful</span>
+                    <span>Amazing</span>
+                </div>
+                <p class="review-note">Guests consistently highlight our friendly service, spotless rooms, and central location. Many say it’s the best hostel in Novi Sad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Book your stay or ask us anything — we’re here to help.</p>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <div>
+                            <div class="label">Phone</div>
+                            <a href="tel:0629741175">062 9741175</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">✉️</div>
+                        <div>
+                            <div class="label">Email</div>
+                            <a href="mailto:mucic86@gmail.com">mucic86@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div>
+                            <div class="label">Address</div>
+                            <div class="address-text">Braće Ribnikar 25, Novi Sad 21000, Serbia</div>
+                        </div>
+                    </div>
+                    <div class="contact-cta">
+                        <a href="tel:0629741175" class="cta-btn">Call Now</a>
+                    </div>
+                </div>
+                <div style="min-height: 200px; background: #e8e8f0; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #777; font-size: 0.95rem; border: 1px solid #ddd;">
+                    <span>📍 Braće Ribnikar 25, Novi Sad</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Passenger Hostel · Braće Ribnikar 25, Novi Sad · <a href="tel:0629741175">062 9741175</a></p>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // Smooth scroll for any internal anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

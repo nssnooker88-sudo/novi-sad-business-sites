@@ -1,0 +1,37 @@
+{
+  "company_name": "Elektrofokus d.o.o",
+  "category": "Electrician",
+  "archetype": "Local Service Provider",
+  "website_style": "trustworthy, straightforward, modern",
+  "website_goal": "call_now",
+  "phone": "",
+  "email": "office.elektrofokus@gmail.com",
+  "address": "Miše Dimitrijevića 42, 21000, Novi Sad 21000, Serbia",
+  "services": [
+    "Professional Electrician Services"
+  ],
+  "usp": [
+    "Exceptional 5.0-star rating from customers",
+    "Fast and efficient service"
+  ],
+  "review_summary": "Fast",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Elektrofokus d.o.o",
+      "Electrician Novi Sad",
+      "Electrician electrician"
+    ],
+    "secondary": [
+      "best electrician in Novi Sad",
+      "electrician services Serbia",
+      "professional electrician"
+    ]
+  }
+}

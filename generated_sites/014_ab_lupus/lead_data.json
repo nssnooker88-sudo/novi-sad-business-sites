@@ -1,0 +1,39 @@
+{
+  "company_name": "A&B Lupus",
+  "category": "Hotel",
+  "archetype": "Hospitality Provider",
+  "website_style": "elegant, welcoming, modern",
+  "website_goal": "call_now",
+  "phone": "064 5045504",
+  "email": "ablupus.ns@gmail.com",
+  "address": "Branka Ćopića 62, Novi Sad 406766, Serbia",
+  "services": [
+    "Breakfast",
+    "Accommodation",
+    "Rooms"
+  ],
+  "usp": [
+    "Trusted by over 104 satisfied clients",
+    "Fast and efficient service"
+  ],
+  "review_summary": "Kind, Recommend, Excellent, Best, Top",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "A&B Lupus",
+      "Hotel Novi Sad",
+      "Hotel hotel"
+    ],
+    "secondary": [
+      "best hotel in Novi Sad",
+      "hotel services Serbia",
+      "professional hotel"
+    ]
+  }
+}

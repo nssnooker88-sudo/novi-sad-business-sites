@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Juvelir Mojse | Jewelry Store Novi Sad – Elegant Rings & Jewelry</title>
+    <meta name="description" content="Juvelir Mojse – trusted jewelry store in Novi Sad, Serbia. 4.8★ rating, 125+ happy clients. Visit us for rings, fine jewelry & professional service.">
+    <meta property="og:title" content="Juvelir Mojse | Jewelry Store Novi Sad">
+    <meta property="og:description" content="Exceptional 4.8-star rating, 125+ satisfied clients. Professional rings & jewelry in Novi Sad. Visit Jevrejska 34.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://juvelirmojse.rs">
+    <meta property="og:locale" content="sr_RS">
+    <meta name="keywords" content="Juvelir Mojse, Jewelry Store Novi Sad, Jewelry Store jewelry_store, best jewelry store in Novi Sad, jewelry store services Serbia, professional jewelry store">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #fbfaf8;
+            color: #1e1b1a;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            padding: 0 1.25rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem 0 4rem;
+        }
+
+        /* ---------- typography ---------- */
+        h1, h2, h3 {
+            font-weight: 350;
+            letter-spacing: -0.01em;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 320;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            font-weight: 340;
+            border-bottom: 1px solid #e3ddd9;
+            padding-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 380;
+            margin-bottom: 0.5rem;
+        }
+
+        p, li {
+            font-size: 1.125rem;
+            color: #3f3a37;
+        }
+
+        .section {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        /* ---------- header / nav ---------- */
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0 0.5rem;
+            border-bottom: 1px solid #e7e2dd;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 340;
+            letter-spacing: -0.02em;
+            color: #2b2624;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #4d4542;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.15s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.65;
+        }
+
+        /* ---------- hero ---------- */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 4.5rem 0 5rem;
+        }
+
+        .hero-content {
+            max-width: 780px;
+        }
+
+        .hero-tagline {
+            font-size: 1.3rem;
+            color: #6b615c;
+            margin-bottom: 2.2rem;
+            max-width: 600px;
+            font-weight: 360;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #1e1b1a;
+            color: #f5f1ee;
+            padding: 1rem 2.8rem;
+            font-size: 1.25rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            border: none;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .cta-button:hover {
+            background: #3a3330;
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .hero-extra {
+            color: #736b67;
+            font-size: 1rem;
+            border-left: 2px solid #d6cfcb;
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* ---------- services cards ---------- */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .service-card {
+            background: #fffffffa;
+            padding: 2.2rem 1.8rem;
+            border-radius: 32px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.02);
+            border: 1px solid #ede9e5;
+            transition: 0.2s;
+        }
+
+        .service-card:hover {
+            border-color: #cdc3bd;
+            box-shadow: 0 16px 32px rgba(0,0,0,0.03);
+        }
+
+        .service-icon {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #4f4844;
+        }
+
+        /* ---------- why choose us ---------- */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-top: 1rem;
+        }
+        .usp-item {
+            background: #ffffff;
+            padding: 2rem 1.5rem;
+            border-radius: 28px;
+            border: 1px solid #eae4e0;
+            text-align: center;
+        }
+        .usp-number {
+            font-size: 2.8rem;
+            font-weight: 280;
+            color: #1e1b1a;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .usp-label {
+            font-size: 1.2rem;
+            font-weight: 380;
+            color: #2d2826;
+        }
+        .usp-desc {
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            color: #5f5652;
+        }
+
+        /* ---------- reviews ---------- */
+        .review-summary {
+            background: #f3efec;
+            padding: 2.5rem 2.2rem;
+            border-radius: 40px;
+            margin: 1.8rem 0;
+            border: 1px solid #e3dbd6;
+        }
+        .review-badge {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.8rem 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        .stars {
+            font-size: 2rem;
+            letter-spacing: 4px;
+            color: #b28b6f;
+        }
+        .rating-text {
+            font-size: 1.4rem;
+            font-weight: 380;
+            color: #1e1b1a;
+        }
+        .review-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1rem;
+            margin-top: 1.2rem;
+        }
+        .keyword-tag {
+            background: #ffffffd9;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.95rem;
+            border: 1px solid #d6cdc7;
+            color: #2d2826;
+        }
+        .review-quote {
+            font-size: 1.2rem;
+            font-style: normal;
+            font-weight: 340;
+            color: #2f2926;
+            margin-top: 1.2rem;
+            border-top: 1px solid #ddd5cf;
+            padding-top: 1.2rem;
+        }
+
+        /* ---------- contact ---------- */
+        .contact-block {
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 2.8rem 2.5rem;
+            border: 1px solid #e7e0db;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem 4rem;
+            margin-top: 1rem;
+        }
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        .contact-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #7a706b;
+        }
+        .contact-value {
+            font-size: 1.3rem;
+            font-weight: 380;
+            color: #1e1b1a;
+        }
+        .contact-value a {
+            text-decoration: none;
+            color: inherit;
+            border-bottom: 1px solid transparent;
+            transition: border 0.1s;
+        }
+        .contact-value a:hover {
+            border-bottom: 1px solid #b1a59f;
+        }
+        .address-block {
+            max-width: 300px;
+        }
+
+        /* ---------- footer ---------- */
+        .footer-note {
+            margin-top: 4.5rem;
+            font-size: 0.9rem;
+            color: #7a706b;
+            border-top: 1px solid #e3ddd9;
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        /* ---------- responsive ---------- */
+        @media (max-width: 700px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            .nav-links { display: none; } /* minimal nav for pure elegance */
+            .hero { margin: 2.5rem 0; }
+            .contact-block { flex-direction: column; gap: 1.8rem; }
+            .review-summary { padding: 1.8rem; }
+            .cta-button { width: 100%; text-align: center; }
+        }
+
+        @media (min-width: 701px) and (max-width: 1000px) {
+            h1 { font-size: 2.6rem; }
+        }
+
+        /* small extra tweaks */
+        .subtle-link {
+            color: inherit;
+        }
+        .mt-1 { margin-top: 0.75rem; }
+        .inline-flex { display: inline-flex; align-items: center; gap: 0.5rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- simple navigation -->
+    <div class="nav-bar">
+        <span class="logo">Juvelir Mojse</span>
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#why">Why us</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- HERO section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Rings & jewelry,<br>crafted with quiet elegance.</h1>
+            <p class="hero-tagline">Juvelir Mojse — trusted jewelry store in Novi Sad. Exceptional 4.8★ rating, over 125 satisfied clients. Discover pieces that last.</p>
+            <a href="#contact" class="cta-button">Visit Us</a>
+            <div class="hero-extra">
+                Jevrejska 34 · 021 427222
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES section -->
+    <section class="section" id="services">
+        <h2>Our services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <div class="service-icon">⌚</div>
+                <h3>Rings</h3>
+                <p>Engagement, wedding & fine rings — each piece reflects meticulous craftsmanship. From classic gold to modern minimal.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✦</div>
+                <h3>Jewelry</h3>
+                <p>Necklaces, earrings, bracelets and bespoke pieces. Carefully selected for everyday elegance and special occasions.</p>
+            </div>
+        </div>
+        <p style="margin-top: 1.5rem; color: #5f5652; font-size: 1rem;">* all services available in-store. Personal consultation by appointment.</p>
+    </section>
+
+    <!-- WHY CHOOSE US (USP) -->
+    <section class="section" id="why">
+        <h2>Why choose us</h2>
+        <div class="usp-grid">
+            <div class="usp-item">
+                <div class="usp-number">4.8</div>
+                <div class="usp-label">★ star rating</div>
+                <div class="usp-desc">Consistently high reviews from our community.</div>
+            </div>
+            <div class="usp-item">
+                <div class="usp-number">125+</div>
+                <div class="usp-label">clients trust us</div>
+                <div class="usp-desc">Satisfied customers in Novi Sad and across Serbia.</div>
+            </div>
+            <div class="usp-item">
+                <div class="usp-number">★</div>
+                <div class="usp-label">professional & reliable</div>
+                <div class="usp-desc">Kind, expert service — every visit matters.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS section (insights, no fake names) -->
+    <section class="section" id="reviews">
+        <h2>What clients say</h2>
+        <div class="review-summary">
+            <div class="review-badge">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.8 / 5.0</span>
+                <span style="font-size: 1rem; color: #5c534f;">· 125+ reviews</span>
+            </div>
+            <div class="review-keywords">
+                <span class="keyword-tag">Professional</span>
+                <span class="keyword-tag">Kind</span>
+                <span class="keyword-tag">Excellent</span>
+                <span class="keyword-tag">Best</span>
+                <span class="keyword-tag">Super</span>
+            </div>
+            <div class="review-quote">
+                “Professional, kind, excellent service. Best jewelry experience in Novi Sad — super quality and attention.”
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.95rem; color: #5f5652;">Recurring themes: trust, craftsmanship, warm atmosphere.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT section -->
+    <section class="section" id="contact">
+        <h2>Visit the store</h2>
+        <div class="contact-block">
+            <div class="contact-item">
+                <span class="contact-label">Phone</span>
+                <span class="contact-value"><a href="tel:021427222">021 427222</a></span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <span class="contact-value"><a href="mailto:zlataramojse@gmail.com">zlataramojse@gmail.com</a></span>
+            </div>
+            <div class="contact-item address-block">
+                <span class="contact-label">Address</span>
+                <span class="contact-value">Jevrejska 34, Novi Sad 21000, Serbia</span>
+                <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #6b615c;">Open today · call ahead</div>
+            </div>
+        </div>
+        <div style="margin-top: 2rem;">
+            <a href="https://maps.google.com/?q=Jevrejska+34+Novi+Sad+21000" target="_blank" rel="noopener" class="cta-button" style="background: #f2edea; color: #1e1b1a; border: 1px solid #d6cdc7; box-shadow: none;">Get directions</a>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer-note">
+        Juvelir Mojse · Jevrejska 34, Novi Sad · 021 427222
+    </footer>
+
+</div>
+<!-- minimal JS for smooth scroll (no external) -->
+<script>
+    (function() {
+        // smooth anchor scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === "#" || href === "") return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    })();
+</script>
+</body>
+</html>

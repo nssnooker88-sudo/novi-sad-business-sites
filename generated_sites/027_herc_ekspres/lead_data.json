@@ -1,0 +1,37 @@
+{
+  "company_name": "Herc Ekspres",
+  "category": "Locksmith",
+  "archetype": "Local Service Provider",
+  "website_style": "trustworthy, fast, modern",
+  "website_goal": "call_now",
+  "phone": "060 6533421",
+  "email": "hercekspres@gmail.com",
+  "address": "Ćirpanova 6, Novi Sad 21000, Serbia",
+  "services": [
+    "Professional Locksmith Services"
+  ],
+  "usp": [
+    "Exceptional 5.0-star rating from customers",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Recommend, Helpful",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Herc Ekspres",
+      "Locksmith Novi Sad",
+      "Locksmith locksmith"
+    ],
+    "secondary": [
+      "best locksmith in Novi Sad",
+      "locksmith services Serbia",
+      "professional locksmith"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "company_name": "Ključar - Bravar - Hitna Služba - Novi Sad",
+  "category": "Locksmith",
+  "archetype": "Local Service Provider",
+  "website_style": "trustworthy, fast, modern",
+  "website_goal": "call_now",
+  "phone": "069 718150",
+  "email": "nskljucar21@gmail.com",
+  "address": "Bulevar kralja Petra I 23, Novi Sad 21000, Serbia",
+  "services": [
+    "Professional Locksmith Services"
+  ],
+  "usp": [
+    "Exceptional 5.0-star rating from customers",
+    "Fast and efficient service",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Recommend, Fast, Quick",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Ključar - Bravar - Hitna Služba - Novi Sad",
+      "Locksmith Novi Sad",
+      "Locksmith locksmith"
+    ],
+    "secondary": [
+      "best locksmith in Novi Sad",
+      "locksmith services Serbia",
+      "professional locksmith"
+    ]
+  }
+}

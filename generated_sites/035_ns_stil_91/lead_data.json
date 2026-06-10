@@ -1,0 +1,39 @@
+{
+  "company_name": "NS STIL 91",
+  "category": "Hair Salon",
+  "archetype": "Personal Service Provider",
+  "website_style": "stylish, modern, elegant",
+  "website_goal": "book_appointment",
+  "phone": "063 7595789",
+  "email": "nemanjajovanovic@yahoo.com",
+  "address": "Bulevar kralja Petra I 55, Novi Sad, Serbia",
+  "services": [
+    "Professional Hair Salon Services"
+  ],
+  "usp": [
+    "Exceptional 5.0-star rating from customers",
+    "Trusted by over 127 satisfied clients",
+    "Fast and efficient service",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Recommend, Excellent, Great, Fast",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "NS STIL 91",
+      "Hair Salon Novi Sad",
+      "Hair Salon hair_salon"
+    ],
+    "secondary": [
+      "best hair salon in Novi Sad",
+      "hair salon services Serbia",
+      "professional hair salon"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "company_name": "Ključar Novi Sad - Auto bravar Novi Sad",
+  "category": "Locksmith",
+  "archetype": "Local Service Provider",
+  "website_style": "trustworthy, fast, modern",
+  "website_goal": "call_now",
+  "phone": "061 5697562",
+  "email": "nskljucar21@gmail.com",
+  "address": "Pasterova 3, Novi Sad 21000, Serbia",
+  "services": [
+    "Professional Locksmith Services"
+  ],
+  "usp": [
+    "Exceptional 5.0-star rating from customers",
+    "Trusted by over 92 satisfied clients",
+    "Fast and efficient service",
+    "Affordable pricing"
+  ],
+  "review_summary": "Recommend, Best, Top, Fast, Quick",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Ključar Novi Sad - Auto bravar Novi Sad",
+      "Locksmith Novi Sad",
+      "Locksmith locksmith"
+    ],
+    "secondary": [
+      "best locksmith in Novi Sad",
+      "locksmith services Serbia",
+      "professional locksmith"
+    ]
+  }
+}

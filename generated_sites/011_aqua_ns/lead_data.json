@@ -1,0 +1,38 @@
+{
+  "company_name": "Aqua NS",
+  "category": "Plumber",
+  "archetype": "Local Service Provider",
+  "website_style": "trustworthy, straightforward, modern",
+  "website_goal": "call_now",
+  "phone": "064 4820888",
+  "email": "aquastopns@gmail.com",
+  "address": "Pariske komune 29, Novi Sad 21000, Serbia",
+  "services": [
+    "Professional Plumber Services"
+  ],
+  "usp": [
+    "Exceptional 4.6-star rating from customers",
+    "Trusted by over 63 satisfied clients",
+    "Affordable pricing"
+  ],
+  "review_summary": "Recommend, Affordable, Reasonable",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Aqua NS",
+      "Plumber Novi Sad",
+      "Plumber plumber"
+    ],
+    "secondary": [
+      "best plumber in Novi Sad",
+      "plumber services Serbia",
+      "professional plumber"
+    ]
+  }
+}

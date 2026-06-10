@@ -1,0 +1,297 @@
+You are a senior web designer, UX specialist and conversion copywriter.
+
+Your task is to generate a COMPLETE SINGLE-FILE WEBSITE.
+
+Output only one file:
+
+index.html
+
+No additional files.
+
+No backend.
+
+No build process.
+
+No frameworks.
+
+No React.
+
+No Vue.
+
+No Tailwind CDN.
+
+Everything must be contained in a single HTML file.
+
+---
+
+# INPUT
+
+{
+  "company_name": "Pedialogica",
+  "category": "Doctor",
+  "archetype": "Healthcare Professional",
+  "website_style": "clean, professional, trustworthy",
+  "website_goal": "book_appointment",
+  "phone": "064 1455050",
+  "email": "drstojsic@gmail.com",
+  "address": "Jozefa Marčoka 2, Novi Sad 21000, Serbia",
+  "services": [
+    "Examination"
+  ],
+  "usp": [
+    "Professional Doctor services in Novi Sad"
+  ],
+  "review_summary": "Great, Expert, Satisfied, Wonderful",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Pedialogica",
+      "Doctor Novi Sad",
+      "Doctor doctor"
+    ],
+    "secondary": [
+      "best doctor in Novi Sad",
+      "doctor services Serbia",
+      "professional doctor"
+    ]
+  }
+}
+
+---
+
+# OBJECTIVE
+
+Generate a professional local business website.
+
+The website must look like it was custom-built for this company.
+
+Never look like a generic template.
+
+Every company should receive:
+
+* unique headline
+* unique structure
+* unique copy
+* unique service descriptions
+* unique value proposition
+
+Use available business data.
+
+---
+
+# TECHNICAL REQUIREMENTS
+
+Generate:
+
+* one HTML file
+* embedded CSS
+* embedded JavaScript
+
+No external dependencies.
+
+No CDN libraries.
+
+No external fonts.
+
+No external frameworks.
+
+Must work immediately after opening index.html.
+
+---
+
+# DESIGN REQUIREMENTS
+
+Modern 2026 design.
+
+Clean layout.
+
+Large spacing.
+
+Strong typography.
+
+Mobile-first.
+
+Responsive.
+
+Fast loading.
+
+Professional appearance.
+
+---
+
+# CONTENT RULES
+
+Use only supplied information.
+
+Never invent:
+
+* certifications
+* awards
+* years in business
+* employees
+* services
+
+Use reviews and services as primary content sources.
+
+---
+
+# CONTACT INFORMATION
+
+Always use actual values.
+
+Insert:
+
+Phone:
+064 1455050
+
+Email:
+drstojsic@gmail.com
+
+Address:
+Jozefa Marčoka 2, Novi Sad 21000, Serbia
+
+Never modify contact information.
+
+Never generate fake contacts.
+
+---
+
+# CTA
+
+Generate CTA based on website_goal.
+
+Generate CTA based on website_goal.
+
+website_goal: book_appointment
+
+Button:
+Book Appointment
+
+Action:
+mailto:{{email}}
+
+---
+
+# REQUIRED SECTIONS
+
+Hero
+
+Services
+
+Why Choose Us
+
+Reviews
+
+Contact
+
+Only add extra sections when relevant.
+
+---
+
+# HERO SECTION
+
+Generate:
+
+* unique headline
+* supporting text
+* CTA button
+
+The headline must be specific to the business.
+
+Avoid generic marketing language.
+
+---
+
+# SERVICES
+
+Create cards based on actual services.
+
+Do not invent services.
+
+---
+
+# REVIEWS
+
+Use review insights.
+
+Summarize recurring themes.
+
+Do not generate fake testimonials.
+
+---
+
+# CONTACT SECTION
+
+Display:
+
+* phone
+* email
+* address
+
+Create clickable links.
+
+Phone:
+
+tel:0641455050
+
+Email:
+
+mailto:drstojsic@gmail.com
+
+---
+
+# SEO
+
+Generate:
+
+* title
+* meta description
+* Open Graph tags
+
+Use provided keywords naturally.
+
+---
+
+# OUTPUT FORMAT
+
+Return only valid HTML.
+
+No markdown.
+
+No explanations.
+
+No comments outside HTML.
+
+The response must start with:
+
+<!DOCTYPE html>
+
+and end with:
+
+</html>
+
+---
+
+# CRITICAL RULES
+
+Generate a complete website.
+
+Generate only HTML.
+
+No explanations.
+
+No markdown.
+
+No placeholders.
+
+No TODO items.
+
+No fake information.
+
+The output must be production-ready.

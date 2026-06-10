@@ -1,0 +1,36 @@
+{
+  "company_name": "Apartment Cactus 021",
+  "category": "Real Estate Agency",
+  "archetype": "Service Provider",
+  "website_style": "professional, modern, trustworthy",
+  "website_goal": "request_quote",
+  "phone": "063 480633",
+  "email": "bosiljkafazekas@gmail.com",
+  "address": "Vase Pelagića 1, Novi Sad 21000, Serbia",
+  "services": [
+    "Apartment"
+  ],
+  "usp": [
+    "Exceptional 4.9-star rating from customers"
+  ],
+  "review_summary": "Kind, Recommend, Excellent",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Apartment Cactus 021",
+      "Real Estate Agency Novi Sad",
+      "Real Estate Agency real_estate_agency"
+    ],
+    "secondary": [
+      "best real estate agency in Novi Sad",
+      "real estate agency services Serbia",
+      "professional real estate agency"
+    ]
+  }
+}

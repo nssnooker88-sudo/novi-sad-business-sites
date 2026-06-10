@@ -1,0 +1,36 @@
+{
+  "company_name": "Dentistry",
+  "category": "Dental Clinic",
+  "archetype": "Healthcare Professional",
+  "website_style": "clean, modern, calming",
+  "website_goal": "book_appointment",
+  "phone": "061 1311111",
+  "email": "prim.su@eunet.rs",
+  "address": "Pere Popadića 1, Novi Sad, Serbia",
+  "services": [
+    "Professional Dental Clinic Services"
+  ],
+  "usp": [
+    "Exceptional 5.0-star rating from customers"
+  ],
+  "review_summary": "Positive customer experiences",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Dentistry",
+      "Dental Clinic Novi Sad",
+      "Dental Clinic dental_clinic"
+    ],
+    "secondary": [
+      "best dental clinic in Novi Sad",
+      "dental clinic services Serbia",
+      "professional dental clinic"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "company_name": "Cartize Company Rent A Car",
+  "category": "Car Rental Agency",
+  "archetype": "Service Provider",
+  "website_style": "modern, trustworthy, professional",
+  "website_goal": "call_now",
+  "phone": "065 5501332",
+  "email": "cartizecompany@gmail.com",
+  "address": "Futoška 22, Novi Sad 21000, Serbia",
+  "services": [
+    "Rent a car"
+  ],
+  "usp": [
+    "Exceptional 4.6-star rating from customers",
+    "Trusted by over 56 satisfied clients",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Friendly, Recommend, Great, Perfect",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Cartize Company Rent A Car",
+      "Car Rental Agency Novi Sad",
+      "Car Rental Agency car_rental"
+    ],
+    "secondary": [
+      "best car rental agency in Novi Sad",
+      "car rental agency services Serbia",
+      "professional car rental agency"
+    ]
+  }
+}
