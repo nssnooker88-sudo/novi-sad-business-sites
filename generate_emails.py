@@ -1,5 +1,5 @@
 """
-Generate personalized cold-email campaigns for DreamTim.
+Generate personalized cold-email campaigns for drimtim.
 Each business gets a custom HTML + plain text email with their unique site URL.
 
 Usage:
@@ -22,14 +22,14 @@ DREAMTIM = {
     "company": "drimtim",
     "tagline": "Digital solutions for your business",
     "email": "info@drimtim.rs",
-    "phone": "+381 6X XXX XXXX",
+    "phone": "",
     "website": "https://drimtim.studio",
 }
 
 TEMPLATES = {
     "sr": {
         "greeting": "Poštovani {name},",
-        "intro": "Ja sam [Ime] iz kompanije DreamTim.",
+        "intro": "Piše vam tim iz kompanije drimtim.",
         "problem": "Primetili smo da Vaš biznis još uvek nema svoj veb-sajt. U današnje vreme je veoma važno imati online prisustvo kako bi Vas klijenti lako pronašli.",
         "offer": "Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:",
         "link": "👉 {url}",
@@ -48,12 +48,12 @@ TEMPLATES = {
             "Integrisati društvene mreže",
         ],
         "closing": "Kontaktirajte nas i dogovorićemo sve detalje!",
-        "signoff": "Srdačno,\nTim DreamTim\n{email}\n{phone}\n{website}",
+        "signoff": "Srdačno,\ndrimtim\n{email}\n{website}",
         "personalize": "Primetili smo da se bavite {category} delatnošću{services}{address}.",
     },
     "ru": {
         "greeting": "Здравствуйте, {name}!",
-        "intro": "Меня зовут [Имя], я представляю компанию DreamTim.",
+        "intro": "Вам пишет команда drimtim.",
         "problem": "Мы заметили, что у вашего бизнеса пока нет собственного сайта. В современном мире это очень важно — иметь онлайн-присутствие, чтобы клиенты могли легко вас найти.",
         "offer": "Мы подготовили для вас БЕСПЛАТНЫЙ демо-сайт. Посмотрите, как он может выглядеть:",
         "link": "👉 {url}",
@@ -72,12 +72,12 @@ TEMPLATES = {
             "Интегрировать социальные сети",
         ],
         "closing": "Свяжитесь с нами, и мы обсудим все детали!",
-        "signoff": "С уважением,\nКоманда DreamTim\n{email}\n{phone}\n{website}",
+        "signoff": "С уважением,\nКоманда drimtim\n{email}\n{website}",
         "personalize": "Мы заметили, что вы занимаетесь {category}{services}{address}.",
     },
     "en": {
         "greeting": "Hello {name},",
-        "intro": "I'm [Name] from DreamTim.",
+        "intro": "This is the team at drimtim.",
         "problem": "We noticed that your business doesn't have a website yet. In today's digital world, having an online presence is essential for customers to find you easily.",
         "offer": "We've prepared a FREE demo website for you. Take a look:",
         "link": "👉 {url}",
@@ -96,7 +96,7 @@ TEMPLATES = {
             "Integrate social media",
         ],
         "closing": "Contact us and we'll discuss all the details!",
-        "signoff": "Best regards,\nDreamTim Team\n{email}\n{phone}\n{website}",
+        "signoff": "Best regards,\ndrimtim\n{email}\n{website}",
         "personalize": "We noticed you're in the {category} business{services}{address}.",
     },
 }
@@ -195,7 +195,7 @@ def build_html_email(biz, lang="sr"):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DreamTim — {biz['name']}</title>
+    <title>drimtim — {biz['name']}</title>
 </head>
 <body style="margin:0;padding:0;background-color:#f4f4f4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f4f4;padding:20px 0;">
@@ -216,7 +216,7 @@ def build_html_email(biz, lang="sr"):
                     <tr>
                         <td style="background:#f8f9fa;padding:20px 30px;text-align:center;border-top:1px solid #eee;">
                             <p style="margin:0;font-size:13px;color:#888;">
-                                {DREAMTIM['company']} &bull; {DREAMTIM['email']} &bull; {DREAMTIM['phone']}
+                                {DREAMTIM['company']} &bull; {DREAMTIM['email']}
                             </p>
                             <p style="margin:8px 0 0 0;font-size:12px;color:#aaa;">
                                 You received this email because we believe your business could benefit from a website.
@@ -296,7 +296,7 @@ def generate_all_emails(lang="sr"):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DreamTim — Generated Emails ({lang})</title>
+    <title>drimtim — Generated Emails ({lang})</title>
     <style>
         * {{ margin:0; padding:0; box-sizing:border-box; }}
         body {{ font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; background:#f5f5f7; color:#1d1d1f; padding:40px 20px; }}
@@ -312,7 +312,7 @@ def generate_all_emails(lang="sr"):
     </style>
 </head>
 <body>
-    <h1>DreamTim — Generated Emails ({lang}) <span class="count">{len(summary)}</span></h1>
+    <h1>drimtim — Generated Emails ({lang}) <span class="count">{len(summary)}</span></h1>
     <p>Cold email campaign for Novi Sad businesses without websites.</p>
     <table>
         <thead><tr><th>Business</th><th>Email</th><th>Site URL</th><th>Plain Text</th></tr></thead>

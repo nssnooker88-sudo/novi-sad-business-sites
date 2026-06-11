@@ -1,6 +1,6 @@
 Poštovani Servis klima Mastercool solution,
 
-Ja sam [Ime] iz kompanije DreamTim.
+Piše vam tim iz kompanije drimtim.
 
 Primetili smo da Vaš biznis još uvek nema svoj veb-sajt. U današnje vreme je veoma važno imati online prisustvo kako bi Vas klijenti lako pronašli.
 
@@ -26,7 +26,6 @@ Ukoliko Vam se sajt dopada, možete ga otkupiti za mali iznos. Takođe možemo:
 Kontaktirajte nas i dogovorićemo sve detalje!
 
 Srdačno,
-Tim DreamTim
+drimtim
 info@drimtim.rs
-+381 6X XXX XXXX
 https://drimtim.studio
