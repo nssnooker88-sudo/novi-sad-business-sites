@@ -30,3 +30,18 @@ _slug_mapping.json
 /emails/
 /generated_sites/
 
+# Local-only pipeline/source assets. GitHub Pages should publish only static sites.
+/AGENTS.md
+/CLAUDE.md
+/README.md
+/requirements.txt
+/config.example.json
+/repos.json
+/leads_email_list.md
+/*.py
+/*.png
+/database/
+/scraper/
+/tests/
+/venv/
+
