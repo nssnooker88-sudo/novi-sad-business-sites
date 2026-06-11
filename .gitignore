@@ -24,3 +24,9 @@ create_github_repo.py
 # Sensitive data
 _site_data/
 _slug_mapping.json
+
+# Local-only campaign/internal assets
+/dashboard.html
+/emails/
+/generated_sites/
+
