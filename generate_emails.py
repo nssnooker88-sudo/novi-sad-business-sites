@@ -253,10 +253,13 @@ def generate_all_emails(lang="sr"):
 
         html_path = os.path.join(OUTPUT_DIR, f"{safe}.html")
         txt_path = os.path.join(OUTPUT_DIR, f"{safe}.txt")
+        md_path = os.path.join(OUTPUT_DIR, f"{safe}.md")
 
         with open(html_path, "w", encoding="utf-8") as f:
             f.write(html)
         with open(txt_path, "w", encoding="utf-8") as f:
+            f.write(plain)
+        with open(md_path, "w", encoding="utf-8") as f:
             f.write(plain)
 
         summary.append({
@@ -266,6 +269,7 @@ def generate_all_emails(lang="sr"):
             "site_url": biz["site_url"],
             "html_file": f"{safe}.html",
             "txt_file": f"{safe}.txt",
+            "md_file": f"{safe}.md",
         })
 
         total += 1

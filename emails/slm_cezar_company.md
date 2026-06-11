@@ -1,0 +1,32 @@
+Poštovani SLM Cezar Company,
+
+Ja sam [Ime] iz kompanije DreamTim.
+
+Primetili smo da Vaš biznis još uvek nema svoj veb-sajt. U današnje vreme je veoma važno imati online prisustvo kako bi Vas klijenti lako pronašli.
+
+Primetili smo da se bavite shopping mall delatnošću, sa uslugama: materials, shopping na adresi 20, Primorska 21000, Novi Sad 21000, Serbia.
+
+Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
+
+👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/slm-cezar/
+
+Šta dobijate:
+• Moderan, responzivan dizajn
+• Vaše kontakt informacije i usluge
+• Spremnost za Google promociju
+• Mogućnost lakog dodavanja novih stranica
+
+Ukoliko Vam se sajt dopada, možete ga otkupiti za mali iznos. Takođe možemo:
+• Dodati nove sekcije i stranice
+• Unaprediti dizajn prema Vašem brendu
+• Povezati online zakazivanje/poručivanje
+• Podesiti SEO optimizaciju
+• Integrisati društvene mreže
+
+Kontaktirajte nas i dogovorićemo sve detalje!
+
+Srdačno,
+Tim DreamTim
+info@drimtim.rs
++381 6X XXX XXXX
+https://drimtim.studio
