@@ -8,7 +8,7 @@ Primetili smo da se bavite doctor delatnošću, sa uslugama: examination na adre
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/pedialogica/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/pedialogica/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

@@ -8,7 +8,7 @@ Primetili smo da se bavite plumber delatnošću, sa uslugama: plumbing na adresi
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/vodoinstalater-danijel/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/vodoinstalater-danijel/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

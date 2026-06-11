@@ -8,7 +8,7 @@ Primetili smo da se bavite general contractor delatnošću, sa uslugama: decorat
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/home-sweets/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/home-sweets/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

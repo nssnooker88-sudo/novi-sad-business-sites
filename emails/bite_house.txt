@@ -8,7 +8,7 @@ Primetili smo da se bavite restaurant delatnošću, sa uslugama: lunch na adresi
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/bite-house/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/bite-house/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

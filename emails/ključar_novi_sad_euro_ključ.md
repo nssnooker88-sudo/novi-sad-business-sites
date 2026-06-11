@@ -8,7 +8,7 @@ Primetili smo da se bavite locksmith delatnošću, sa uslugama: professional loc
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/ključar-euro-ključ/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/ključar-euro-ključ/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

@@ -8,7 +8,7 @@ Primetili smo da se bavite dentist delatnošću, sa uslugama: professional denti
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/stomatološka-ordinacija-todoran/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/stomatološka-ordinacija-todoran/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

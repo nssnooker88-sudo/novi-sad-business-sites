@@ -16,7 +16,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 GENERATED = os.path.join(ROOT, "generated_sites")
 SLUG_PATH = os.path.join(ROOT, "_slug_mapping.json")
 OUTPUT_DIR = os.path.join(ROOT, "emails")
-BASE_URL = "https://nssnooker88-sudo.github.io/novi-sad-business-sites"
+BASE_URL = "https://nsdrimtim21.github.io/novi-sad-business-sites"
 
 DREAMTIM = {
     "company": "drimtim",

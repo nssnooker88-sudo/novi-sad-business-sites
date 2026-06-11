@@ -8,7 +8,7 @@ Primetili smo da se bavite real estate agency delatnošću, sa uslugama: apartme
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/apartment-cactus-021/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/apartment-cactus-021/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

@@ -8,7 +8,7 @@ Primetili smo da se bavite bed & breakfast delatnošću, sa uslugama: stay, room
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/hostel-milkaza/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/hostel-milkaza/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

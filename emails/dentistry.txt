@@ -8,7 +8,7 @@ Primetili smo da se bavite dental clinic delatnošću, sa uslugama: professional
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/dentistry/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/dentistry/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

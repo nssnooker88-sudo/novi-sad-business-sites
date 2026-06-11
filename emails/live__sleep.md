@@ -8,7 +8,7 @@ Primetili smo da se bavite hotel delatnošću, sa uslugama: breakfast, parking n
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nssnooker88-sudo.github.io/novi-sad-business-sites/live-sleep/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/live-sleep/
 
 Šta dobijate:
 • Moderan, responzivan dizajn
