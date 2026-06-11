@@ -25,7 +25,6 @@ Base URL: https://nsdrimtim21.github.io/novi-sad-business-sites
 | 13 | SLM Cezar Company | slm.cezar@gmail.com | 021 6411696 | Shopping Mall | 96 | https://nsdrimtim21.github.io/novi-sad-business-sites/slm-cezar/ |
 | 14 | A&B Lupus | ablupus.ns@gmail.com | 064 5045504 | Hotel | 96 | https://nsdrimtim21.github.io/novi-sad-business-sites/ab-lupus/ |
 | 15 | Cartize Company Rent A Car | cartizecompany@gmail.com | 065 5501332 | Car Rental Agency | 96 | https://nsdrimtim21.github.io/novi-sad-business-sites/cartize-rent-a-car/ |
-| 16 | Home Sweets | .ns@gmail.com |  |  | 0 | https://nsdrimtim21.github.io/novi-sad-business-sites/home-sweets/ |
 | 17 | Stomatoliška ordinacija "MM DENT" | mgavric@hotmail.com | 062 288089 | Dentist | 95 | https://nsdrimtim21.github.io/novi-sad-business-sites/stomatoliška-ordinacija-mm-dent/ |
 | 18 | Ključar Novi Sad Euro Ključ | svetozarmaluckov@gmail.com | 062 9682567 | Locksmith | 95 | https://nsdrimtim21.github.io/novi-sad-business-sites/ključar-euro-ključ/ |
 | 19 | Burano Garden | buranogarden@gmail.com | 063 590380 | Wedding Venue | 95 | https://nsdrimtim21.github.io/novi-sad-business-sites/burano-garden/ |
@@ -91,7 +90,6 @@ Base URL: https://nsdrimtim21.github.io/novi-sad-business-sites
 - **SLM Cezar Company** | slm.cezar@gmail.com | https://nsdrimtim21.github.io/novi-sad-business-sites/slm-cezar/
 - **A&B Lupus** | ablupus.ns@gmail.com | https://nsdrimtim21.github.io/novi-sad-business-sites/ab-lupus/
 - **Cartize Company Rent A Car** | cartizecompany@gmail.com | https://nsdrimtim21.github.io/novi-sad-business-sites/cartize-rent-a-car/
-- **Home Sweets** | .ns@gmail.com | https://nsdrimtim21.github.io/novi-sad-business-sites/home-sweets/
 - **Stomatoliška ordinacija "MM DENT"** | mgavric@hotmail.com | https://nsdrimtim21.github.io/novi-sad-business-sites/stomatoliška-ordinacija-mm-dent/
 - **Ključar Novi Sad Euro Ključ** | svetozarmaluckov@gmail.com | https://nsdrimtim21.github.io/novi-sad-business-sites/ključar-euro-ključ/
 - **Burano Garden** | buranogarden@gmail.com | https://nsdrimtim21.github.io/novi-sad-business-sites/burano-garden/

@@ -18,6 +18,11 @@ GENERATED = os.path.join(ROOT, "generated_sites")
 SLUG_PATH = os.path.join(ROOT, "_slug_mapping.json")
 OUTPUT_DIR = os.path.join(ROOT, "emails")
 BASE_URL = "https://nsdrimtim21.github.io/novi-sad-business-sites"
+EMAIL_RE = re.compile(
+    r"^[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+"
+    r"(?:\.[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]+)*@"
+    r"(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$"
+)
 
 DREAMTIM = {
     "company": "drimtim",
@@ -144,6 +149,25 @@ def load_data():
     return businesses
 
 
+def is_valid_email(email):
+    """Return True for syntactically valid campaign recipient emails."""
+    return bool(email and EMAIL_RE.match(email.strip()))
+
+
+def console_safe(value):
+    """Make progress logs printable in legacy Windows consoles."""
+    return str(value).encode("ascii", errors="replace").decode("ascii")
+
+
+def clean_output_dir():
+    """Remove stale generated email artifacts before rebuilding the campaign."""
+    if not os.path.exists(OUTPUT_DIR):
+        return
+    for filename in os.listdir(OUTPUT_DIR):
+        if filename == "_summary.json" or filename.endswith((".html", ".txt", ".md")):
+            os.remove(os.path.join(OUTPUT_DIR, filename))
+
+
 def personalize(biz, lang):
     """Generate a personalized sentence about the business."""
     t = TEMPLATES[lang]
@@ -247,13 +271,20 @@ def generate_all_emails(lang="sr"):
     """Generate all emails."""
     businesses = load_data()
     os.makedirs(OUTPUT_DIR, exist_ok=True)
+    clean_output_dir()
 
     summary = []
     total = 0
 
     for biz in businesses:
         if not biz["email"]:
-            print(f"  SKIP [{biz['folder']}] {biz['name']} — no email")
+            print(f"  SKIP [{console_safe(biz['folder'])}] {console_safe(biz['name'])} - no email")
+            continue
+        if not is_valid_email(biz["email"]):
+            print(
+                f"  SKIP [{console_safe(biz['folder'])}] "
+                f"{console_safe(biz['name'])} - invalid email: {console_safe(biz['email'])}"
+            )
             continue
 
         html = build_html_email(biz, lang)
@@ -285,7 +316,11 @@ def generate_all_emails(lang="sr"):
         })
 
         total += 1
-        print(f"  ✓ [{biz['folder']}] {biz['name']:40s} → {biz['email']:35s} → {safe}.html")
+        print(
+            f"  OK [{console_safe(biz['folder'])}] "
+            f"{console_safe(biz['name']):40s} -> {console_safe(biz['email']):35s} -> "
+            f"{console_safe(safe)}.html"
+        )
 
     # Summary JSON
     with open(os.path.join(OUTPUT_DIR, "_summary.json"), "w", encoding="utf-8") as f:
@@ -337,7 +372,7 @@ def generate_all_emails(lang="sr"):
         f.write(index_html)
 
     print(f"\n{'='*60}")
-    print(f"✅ Generated {total} emails ({lang}) in {OUTPUT_DIR}/")
+    print(f"Generated {total} emails ({lang}) in {OUTPUT_DIR}/")
     print(f"{'='*60}")
 
 

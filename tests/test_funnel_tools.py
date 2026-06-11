@@ -10,6 +10,7 @@ from funnel_tools import (
     build_gallery_html,
     extract_html_document,
 )
+from generate_emails import is_valid_email
 
 
 class FunnelToolsTest(unittest.TestCase):
@@ -103,6 +104,12 @@ class FunnelToolsTest(unittest.TestCase):
         self.assertEqual(model["metrics"]["high_priority"], 2)
         self.assertEqual(model["metrics"]["high_priority_with_email"], 1)
         self.assertEqual(model["metrics"]["generated_sites"], 1)
+
+    def test_campaign_email_validation_rejects_leading_dot(self):
+        self.assertTrue(is_valid_email("owner@example.com"))
+        self.assertTrue(is_valid_email("first.last+tag@example.co.rs"))
+        self.assertFalse(is_valid_email(".ns@gmail.com"))
+        self.assertFalse(is_valid_email("missing-at.example.com"))
 
 
 if __name__ == "__main__":
