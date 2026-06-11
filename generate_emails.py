@@ -23,7 +23,7 @@ DREAMTIM = {
     "tagline": "Digital solutions for your business",
     "email": "info@drimtim.rs",
     "phone": "+381 6X XXX XXXX",
-    "website": "https://drimtim.rs",
+    "website": "https://drimtim.studio",
 }
 
 TEMPLATES = {
