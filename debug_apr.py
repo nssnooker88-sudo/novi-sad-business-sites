@@ -1,94 +1,100 @@
-"""Debug script: fetch one APR page and dump HTML structure."""
-import json, re, ssl, sys, urllib.request
-from bs4 import BeautifulSoup
+"""Debug: extract APR email from PIB response, find name-search endpoint."""
+import http.cookiejar, json, re, ssl, sys, urllib.request
+from urllib.parse import urlencode
 
 sys.stdout.reconfigure(encoding="utf-8")
-
-# Same SSL bypass used in verify_and_pages.py — proven to work on this machine
 ctx = ssl._create_unverified_context()
+cj = http.cookiejar.CookieJar()
+opener = urllib.request.build_opener(
+    urllib.request.HTTPSHandler(context=ctx),
+    urllib.request.HTTPCookieProcessor(cj),
+)
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+BASE = "https://pretraga.apr.gov.rs"
+
+HEADERS_HTML = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "sr-RS,sr;q=0.9,en;q=0.8",
 }
+HEADERS_JSON = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "sr-RS,sr;q=0.9,en;q=0.8",
+    "Referer": "https://pretraga.apr.gov.rs/searchBD",
+}
 
-APR_SEARCH = "https://www.apr.gov.rs/reg/skr/skrHome.aspx"
-APR_DETAIL = "https://www.apr.gov.rs/reg/skr/skrIndividualResult.aspx"
 
-
-def get(url, params=None):
-    if params:
-        from urllib.parse import urlencode
-        url = url + "?" + urlencode(params)
-    req = urllib.request.Request(url, headers=HEADERS)
+def fetch(url, params=None, headers=None):
+    h = headers or HEADERS_HTML
+    full_url = (url + "?" + urlencode(params)) if params else url
+    req = urllib.request.Request(full_url, headers=h)
     try:
-        with urllib.request.urlopen(req, context=ctx, timeout=20) as resp:
-            raw = resp.read()
-            return raw.decode("utf-8", errors="replace")
+        with opener.open(req, timeout=25) as resp:
+            raw = resp.read().decode("utf-8", errors="replace")
+            print(f"  GET {full_url[:100]}  -> {resp.status}  len={len(raw)}")
+            try:
+                return json.loads(raw)
+            except Exception:
+                return raw
+    except urllib.error.HTTPError as e:
+        print(f"  GET {full_url[:100]}  -> HTTP {e.code}")
+        return None
     except Exception as e:
-        print(f"ERROR {url}: {e}")
-        return ""
+        print(f"  GET {full_url[:100]}  -> ERROR: {e}")
+        return None
 
-# 1) Search by name
-name = "Pekara Krosti"
-print(f"\n=== SEARCH for '{name}' (BDP) ===")
-r = s.get(APR_SEARCH, params={"reg": "BDP", "Naziv": name, "showType": "1"},
-          headers=HEADERS, timeout=20)
-r.encoding = "utf-8"
-html = r.text
-print(f"Status: {r.status_code}, Length: {len(html)}")
 
-soup = BeautifulSoup(html, "lxml")
-# Print all tables found
-tables = soup.find_all("table")
-print(f"Tables found: {len(tables)}")
-for i, t in enumerate(tables):
-    rows = t.find_all("tr")
-    print(f"  Table {i}: id={t.get('id')} class={t.get('class')} rows={len(rows)}")
-    for j, tr in enumerate(rows[:4]):
-        cells = [td.get_text(strip=True)[:40] for td in tr.find_all(["td","th"])]
-        print(f"    Row {j}: {cells}")
+# Prime session
+fetch(BASE, headers=HEADERS_HTML)
+fetch(f"{BASE}/searchBD", headers=HEADERS_HTML)
 
-# Print links that look like detail links
-links = [(a.get_text(strip=True)[:40], a["href"][:80]) for a in soup.find_all("a", href=True) if "skr" in a["href"].lower()]
-print(f"\nAPR-looking links: {len(links)}")
-for name, href in links[:10]:
-    print(f"  {name!r} -> {href}")
+# 1) Full response from PIB search
+print("\n=== PIB 115210171 (The Pub) full response ===")
+r = fetch(f"{BASE}/api/BD/search", params={"pib": "115210171"}, headers=HEADERS_JSON)
+print(json.dumps(r, indent=2, ensure_ascii=False) if isinstance(r, (dict,list)) else r)
 
-# 2) Also try PR (entrepreneurs)
-print(f"\n=== SEARCH for '{name}' (PR) ===")
-r2 = s.get(APR_SEARCH, params={"reg": "PR", "Naziv": name, "showType": "1"},
-           headers=HEADERS, timeout=20)
-r2.encoding = "utf-8"
-html2 = r2.text
-print(f"Status: {r2.status_code}, Length: {len(html2)}")
-soup2 = BeautifulSoup(html2, "lxml")
-tables2 = soup2.find_all("table")
-print(f"Tables found: {len(tables2)}")
-for i, t in enumerate(tables2):
-    rows = t.find_all("tr")
-    print(f"  Table {i}: id={t.get('id')} rows={len(rows)}")
-    for j, tr in enumerate(rows[:3]):
-        cells = [td.get_text(strip=True)[:40] for td in tr.find_all(["td","th"])]
-        print(f"    Row {j}: {cells}")
+# 2) PIB search for Radio Cafe (pib 115147664)
+print("\n=== PIB 115147664 (Radio Cafe) ===")
+r2 = fetch(f"{BASE}/api/BD/search", params={"pib": "115147664"}, headers=HEADERS_JSON)
+print(json.dumps(r2, indent=2, ensure_ascii=False) if isinstance(r2, (dict,list)) else r2)
 
-# 3) Try PIB lookup (The Pub has PIB 115210171)
-print("\n=== SEARCH by PIB 115210171 ===")
-r3 = s.get(APR_SEARCH, params={"reg": "BDP", "PIB": "115210171", "showType": "1"},
-           headers=HEADERS, timeout=20)
-r3.encoding = "utf-8"
-html3 = r3.text
-print(f"Status: {r3.status_code}, Length: {len(html3)}")
-soup3 = BeautifulSoup(html3, "lxml")
-# dump a snippet with email-looking content
-emails = re.findall(r"[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}", html3)
-print(f"Emails in response: {emails}")
-tables3 = soup3.find_all("table")
-print(f"Tables: {len(tables3)}")
-for i, t in enumerate(tables3):
-    rows = t.find_all("tr")
-    print(f"  Table {i}: id={t.get('id')} rows={len(rows)}")
-    for j, tr in enumerate(rows[:5]):
-        cells = [td.get_text(strip=True)[:50] for td in tr.find_all(["td","th"])]
-        if any(c for c in cells):
-            print(f"    Row {j}: {cells}")
+# 3) Try name-based search with different param names  (needs session cookies)
+print("\n=== Name search attempts ===")
+for p in [
+    {"naziv": "Pekara Krosti"},
+    {"name": "Pekara Krosti"},
+    {"searchNaziv": "Pekara"},
+    {"searchTerm": "Pekara"},
+    {"filter": "Pekara"},
+    {"q": "Pekara"},
+]:
+    r3 = fetch(f"{BASE}/api/BD/search", params=p, headers=HEADERS_JSON)
+    if r3 and r3 != {"title": "404 Not Found"}:
+        print(f"  HIT with params {p}: {str(r3)[:200]}")
+
+# 4) Try /api/BD/searchByName  /api/BD/list  etc.
+print("\n=== Alternative BD endpoints ===")
+for ep in [
+    "/api/BD/searchByName",
+    "/api/BD/list",
+    "/api/BD/pretraga",
+    "/api/BD/find",
+    "/api/BD/getAll",
+    "/api/BD/searchNaziv",
+    "/api/BD/naziv",
+    "/api/PRU/search",
+    "/api/PRU/search",
+]:
+    fetch(f"{BASE}{ep}", params={"naziv": "Pekara"}, headers=HEADERS_JSON)
+
+# 5) If we got an ID from the PIB lookup, try detail endpoint
+if isinstance(r, (dict, list)):
+    # look for IDs in the response
+    rstr = json.dumps(r)
+    ids = re.findall(r'"(?:id|Id|ID|registrationId|subjectId)"\s*:\s*(\d+)', rstr)
+    mbs = re.findall(r'"(?:mb|MB|maticniBroj)"\s*:\s*"?(\d{8})"?', rstr)
+    print(f"\nIDs found: {ids},  MBs found: {mbs}")
+    for mb in mbs[:3]:
+        for ep in [f"/api/BD/{mb}", f"/api/BD/detail/{mb}", f"/api/BD/details/{mb}"]:
+            fetch(f"{BASE}{ep}", headers=HEADERS_JSON)

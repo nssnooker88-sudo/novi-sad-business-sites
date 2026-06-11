@@ -1,666 +1,666 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Herc Ekspres | Professional Locksmith Novi Sad | 5.0 Star Service</title>
-    <meta name="description" content="Herc Ekspres offers professional locksmith services in Novi Sad, Serbia. Exceptional 5.0-star rating, fast response, reliable. Call now: 060 6533421.">
-    <meta property="og:title" content="Herc Ekspres | Professional Locksmith Novi Sad">
-    <meta property="og:description" content="Fast, professional locksmith services in Novi Sad. 5.0-star rated. Call 060 6533421.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hercekspres.rs">
-    <meta property="og:locale" content="en_US">
-    <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #1a1a1a;
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* -------- HERO -------- */
-        .hero {
-            background: #0d2b3e;
-            background-image: radial-gradient(circle at 10% 20%, #1a4b63, #0a1e2b);
-            color: #ffffff;
-            padding: 90px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 80px;
-            background: linear-gradient(to top, #f8f9fa, transparent);
-            pointer-events: none;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: #f5b04144;
-            border: 1px solid #f5b04188;
-            color: #f5c542;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 8px 20px;
-            border-radius: 40px;
-            letter-spacing: 0.3px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(2px);
-        }
-
-        .hero h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            line-height: 1.2;
-            max-width: 850px;
-            letter-spacing: -0.02em;
-            margin-bottom: 24px;
-        }
-
-        .hero h1 span {
-            color: #f5c542;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 620px;
-            margin-bottom: 36px;
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 14px;
-            background: #f5c542;
-            color: #0a1e2b;
-            font-weight: 700;
-            font-size: 1.3rem;
-            padding: 18px 44px;
-            border-radius: 60px;
-            text-decoration: none;
-            transition: 0.2s ease;
-            box-shadow: 0 12px 30px -10px #00000055;
-        }
-
-        .hero-cta:hover {
-            background: #ffd75e;
-            transform: scale(1.02);
-            box-shadow: 0 18px 35px -12px #00000077;
-        }
-
-        .hero-cta svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        .hero-meta {
-            margin-top: 40px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
-            font-size: 0.95rem;
-            opacity: 0.8;
-        }
-
-        .hero-meta a {
-            color: #ffffffcc;
-            text-decoration: none;
-            border-bottom: 1px solid #ffffff33;
-            transition: 0.2s;
-        }
-
-        .hero-meta a:hover {
-            color: #fff;
-            border-color: #fff;
-        }
-
-        /* -------- SECTIONS -------- */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-label {
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #6c7a8a;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            color: #0d2b3e;
-        }
-
-        .section-desc {
-            font-size: 1.1rem;
-            color: #3d4f5e;
-            max-width: 680px;
-            line-height: 1.6;
-        }
-
-        /* -------- SERVICES -------- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 28px;
-            margin-top: 50px;
-        }
-
-        .service-card {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 40px 32px 36px;
-            box-shadow: 0 6px 26px rgba(0,0,0,0.04);
-            transition: 0.25s ease;
-            border: 1px solid #eef1f4;
-        }
-
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 16px 40px -12px rgba(0,0,0,0.12);
-            border-color: #d0d9e0;
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: #0d2b3e0c;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-        }
-
-        .service-icon svg {
-            width: 32px;
-            height: 32px;
-            fill: #0d2b3e;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #0d2b3e;
-        }
-
-        .service-card p {
-            color: #3d4f5e;
-            line-height: 1.6;
-        }
-
-        .service-card .usp-tag {
-            display: inline-block;
-            background: #eaf3e8;
-            color: #1f6d3f;
-            font-weight: 600;
-            font-size: 0.75rem;
-            padding: 6px 16px;
-            border-radius: 30px;
-            margin-top: 20px;
-            letter-spacing: 0.2px;
-        }
-
-        /* -------- WHY CHOOSE US -------- */
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .why-item {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 36px 28px;
-            border: 1px solid #eef1f4;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.02);
-            transition: 0.2s;
-        }
-
-        .why-item:hover {
-            border-color: #cbd5e0;
-            box-shadow: 0 10px 30px -14px rgba(0,0,0,0.08);
-        }
-
-        .why-item h4 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #0d2b3e;
-        }
-
-        .why-item p {
-            color: #3d4f5e;
-            line-height: 1.6;
-        }
-
-        .rating-highlight {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .rating-highlight .stars {
-            color: #f5b342;
-            font-size: 1.4rem;
-            letter-spacing: 2px;
-        }
-
-        .rating-highlight strong {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #0d2b3e;
-        }
-
-        /* -------- REVIEWS -------- */
-        .reviews-summary {
-            background: #ffffff;
-            border-radius: 28px;
-            padding: 48px 40px;
-            box-shadow: 0 6px 28px rgba(0,0,0,0.03);
-            border: 1px solid #eef1f4;
-            margin-top: 40px;
-        }
-
-        .review-tagline {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 18px;
-            color: #0d2b3e;
-        }
-
-        .review-themes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin: 24px 0 18px;
-        }
-
-        .review-theme {
-            background: #e3f0f7;
-            color: #0f4b66;
-            padding: 10px 24px;
-            border-radius: 40px;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .review-quote {
-            border-left: 4px solid #f5c542;
-            padding-left: 24px;
-            font-style: italic;
-            color: #2a4050;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin: 28px 0 10px;
-        }
-
-        .review-source {
-            font-size: 0.9rem;
-            color: #6c7a8a;
-        }
-
-        /* -------- CONTACT -------- */
-        .contact-section {
-            background: #0d2b3e;
-            color: #ffffff;
-        }
-
-        .contact-section .section-title {
-            color: #ffffff;
-        }
-
-        .contact-section .section-desc {
-            color: #cbdbeb;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 32px;
-            margin-top: 44px;
-        }
-
-        .contact-item {
-            background: #ffffff0c;
-            border: 1px solid #ffffff1a;
-            border-radius: 20px;
-            padding: 28px 24px;
-            backdrop-filter: blur(4px);
-        }
-
-        .contact-item .label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #b0c8dd;
-            margin-bottom: 8px;
-        }
-
-        .contact-item a {
-            color: #f5c542;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: block;
-            transition: 0.2s;
-        }
-
-        .contact-item a:hover {
-            color: #ffe180;
-        }
-
-        .contact-item .value {
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-
-        .contact-cta-mobile {
-            display: block;
-            background: #f5c542;
-            color: #0a1e2b;
-            font-weight: 700;
-            font-size: 1.4rem;
-            padding: 20px 30px;
-            text-align: center;
-            border-radius: 60px;
-            text-decoration: none;
-            margin-top: 40px;
-            transition: 0.2s;
-            box-shadow: 0 12px 35px -10px #00000044;
-        }
-
-        .contact-cta-mobile:hover {
-            background: #ffd75e;
-            transform: scale(1.01);
-        }
-
-        /* -------- FOOTER -------- */
-        .footer {
-            background: #05141d;
-            color: #8fa9bc;
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9rem;
-            border-top: 1px solid #1f3543;
-        }
-
-        .footer a {
-            color: #f5c542;
-            text-decoration: none;
-        }
-
-        /* -------- RESPONSIVE -------- */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 64px 0 60px;
-            }
-
-            .hero h1 {
-                font-size: 2.1rem;
-            }
-
-            .hero p {
-                font-size: 1.05rem;
-            }
-
-            .hero-cta {
-                font-size: 1.1rem;
-                padding: 16px 34px;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .hero-meta {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            .reviews-summary {
-                padding: 32px 24px;
-            }
-
-            .review-tagline {
-                font-size: 1.3rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .service-card {
-                padding: 30px 24px;
-            }
-
-            .why-item {
-                padding: 28px 20px;
-            }
-
-            .contact-item a {
-                font-size: 1rem;
-            }
-        }
-
-        /* utilities */
-        .text-center {
-            text-align: center;
-        }
-
-        .mt-20 {
-            margin-top: 20px;
-        }
-
-        .mb-10 {
-            margin-bottom: 10px;
-        }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Herc Ekspres | Professional Locksmith Novi Sad | 5.0 Star Service</title>
+ <meta name="description" content="Herc Ekspres offers professional locksmith services in Novi Sad, Serbia. Exceptional 5.0-star rating, fast response, reliable. Call now: 060 6533421.">
+ <meta property="og:title" content="Herc Ekspres | Professional Locksmith Novi Sad">
+ <meta property="og:description" content="Fast, professional locksmith services in Novi Sad. 5.0-star rated. Call 060 6533421.">
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="https://hercekspres.rs">
+ <meta property="og:locale" content="en_US">
+ <style>
+ *, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+
+ body {
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+ background-color: #f8f9fa;
+ color: #1a1a1a;
+ line-height: 1.5;
+ -webkit-font-smoothing: antialiased;
+ }
+
+ .container {
+ max-width: 1120px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+
+ /* -------- HERO -------- */
+ .hero {
+ background: #0d2b3e;
+ background-image: radial-gradient(circle at 10% 20%, #1a4b63, #0a1e2b);
+ color: #ffffff;
+ padding: 90px 0 80px;
+ position: relative;
+ overflow: hidden;
+ }
+
+ .hero::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ height: 80px;
+ background: linear-gradient(to top, #f8f9fa, transparent);
+ pointer-events: none;
+ }
+
+ .hero .container {
+ position: relative;
+ z-index: 2;
+ }
+
+ .hero-badge {
+ display: inline-block;
+ background: #f5b04144;
+ border: 1px solid #f5b04188;
+ color: #f5c542;
+ font-size: 0.85rem;
+ font-weight: 600;
+ padding: 8px 20px;
+ border-radius: 40px;
+ letter-spacing: 0.3px;
+ margin-bottom: 30px;
+ backdrop-filter: blur(2px);
+ }
+
+ .hero h1 {
+ font-size: 2.8rem;
+ font-weight: 800;
+ line-height: 1.2;
+ max-width: 850px;
+ letter-spacing: -0.02em;
+ margin-bottom: 24px;
+ }
+
+ .hero h1 span {
+ color: #f5c542;
+ }
+
+ .hero p {
+ font-size: 1.2rem;
+ max-width: 620px;
+ margin-bottom: 36px;
+ opacity: 0.9;
+ line-height: 1.6;
+ }
+
+ .hero-cta {
+ display: inline-flex;
+ align-items: center;
+ gap: 14px;
+ background: #f5c542;
+ color: #0a1e2b;
+ font-weight: 700;
+ font-size: 1.3rem;
+ padding: 18px 44px;
+ border-radius: 60px;
+ text-decoration: none;
+ transition: 0.2s ease;
+ box-shadow: 0 12px 30px -10px #00000055;
+ }
+
+ .hero-cta:hover {
+ background: #ffd75e;
+ transform: scale(1.02);
+ box-shadow: 0 18px 35px -12px #00000077;
+ }
+
+ .hero-cta svg {
+ width: 24px;
+ height: 24px;
+ fill: currentColor;
+ }
+
+ .hero-meta {
+ margin-top: 40px;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 32px;
+ font-size: 0.95rem;
+ opacity: 0.8;
+ }
+
+ .hero-meta a {
+ color: #ffffffcc;
+ text-decoration: none;
+ border-bottom: 1px solid #ffffff33;
+ transition: 0.2s;
+ }
+
+ .hero-meta a:hover {
+ color: #fff;
+ border-color: #fff;
+ }
+
+ /* -------- SECTIONS -------- */
+ section {
+ padding: 80px 0;
+ }
+
+ .section-label {
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ font-size: 0.8rem;
+ font-weight: 700;
+ color: #6c7a8a;
+ margin-bottom: 12px;
+ }
+
+ .section-title {
+ font-size: 2.2rem;
+ font-weight: 700;
+ letter-spacing: -0.02em;
+ line-height: 1.2;
+ margin-bottom: 20px;
+ color: #0d2b3e;
+ }
+
+ .section-desc {
+ font-size: 1.1rem;
+ color: #3d4f5e;
+ max-width: 680px;
+ line-height: 1.6;
+ }
+
+ /* -------- SERVICES -------- */
+ .services-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: 28px;
+ margin-top: 50px;
+ }
+
+ .service-card {
+ background: #ffffff;
+ border-radius: 24px;
+ padding: 40px 32px 36px;
+ box-shadow: 0 6px 26px rgba(0,0,0,0.04);
+ transition: 0.25s ease;
+ border: 1px solid #eef1f4;
+ }
+
+ .service-card:hover {
+ transform: translateY(-6px);
+ box-shadow: 0 16px 40px -12px rgba(0,0,0,0.12);
+ border-color: #d0d9e0;
+ }
+
+ .service-icon {
+ width: 60px;
+ height: 60px;
+ background: #0d2b3e0c;
+ border-radius: 18px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 24px;
+ }
+
+ .service-icon svg {
+ width: 32px;
+ height: 32px;
+ fill: #0d2b3e;
+ }
+
+ .service-card h3 {
+ font-size: 1.5rem;
+ font-weight: 700;
+ margin-bottom: 12px;
+ color: #0d2b3e;
+ }
+
+ .service-card p {
+ color: #3d4f5e;
+ line-height: 1.6;
+ }
+
+ .service-card .usp-tag {
+ display: inline-block;
+ background: #eaf3e8;
+ color: #1f6d3f;
+ font-weight: 600;
+ font-size: 0.75rem;
+ padding: 6px 16px;
+ border-radius: 30px;
+ margin-top: 20px;
+ letter-spacing: 0.2px;
+ }
+
+ /* -------- WHY CHOOSE US -------- */
+ .why-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+ gap: 30px;
+ margin-top: 50px;
+ }
+
+ .why-item {
+ background: #ffffff;
+ border-radius: 24px;
+ padding: 36px 28px;
+ border: 1px solid #eef1f4;
+ box-shadow: 0 4px 14px rgba(0,0,0,0.02);
+ transition: 0.2s;
+ }
+
+ .why-item:hover {
+ border-color: #cbd5e0;
+ box-shadow: 0 10px 30px -14px rgba(0,0,0,0.08);
+ }
+
+ .why-item h4 {
+ font-size: 1.3rem;
+ font-weight: 700;
+ margin-bottom: 12px;
+ color: #0d2b3e;
+ }
+
+ .why-item p {
+ color: #3d4f5e;
+ line-height: 1.6;
+ }
+
+ .rating-highlight {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ margin-bottom: 10px;
+ }
+
+ .rating-highlight .stars {
+ color: #f5b342;
+ font-size: 1.4rem;
+ letter-spacing: 2px;
+ }
+
+ .rating-highlight strong {
+ font-size: 1.8rem;
+ font-weight: 800;
+ color: #0d2b3e;
+ }
+
+ /* -------- REVIEWS -------- */
+ .reviews-summary {
+ background: #ffffff;
+ border-radius: 28px;
+ padding: 48px 40px;
+ box-shadow: 0 6px 28px rgba(0,0,0,0.03);
+ border: 1px solid #eef1f4;
+ margin-top: 40px;
+ }
+
+ .review-tagline {
+ font-size: 1.6rem;
+ font-weight: 700;
+ margin-bottom: 18px;
+ color: #0d2b3e;
+ }
+
+ .review-themes {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 16px;
+ margin: 24px 0 18px;
+ }
+
+ .review-theme {
+ background: #e3f0f7;
+ color: #0f4b66;
+ padding: 10px 24px;
+ border-radius: 40px;
+ font-weight: 600;
+ font-size: 0.95rem;
+ }
+
+ .review-quote {
+ border-left: 4px solid #f5c542;
+ padding-left: 24px;
+ font-style: italic;
+ color: #2a4050;
+ font-size: 1.1rem;
+ line-height: 1.7;
+ margin: 28px 0 10px;
+ }
+
+ .review-source {
+ font-size: 0.9rem;
+ color: #6c7a8a;
+ }
+
+ /* -------- CONTACT -------- */
+ .contact-section {
+ background: #0d2b3e;
+ color: #ffffff;
+ }
+
+ .contact-section .section-title {
+ color: #ffffff;
+ }
+
+ .contact-section .section-desc {
+ color: #cbdbeb;
+ }
+
+ .contact-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 32px;
+ margin-top: 44px;
+ }
+
+ .contact-item {
+ background: #ffffff0c;
+ border: 1px solid #ffffff1a;
+ border-radius: 20px;
+ padding: 28px 24px;
+ backdrop-filter: blur(4px);
+ }
+
+ .contact-item .label {
+ font-size: 0.75rem;
+ text-transform: uppercase;
+ letter-spacing: 1.5px;
+ color: #b0c8dd;
+ margin-bottom: 8px;
+ }
+
+ .contact-item a {
+ color: #f5c542;
+ font-size: 1.2rem;
+ font-weight: 600;
+ text-decoration: none;
+ display: block;
+ transition: 0.2s;
+ }
+
+ .contact-item a:hover {
+ color: #ffe180;
+ }
+
+ .contact-item .value {
+ font-size: 1.1rem;
+ line-height: 1.5;
+ }
+
+ .contact-cta-mobile {
+ display: block;
+ background: #f5c542;
+ color: #0a1e2b;
+ font-weight: 700;
+ font-size: 1.4rem;
+ padding: 20px 30px;
+ text-align: center;
+ border-radius: 60px;
+ text-decoration: none;
+ margin-top: 40px;
+ transition: 0.2s;
+ box-shadow: 0 12px 35px -10px #00000044;
+ }
+
+ .contact-cta-mobile:hover {
+ background: #ffd75e;
+ transform: scale(1.01);
+ }
+
+ /* -------- FOOTER -------- */
+ .footer {
+ background: #05141d;
+ color: #8fa9bc;
+ text-align: center;
+ padding: 30px 20px;
+ font-size: 0.9rem;
+ border-top: 1px solid #1f3543;
+ }
+
+ .footer a {
+ color: #f5c542;
+ text-decoration: none;
+ }
+
+ /* -------- RESPONSIVE -------- */
+ @media (max-width: 768px) {
+ .hero {
+ padding: 64px 0 60px;
+ }
+
+ .hero h1 {
+ font-size: 2.1rem;
+ }
+
+ .hero p {
+ font-size: 1.05rem;
+ }
+
+ .hero-cta {
+ font-size: 1.1rem;
+ padding: 16px 34px;
+ width: 100%;
+ justify-content: center;
+ }
+
+ .hero-meta {
+ flex-direction: column;
+ gap: 12px;
+ }
+
+ .section-title {
+ font-size: 1.8rem;
+ }
+
+ section {
+ padding: 60px 0;
+ }
+
+ .reviews-summary {
+ padding: 32px 24px;
+ }
+
+ .review-tagline {
+ font-size: 1.3rem;
+ }
+ }
+
+ @media (max-width: 480px) {
+ .hero h1 {
+ font-size: 1.8rem;
+ }
+
+ .service-card {
+ padding: 30px 24px;
+ }
+
+ .why-item {
+ padding: 28px 20px;
+ }
+
+ .contact-item a {
+ font-size: 1rem;
+ }
+ }
+
+ /* utilities */
+ .text-center {
+ text-align: center;
+ }
+
+ .mt-20 {
+ margin-top: 20px;
+ }
+
+ .mb-10 {
+ margin-bottom: 10px;
+ }
+ </style>
 </head>
 <body>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-badge">★ 5.0 Rating · Trusted in Novi Sad</div>
-            <h1>Your Key Is Our <span>Priority</span> — Professional Locksmith, Fast & Reliable</h1>
-            <p>Herc Ekspres delivers professional locksmith services in Novi Sad with exceptional 5.0-star reviews. We show up fast, work clean, and solve your lock issues with care.</p>
-            <a href="tel:0606533421" class="hero-cta">
-                <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.32.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.21z"/></svg>
-                Call Now 060 6533421
-            </a>
-            <div class="hero-meta">
-                <span>📍 Ćirpanova 6, Novi Sad</span>
-                <a href="mailto:hercekspres@gmail.com">✉ hercekspres@gmail.com</a>
-                <span>⚡ Service within 30–60 min</span>
-            </div>
-        </div>
-    </header>
+ <!-- HERO -->
+ <header class="hero">
+ <div class="container">
+ <div class="hero-badge">★ 5.0 Rating · Trusted in Novi Sad</div>
+ <h1>Your Key Is Our <span>Priority</span> — Professional Locksmith, Fast & Reliable</h1>
+ <p>Herc Ekspres delivers professional locksmith services in Novi Sad with exceptional 5.0-star reviews. We show up fast, work clean, and solve your lock issues with care.</p>
+ <a href="tel:0606533421" class="hero-cta">
+ <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.09 15.09 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.32.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.21z"/></svg>
+ Call Now 060 6533421
+ </a>
+ <div class="hero-meta">
+ <span>📍 Ćirpanova 6, Novi Sad</span>
+ <a href="mailto:hercekspres@gmail.com">✉ hercekspres@gmail.com</a>
+ <span>⚡ Service within 30–60 min</span>
+ </div>
+ </div>
+ </header>
 
-    <!-- SERVICES -->
-    <section id="services">
-        <div class="container">
-            <div class="section-label">What We Do</div>
-            <h2 class="section-title">Professional Locksmith Services — Novi Sad & Surroundings</h2>
-            <p class="section-desc">Every job is handled with precision, transparency, and respect for your property. From emergency lockouts to key duplication, we’ve got you covered.</p>
+ <!-- SERVICES -->
+ <section id="services">
+ <div class="container">
+ <div class="section-label">What We Do</div>
+ <h2 class="section-title">Professional Locksmith Services — Novi Sad & Surroundings</h2>
+ <p class="section-desc">Every job is handled with precision, transparency, and respect for your property. From emergency lockouts to key duplication, we’ve got you covered.</p>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9v2c0 .55.45 1 1 1s1-.45 1-1V9c0-2.76 2.24-5 5-5s5 2.24 5 5v2c0 .55.45 1 1 1s1-.45 1-1V9c0-3.87-3.13-7-7-7z"/><path d="M7 11v2c0 2.76 2.24 5 5 5s5-2.24 5-5v-2H7z"/><path d="M12 15c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
-                    </div>
-                    <h3>Emergency Lockout</h3>
-                    <p>Locked out of your home, car, or office? We respond quickly, open doors without damage, and get you back inside — stress-free.</p>
-                    <span class="usp-tag">⭐ 5.0 Rated</span>
-                </div>
+ <div class="services-grid">
+ <div class="service-card">
+ <div class="service-icon">
+ <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9v2c0 .55.45 1 1 1s1-.45 1-1V9c0-2.76 2.24-5 5-5s5 2.24 5 5v2c0 .55.45 1 1 1s1-.45 1-1V9c0-3.87-3.13-7-7-7z"/><path d="M7 11v2c0 2.76 2.24 5 5 5s5-2.24 5-5v-2H7z"/><path d="M12 15c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+ </div>
+ <h3>Emergency Lockout</h3>
+ <p>Locked out of your home, car, or office? We respond quickly, open doors without damage, and get you back inside — stress-free.</p>
+ <span class="usp-tag">⭐ 5.0 Rated</span>
+ </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 14H4V8h16v10z"/><path d="M7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
-                    </div>
-                    <h3>Key Duplication & Programming</h3>
-                    <p>We copy standard keys, high-security keys, and program transponder keys for modern vehicles. Precision cuts, reliable results.</p>
-                    <span class="usp-tag">🔑 Fast turnaround</span>
-                </div>
+ <div class="service-card">
+ <div class="service-icon">
+ <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 14H4V8h16v10z"/><path d="M7 12h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+ </div>
+ <h3>Key Duplication & Programming</h3>
+ <p>We copy standard keys, high-security keys, and program transponder keys for modern vehicles. Precision cuts, reliable results.</p>
+ <span class="usp-tag">🔑 Fast turnaround</span>
+ </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm0 16H5V5h14v14z"/><path d="M12 7v10M7 12h10"/></svg>
-                    </div>
-                    <h3>Lock Repair & Replacement</h3>
-                    <p>Faulty locks, broken keys, worn mechanisms — we repair or replace with high-quality hardware. Security is non-negotiable.</p>
-                    <span class="usp-tag">🛡️ Security first</span>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="service-card">
+ <div class="service-icon">
+ <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm0 16H5V5h14v14z"/><path d="M12 7v10M7 12h10"/></svg>
+ </div>
+ <h3>Lock Repair & Replacement</h3>
+ <p>Faulty locks, broken keys, worn mechanisms — we repair or replace with high-quality hardware. Security is non-negotiable.</p>
+ <span class="usp-tag">🛡️ Security first</span>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- WHY CHOOSE US -->
-    <section style="background: #f2f5f8;">
-        <div class="container">
-            <div class="section-label">Why Herc Ekspres</div>
-            <h2 class="section-title">Trusted by Locals — Professional, Reliable, 5.0 ★</h2>
-            <p class="section-desc">We don’t just open locks — we build trust. Every call is answered with skill, honesty, and a smile.</p>
+ <!-- WHY CHOOSE US -->
+ <section style="background: #f2f5f8;">
+ <div class="container">
+ <div class="section-label">Why Herc Ekspres</div>
+ <h2 class="section-title">Trusted by Locals — Professional, Reliable, 5.0 ★</h2>
+ <p class="section-desc">We don’t just open locks — we build trust. Every call is answered with skill, honesty, and a smile.</p>
 
-            <div class="why-grid">
-                <div class="why-item">
-                    <div class="rating-highlight">
-                        <span class="stars">★★★★★</span>
-                        <strong>5.0</strong>
-                    </div>
-                    <h4>Exceptional Customer Rating</h4>
-                    <p>Our 5.0-star rating reflects real experiences from real people in Novi Sad. We treat every job like it's our own home.</p>
-                </div>
-                <div class="why-item">
-                    <h4>Professional & Reliable</h4>
-                    <p>We arrive on time, work cleanly, and communicate clearly. No hidden fees, no guesswork — just dependable locksmith service.</p>
-                </div>
-                <div class="why-item">
-                    <h4>Fast Response in Novi Sad</h4>
-                    <p>Based in Ćirpanova 6, we serve all of Novi Sad and surrounding areas. Most calls answered within 30 minutes.</p>
-                </div>
-                <div class="why-item">
-                    <h4>Transparent Pricing</h4>
-                    <p>You'll know the cost before any work begins. No surprises, no inflated charges. Fair rates for top-quality service.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <div class="why-grid">
+ <div class="why-item">
+ <div class="rating-highlight">
+ <span class="stars">★★★★★</span>
+ <strong>5.0</strong>
+ </div>
+ <h4>Exceptional Customer Rating</h4>
+ <p>Our 5.0-star rating reflects real experiences from real people in Novi Sad. We treat every job like it's our own home.</p>
+ </div>
+ <div class="why-item">
+ <h4>Professional & Reliable</h4>
+ <p>We arrive on time, work cleanly, and communicate clearly. No hidden fees, no guesswork — just dependable locksmith service.</p>
+ </div>
+ <div class="why-item">
+ <h4>Fast Response in Novi Sad</h4>
+ <p>Based in Ćirpanova 6, we serve all of Novi Sad and surrounding areas. Most calls answered within 30 minutes.</p>
+ </div>
+ <div class="why-item">
+ <h4>Transparent Pricing</h4>
+ <p>You'll know the cost before any work begins. No surprises, no inflated charges. Fair rates for top-quality service.</p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- REVIEWS -->
-    <section id="reviews">
-        <div class="container">
-            <div class="section-label">What Clients Say</div>
-            <h2 class="section-title">Real Feedback from Real People</h2>
-            <p class="section-desc">The words that come back most often: <strong>professional, recommend, helpful</strong>. Here's what that looks like.</p>
+ <!-- REVIEWS -->
+ <section id="reviews">
+ <div class="container">
+ <div class="section-label">What Clients Say</div>
+ <h2 class="section-title">Real Feedback from Real People</h2>
+ <p class="section-desc">The words that come back most often: <strong>professional, recommend, helpful</strong>. Here's what that looks like.</p>
 
-            <div class="reviews-summary">
-                <div class="review-tagline">“Professional, Recommend, Helpful”</div>
-                <div class="rating-highlight">
-                    <span class="stars">★★★★★</span>
-                    <strong>5.0</strong>
-                    <span style="color:#3d4f5e; font-size:0.95rem;">average rating</span>
-                </div>
-                <div class="review-themes">
-                    <span class="review-theme">Professional</span>
-                    <span class="review-theme">Recommend</span>
-                    <span class="review-theme">Helpful</span>
-                    <span class="review-theme">Fast response</span>
-                    <span class="review-theme">Reliable</span>
-                </div>
-                <div class="review-quote">
-                    "They arrived within 20 minutes, fixed my lock quickly, and charged a fair price. Exactly the kind of professional service you hope for. Highly recommend Herc Ekspres!"
-                </div>
-                <div class="review-source">— Verified client, Novi Sad</div>
-            </div>
-        </div>
-    </section>
+ <div class="reviews-summary">
+ <div class="review-tagline">“Professional, Recommend, Helpful”</div>
+ <div class="rating-highlight">
+ <span class="stars">★★★★★</span>
+ <strong>5.0</strong>
+ <span style="color:#3d4f5e; font-size:0.95rem;">average rating</span>
+ </div>
+ <div class="review-themes">
+ <span class="review-theme">Professional</span>
+ <span class="review-theme">Recommend</span>
+ <span class="review-theme">Helpful</span>
+ <span class="review-theme">Fast response</span>
+ <span class="review-theme">Reliable</span>
+ </div>
+ <div class="review-quote">
+ "They arrived within 20 minutes, fixed my lock quickly, and charged a fair price. Exactly the kind of professional service you hope for. Highly recommend Herc Ekspres!"
+ </div>
+ <div class="review-source">— Verified client, Novi Sad</div>
+ </div>
+ </div>
+ </section>
 
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="section-label" style="color: #b0c8dd;">Get In Touch</div>
-            <h2 class="section-title">Ready to Help — Call or Message</h2>
-            <p class="section-desc">Locked out, broken key, need a duplicate? Reach out now. We're here for you.</p>
+ <!-- CONTACT -->
+ <section class="contact-section" id="contact">
+ <div class="container">
+ <div class="section-label" style="color: #b0c8dd;">Get In Touch</div>
+ <h2 class="section-title">Ready to Help — Call or Message</h2>
+ <p class="section-desc">Locked out, broken key, need a duplicate? Reach out now. We're here for you.</p>
 
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="label">Phone</div>
-                    <a href="tel:0606533421">060 6533421</a>
-                    <div class="value" style="color:#cbdbeb; margin-top:6px;">Available 7 days a week</div>
-                </div>
-                <div class="contact-item">
-                    <div class="label">Email</div>
-                    <a href="mailto:hercekspres@gmail.com">hercekspres@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <div class="label">Address</div>
-                    <div class="value" style="color:#ffffff;">Ćirpanova 6, Novi Sad 21000, Serbia</div>
-                </div>
-            </div>
+ <div class="contact-grid">
+ <div class="contact-item">
+ <div class="label">Phone</div>
+ <a href="tel:0606533421">060 6533421</a>
+ <div class="value" style="color:#cbdbeb; margin-top:6px;">Available 7 days a week</div>
+ </div>
+ <div class="contact-item">
+ <div class="label">Email</div>
+ <a href="mailto:hercekspres@gmail.com">hercekspres@gmail.com</a>
+ </div>
+ <div class="contact-item">
+ <div class="label">Address</div>
+ <div class="value" style="color:#ffffff;">Ćirpanova 6, Novi Sad 21000, Serbia</div>
+ </div>
+ </div>
 
-            <a href="tel:0606533421" class="contact-cta-mobile">
-                📞 Call Now — 060 6533421
-            </a>
-        </div>
-    </section>
+ <a href="tel:0606533421" class="contact-cta-mobile">
+ 📞 Call Now — 060 6533421
+ </a>
+ </div>
+ </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Herc Ekspres · Locksmith Novi Sad · <a href="tel:0606533421">060 6533421</a> · <a href="mailto:hercekspres@gmail.com">hercekspres@gmail.com</a></p>
-        </div>
-    </footer>
+ <footer class="footer">
+ <div class="container">
+ <p>&copy; 2025 Herc Ekspres · Locksmith Novi Sad · <a href="tel:0606533421">060 6533421</a> · <a href="mailto:hercekspres@gmail.com">hercekspres@gmail.com</a></p>
+ </div>
+ </footer>
 
-    <!-- JS: smooth scroll for CTA (no external) -->
-    <script>
-        (function() {
-            // Ensure all phone links work on mobile — no extra logic needed
-            // smooth anchor if any internal links added later
-            console.log('Herc Ekspres — Professional Locksmith Novi Sad');
-        })();
-    </script>
+ <!-- JS: smooth scroll for CTA (no external) -->
+ <script>
+ (function {
+ // Ensure all phone links work on mobile — no extra logic needed
+ // smooth anchor if any internal links added later
+ console.log('Herc Ekspres — Professional Locksmith Novi Sad');
+ });
+ </script>
 </body>
 </html>
