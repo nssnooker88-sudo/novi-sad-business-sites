@@ -19,11 +19,11 @@ OUTPUT_DIR = os.path.join(ROOT, "emails")
 BASE_URL = "https://nssnooker88-sudo.github.io/novi-sad-business-sites"
 
 DREAMTIM = {
-    "company": "DreamTim",
+    "company": "drimtim",
     "tagline": "Digital solutions for your business",
-    "email": "info@dreamtim.rs",
+    "email": "info@drimtim.rs",
     "phone": "+381 6X XXX XXXX",
-    "website": "https://dreamtim.rs",
+    "website": "https://drimtim.rs",
 }
 
 TEMPLATES = {
