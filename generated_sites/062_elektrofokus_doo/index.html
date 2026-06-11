@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Elektrofokus d.o.o | Electrician Novi Sad – 5.0 rated pro service</title>
+  <meta name="description" content="Elektrofokus d.o.o – professional electrician in Novi Sad, Serbia. 5.0-star rating, fast & efficient service. Call now for reliable electrical work.">
+  <meta property="og:title" content="Elektrofokus d.o.o | Electrician Novi Sad">
+  <meta property="og:description" content="Exceptional 5.0-star electrician service in Novi Sad. Fast, efficient, professional. Call now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elektrofokus.rs">
+  <meta property="og:locale" content="en_RS">
+  <meta name="keywords" content="Elektrofokus d.o.o, Electrician Novi Sad, Electrician electrician, best electrician in Novi Sad, electrician services Serbia, professional electrician">
+  <style>
+    /* ----- RESET / BASE ----- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #faf9f8;
+      color: #1e1e1e;
+      line-height: 1.5;
+    }
+    img, svg { display: block; max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    section {
+      padding: 5rem 0;
+    }
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #7c6f64;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 650;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #3d3a36;
+      max-width: 68ch;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #1e1e1e;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.9rem 2.2rem;
+      border-radius: 48px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+      letter-spacing: -0.01em;
+    }
+    .btn:hover { background: #3b3b3b; transform: scale(1.02); }
+    .btn:active { transform: scale(0.98); }
+    .btn--outline {
+      background: transparent;
+      border: 1.5px solid #1e1e1e;
+      color: #1e1e1e;
+      box-shadow: none;
+    }
+    .btn--outline:hover { background: #f0efed; }
+
+    /* ----- UTILITY ----- */
+    .text-center { text-align: center; }
+    .mt-1 { margin-top: 1rem; }
+    .mt-2 { margin-top: 2rem; }
+    .mb-1 { margin-bottom: 1rem; }
+    .gap-1 { gap: 1rem; }
+
+    /* ----- HEADER / NAV (minimal) ----- */
+    .top-bar {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e4e0da;
+      background: #fff;
+    }
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .brand {
+      font-weight: 650;
+      font-size: 1.3rem;
+      letter-spacing: -0.03em;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .brand span { color: #7c6f64; font-weight: 400; }
+    .top-contact {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+    .top-contact a { transition: color 0.2s; }
+    .top-contact a:hover { color: #4f4b46; }
+    .top-contact .phone-link {
+      font-weight: 600;
+      background: #f0efed;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+    }
+
+    /* ----- HERO ----- */
+    .hero {
+      background: #ffffff;
+      padding: 5rem 0 4rem;
+      border-bottom: 1px solid #e8e5e0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 span { color: #7c6f64; }
+    .hero-text {
+      font-size: 1.25rem;
+      color: #4a4640;
+      max-width: 32rem;
+      margin-bottom: 2rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      background: #f0efed;
+      padding: 0.4rem 1.2rem 0.4rem 1rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      gap: 0.5rem;
+    }
+    .hero-badge svg { width: 20px; height: 20px; fill: #1e1e1e; }
+    .hero-image {
+      background: #eceae6;
+      border-radius: 32px;
+      min-height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #5e554a;
+      font-weight: 500;
+      padding: 2rem;
+      background-image: radial-gradient(circle at 20% 30%, #ddd8d0 0%, transparent 60%);
+    }
+
+    /* ----- SERVICES ----- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+      margin-top: 2.5rem;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 28px;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      border: 1px solid #eeebe7;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .service-card:hover { box-shadow: 0 12px 28px rgba(0,0,0,0.04); transform: translateY(-3px); }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      background: #f0efed;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .service-icon svg { width: 28px; height: 28px; stroke: #1e1e1e; stroke-width: 1.2; fill: none; }
+    .service-card h3 {
+      font-size: 1.5rem;
+      font-weight: 640;
+      margin-bottom: 0.6rem;
+    }
+    .service-card p {
+      font-size: 0.95rem;
+      color: #4f4b46;
+    }
+
+    /* ----- WHY CHOOSE US (USP) ----- */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+    .usp-item {
+      background: #fff;
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      border: 1px solid #eeebe7;
+      text-align: center;
+    }
+    .usp-item strong {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 650;
+      line-height: 1.2;
+      margin-bottom: 0.3rem;
+      color: #1e1e1e;
+    }
+    .usp-item .usp-label {
+      font-size: 0.95rem;
+      color: #4f4b46;
+    }
+    .usp-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* ----- REVIEWS ----- */
+    .reviews-summary {
+      background: #fff;
+      border-radius: 32px;
+      padding: 2.5rem 2rem;
+      border: 1px solid #eeebe7;
+      margin-top: 2rem;
+    }
+    .review-stars {
+      display: flex;
+      gap: 0.3rem;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      color: #c7a35c;
+      margin-bottom: 0.5rem;
+    }
+    .review-score {
+      font-weight: 650;
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+    .review-meta {
+      color: #4f4b46;
+      font-size: 1rem;
+    }
+    .review-theme {
+      margin-top: 1.2rem;
+      padding: 1.2rem 0 0 0;
+      border-top: 1px solid #eceae6;
+      font-size: 1.1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 2rem;
+    }
+    .review-theme span {
+      background: #f4f2ef;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+    }
+
+    /* ----- CONTACT ----- */
+    .contact-section {
+      background: #1e1e1e;
+      color: #f0efed;
+      border-radius: 48px 48px 0 0;
+      padding: 4.5rem 0;
+      margin-top: 2rem;
+    }
+    .contact-section .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .contact-section h2 { color: #fff; }
+    .contact-section p { color: #cfcac4; }
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: 1.2rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contact-item svg {
+      width: 26px;
+      height: 26px;
+      stroke: #f0efed;
+      fill: none;
+      stroke-width: 1.8;
+    }
+    .contact-item a { color: #f0efed; transition: opacity 0.2s; }
+    .contact-item a:hover { opacity: 0.75; }
+    .contact-cta {
+      margin-top: 1.5rem;
+    }
+    .contact-cta .btn {
+      background: #fff;
+      color: #1e1e1e;
+      font-size: 1.2rem;
+      padding: 1rem 2.5rem;
+    }
+    .contact-cta .btn:hover { background: #eceae6; }
+
+    /* ----- FOOTER ----- */
+    footer {
+      background: #1e1e1e;
+      color: #9f978d;
+      padding: 1.5rem 0;
+      border-top: 1px solid #2f2b26;
+      font-size: 0.9rem;
+    }
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    /* ----- RESPONSIVE (mobile-first) ----- */
+    @media (min-width: 680px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; }
+      .hero h1 { font-size: 3.2rem; }
+      .contact-section .container { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 960px) {
+      section { padding: 6rem 0; }
+      .hero { padding: 5rem 0; }
+      .hero h1 { font-size: 3.8rem; }
+    }
+    @media (max-width: 500px) {
+      .top-contact { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .brand { font-size: 1.1rem; }
+      .hero h1 { font-size: 2.2rem; }
+      .btn { width: 100%; justify-content: center; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="top-bar">
+    <div class="container">
+      <div class="brand">Elektrofokus <span>d.o.o</span></div>
+      <div class="top-contact">
+        <a href="mailto:office.elektrofokus@gmail.com">office.elektrofokus@gmail.com</a>
+        <a href="tel:+381" class="phone-link">Call now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="section-label">Electrician · Novi Sad</div>
+        <h1>Fast, 5.0‑star electrical service<br><span>trusted in Novi Sad</span></h1>
+        <p class="hero-text">Professional electrician – from minor fixes to full installations. Rated exceptional by your neighbours.</p>
+        <div class="hero-actions">
+          <a href="tel:+381" class="btn">📞 Call Now</a>
+          <div class="hero-badge">
+            <svg viewBox="0 0 20 20"><path d="M10 1l2.5 5.1 5.6.8-4 3.9.9 5.6L10 14l-5 2.6.9-5.6-4-3.9 5.6-.8L10 1z"/></svg>
+            5.0 ★ &nbsp; exceptional
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <span style="font-size: 1.2rem; background: rgba(255,255,255,0.6); padding: 0.5rem 1.2rem; border-radius: 60px;">⚡ trusted electrician</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-label">Services</div>
+      <h2>Professional electrician services</h2>
+      <p>Every job, big or small, handled with precision and speed. One focus: reliable electrical work.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg>
+          </div>
+          <h3>Electrical repairs</h3>
+          <p>Faulty outlets, switches, breakers – diagnosed and fixed fast. Same‑day service in Novi Sad.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Wiring & installation</h3>
+          <p>Lighting, fans, new circuits, and full rewiring. Clean work, up to code, done efficiently.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg>
+          </div>
+          <h3>Safety & inspection</h3>
+          <p>Panel upgrades, grounding checks, and safety inspections. Keep your home or office protected.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Emergency call‑out</h3>
+          <p>Power outage? Sparking outlet? Fast response – same reliability, even when it’s urgent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US (USP) -->
+  <section id="why-choose-us">
+    <div class="container">
+      <div class="section-label">Why choose us</div>
+      <h2>Straightforward, reliable, <br>5.0‑star electrician</h2>
+      <div class="why-grid">
+        <div class="usp-item">
+          <div class="usp-icon">⭐</div>
+          <strong>5.0</strong>
+          <span class="usp-label">Exceptional customer rating</span>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">⚡</div>
+          <strong>Fast</strong>
+          <span class="usp-label">Efficient service – same‑day when possible</span>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">🔧</div>
+          <strong>Professional</strong>
+          <span class="usp-label">Licensed, insured, clean work</span>
+        </div>
+        <div class="usp-item">
+          <div class="usp-icon">📍</div>
+          <strong>Local</strong>
+          <span class="usp-label">Novi Sad & surrounding area</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews">
+    <div class="container">
+      <div class="section-label">Customer reviews</div>
+      <h2>What clients say</h2>
+      <div class="reviews-summary">
+        <div class="review-stars">★★★★★</div>
+        <div class="review-score">5.0 / 5.0</div>
+        <div class="review-meta">Based on verified reviews · “Fast” is the most repeated word</div>
+        <div class="review-theme">
+          <span>⚡ Fast service</span>
+          <span>👍 Professional</span>
+          <span>💡 Fair pricing</span>
+          <span>🔌 Reliable</span>
+        </div>
+        <p style="margin-top: 1.4rem; font-style: italic; color: #3d3a36;">“Fast, efficient, and honest. Exactly what you want in an electrician.” — recurring feedback</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div>
+        <div class="section-label" style="color: #9f978d;">Contact</div>
+        <h2>Call us – we’ll be there</h2>
+        <p style="color: #cfcac4;">No voicemail loops. Real electrician, real fast.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+381">+381 (021)  — call now</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:office.elektrofokus@gmail.com">office.elektrofokus@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Miše Dimitrijevića 42, 21000 Novi Sad, Serbia</span>
+          </div>
+        </div>
+        <div class="contact-cta">
+          <a href="tel:+381" class="btn">📞 Call Now – fast service</a>
+        </div>
+      </div>
+      <div style="background: #2b2723; border-radius: 32px; min-height: 200px; display: flex; align-items: center; justify-content: center; color: #7c6f64; padding: 2rem; text-align: center;">
+        <span style="background: #1e1e1e; padding: 0.5rem 1.5rem; border-radius: 60px;">📍 Novi Sad · service area</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <span>© 2025 Elektrofokus d.o.o – electrician Novi Sad</span>
+      <span>⚡ 5.0‑star · fast & professional</span>
+    </div>
+  </footer>
+
+  <!-- inline JS (minimal, for smooth scroll or future enhancements) -->
+  <script>
+    (function() {
+      // any future interactive enhancement (none required now)
+      console.log('Elektrofokus d.o.o – fast electrician Novi Sad');
+    })();
+  </script>
+
+</body>
+</html>

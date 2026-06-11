@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Bite House | Restaurant Novi Sad | Best lunch in town</title>
+    <meta name="description" content="Bite House – affordable, friendly lunch spot in Novi Sad. 4.7★ from 159+ clients. Call now for a great meal at Slovačka.">
+    <meta property="og:title" content="Bite House – best restaurant in Novi Sad">
+    <meta property="og:description" content="Friendly, Recommend, Great, Affordable – 4.7★ from 159+ guests. Lunch at Slovačka, Novi Sad. Call 060 6087870.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thebitehouse.com">
+    <meta property="og:locale" content="en_RS">
+    <meta name="keywords" content="Bite House, Restaurant Novi Sad, best restaurant in Novi Sad, restaurant services Serbia, professional restaurant">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fcf8f3;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #2d2a24;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* spacing */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 650;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #1f1c17;
+        }
+
+        .section-sub {
+            font-size: 1.125rem;
+            color: #5a534a;
+            max-width: 640px;
+            margin-bottom: 2.8rem;
+        }
+
+        /* --- header / nav minimal --- */
+        .nav-bar {
+            padding: 1.2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #b45f3a;
+        }
+
+        .logo span {
+            color: #2d2a24;
+            font-weight: 350;
+        }
+
+        .nav-cta-mobile {
+            background: #b45f3a;
+            color: white;
+            padding: 0.6rem 1.6rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 0.2s;
+            display: inline-block;
+        }
+
+        .nav-cta-mobile:hover {
+            background: #9c4f2e;
+        }
+
+        /* --- hero --- */
+        .hero {
+            padding: 3rem 0 5rem;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            max-width: 850px;
+            color: #1f1c17;
+        }
+
+        .hero h1 .accent {
+            color: #b45f3a;
+            border-bottom: 4px solid #f0d9c8;
+            display: inline-block;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #4d453d;
+            max-width: 600px;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 2.2rem;
+            align-items: center;
+        }
+
+        .btn-call {
+            background: #b45f3a;
+            color: white;
+            padding: 1rem 2.8rem;
+            border-radius: 60px;
+            font-weight: 650;
+            font-size: 1.35rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            box-shadow: 0 12px 20px -12px rgba(180, 95, 58, 0.35);
+            transition: background 0.2s, transform 0.1s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-call:hover {
+            background: #9c4f2e;
+            transform: scale(1.02);
+        }
+
+        .hero-badge {
+            background: #ede7df;
+            padding: 0.5rem 1.4rem;
+            border-radius: 40px;
+            font-weight: 500;
+            color: #2d2a24;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .hero-badge strong {
+            color: #b45f3a;
+        }
+
+        /* --- services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2.2rem 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f0e8de;
+            transition: box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-icon {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            color: #5a534a;
+            font-size: 1.1rem;
+        }
+
+        .service-tag {
+            display: inline-block;
+            background: #f3ede6;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 1.2rem;
+            color: #4d453d;
+        }
+
+        /* --- why choose us --- */
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            margin-top: 1rem;
+        }
+
+        .why-item {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem 2rem;
+            border-left: 6px solid #b45f3a;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        .why-item .stat {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #b45f3a;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .why-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .why-item p {
+            color: #5a534a;
+            font-size: 1.05rem;
+        }
+
+        /* --- reviews --- */
+        .review-summary {
+            background: white;
+            border-radius: 32px;
+            padding: 2.5rem 2.2rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+            border: 1px solid #ede7df;
+        }
+
+        .review-stars {
+            font-size: 2rem;
+            letter-spacing: 4px;
+            color: #e5a93d;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1f1c17;
+            line-height: 1;
+        }
+
+        .review-number sup {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #5a534a;
+        }
+
+        .review-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.2rem 0 1rem;
+        }
+
+        .review-tag {
+            background: #f3ede6;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .review-quote {
+            font-size: 1.2rem;
+            color: #3d3730;
+            border-top: 1px solid #e6ddd2;
+            padding-top: 1.5rem;
+            margin-top: 0.8rem;
+            font-style: italic;
+        }
+
+        .review-quote strong {
+            font-style: normal;
+            color: #b45f3a;
+        }
+
+        /* --- contact --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            background: white;
+            border-radius: 32px;
+            padding: 2.8rem 2.2rem;
+            border: 1px solid #ede7df;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-item a {
+            color: #2d2a24;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border 0.15s;
+        }
+
+        .contact-item a:hover {
+            border-bottom: 1px solid #b45f3a;
+        }
+
+        .contact-icon {
+            background: #f3ede6;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            color: #b45f3a;
+            flex-shrink: 0;
+        }
+
+        .contact-address {
+            color: #4d453d;
+            font-weight: 400;
+        }
+
+        .contact-spacer {
+            margin: 0.6rem 0;
+        }
+
+        /* --- footer --- */
+        .footer {
+            padding: 2rem 0 3rem;
+            color: #5a534a;
+            border-top: 1px solid #e6ddd2;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        /* --- responsive --- */
+        @media (min-width: 640px) {
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero h1 {
+                font-size: 4rem;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .hero-grid {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .hero-text {
+                flex: 2;
+            }
+            .hero-badge-wrap {
+                flex: 1;
+                text-align: right;
+            }
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .why-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .contact-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+                align-items: start;
+            }
+            .section-title {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            .btn-call {
+                font-size: 1.2rem;
+                padding: 0.9rem 2rem;
+                width: 100%;
+                justify-content: center;
+            }
+            .nav-cta-mobile {
+                font-size: 0.9rem;
+                padding: 0.4rem 1.2rem;
+            }
+        }
+
+        /* utilities */
+        .mt-1 { margin-top: 1rem; }
+        .mb-0 { margin-bottom: 0; }
+        .text-muted { color: #5a534a; }
+        .inline-flex { display: inline-flex; align-items: center; gap: 0.3rem; }
+        .gap-2 { gap: 0.8rem; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- simple nav -->
+    <nav class="nav-bar">
+        <div class="logo">Bite<span>House</span></div>
+        <a href="tel:0606087870" class="nav-cta-mobile">Call 060 6087870</a>
+    </nav>
+</div>
+
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>Lunch that <span class="accent">hits different</span><br> at Bite House</h1>
+                    <p>Friendly, affordable, and genuinely great — lunch in Novi Sad, right on Slovačka. 4.7★ from 159+ guests.</p>
+                    <div class="hero-actions">
+                        <a href="tel:0606087870" class="btn-call">📞 Call Now</a>
+                        <span class="hero-badge"><strong>4.7</strong> ★★★★★</span>
+                    </div>
+                </div>
+                <div class="hero-badge-wrap">
+                    <div style="background: #ede7df; padding: 1.2rem 1.8rem; border-radius: 32px; display: inline-block;">
+                        <div style="font-weight: 600; font-size: 1rem; color: #2d2a24;">Trusted by</div>
+                        <div style="font-size: 2.2rem; font-weight: 700; color: #b45f3a; line-height: 1.2;">159+</div>
+                        <div style="font-size: 0.9rem; color: #5a534a;">satisfied clients</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">What we serve</h2>
+            <p class="section-sub">Simple, honest lunch. No fuss, just flavour.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">🍲</span>
+                    <h3>Daily Lunch</h3>
+                    <p>Fresh, locally sourced lunch plates — from hearty classics to lighter bites. Prepared with care, served with a smile.</p>
+                    <span class="service-tag">Lunch · 11:30 – 15:00</span>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">🥗</span>
+                    <h3>Weekly specials</h3>
+                    <p>Rotating menu inspired by seasonal ingredients. Always something new, always affordable. Ask about today's offer.</p>
+                    <span class="service-tag">Chef's choice</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why">
+        <div class="container">
+            <h2 class="section-title">Why Bite House?</h2>
+            <p class="section-sub">Three reasons guests keep coming back.</p>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="stat">4.7 ★</div>
+                    <h3>Exceptional rating</h3>
+                    <p>Consistently high marks from real guests — we take pride in every plate.</p>
+                </div>
+                <div class="why-item">
+                    <div class="stat">159+</div>
+                    <h3>Trusted clients</h3>
+                    <p>From neighbours to newcomers — over 159 satisfied guests and growing.</p>
+                </div>
+                <div class="why-item">
+                    <div class="stat">€</div>
+                    <h3>Affordable pricing</h3>
+                    <p>Great lunch without stretching your budget. Quality ingredients, fair price.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+        <div class="container">
+            <h2 class="section-title">What guests say</h2>
+            <p class="section-sub">Real feedback from real people.</p>
+            <div class="review-summary">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-number">4.7 <sup>/ 5</sup></div>
+                <div class="review-tags">
+                    <span class="review-tag">Friendly</span>
+                    <span class="review-tag">Recommend</span>
+                    <span class="review-tag">Great</span>
+                    <span class="review-tag">Affordable</span>
+                </div>
+                <div class="review-quote">
+                    “<strong>Friendly</strong> service, <strong>great</strong> lunch, and really <strong>affordable</strong>. Totally <strong>recommend</strong> Bite House for anyone in Novi Sad.”
+                </div>
+                <div style="margin-top: 1.2rem; color: #5a534a; font-size: 0.95rem;">
+                    ★ based on reviews from 159+ clients
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Come find us</h2>
+            <p class="section-sub">Give us a call or stop by — we’re on Slovačka.</p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <div style="font-weight: 500;">Phone</div>
+                        <a href="tel:0606087870">060 6087870</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <div>
+                        <div style="font-weight: 500;">Email</div>
+                        <a href="mailto:eat@thebitehouse.com">eat@thebitehouse.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <div style="font-weight: 500;">Address</div>
+                        <span class="contact-address">Slovačka, Novi Sad, Serbia</span>
+                    </div>
+                </div>
+            </div>
+            <!-- extra CTA -->
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="tel:0606087870" class="btn-call" style="background: #2d2a24; box-shadow: none; font-size: 1.3rem;">📞 Call 060 6087870</a>
+                <p style="margin-top: 1rem; color: #5a534a;">We’re ready for your lunch order</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="container footer">
+    <span>© 2026 Bite House – Slovačka, Novi Sad</span>
+    <span>Friendly · Great · Affordable</span>
+</footer>
+
+<!-- minimal inline script for smooth scroll (optional) -->
+<script>
+    (function() {
+        // ensure all tel links are clickable, no extra behaviour
+        console.log('Bite House – ready');
+    })();
+</script>
+
+</body>
+</html>

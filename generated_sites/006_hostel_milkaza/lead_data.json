@@ -1,0 +1,38 @@
+{
+  "company_name": "Hostel Milkaza",
+  "category": "Bed & Breakfast",
+  "archetype": "Hospitality Provider",
+  "website_style": "cozy, welcoming, charming",
+  "website_goal": "visit_store",
+  "phone": "064 2361648",
+  "email": "hotelmilkaz@gmail.com",
+  "address": "Temerinski put 99, Novi Sad 21138, Serbia",
+  "services": [
+    "Stay",
+    "Rooms"
+  ],
+  "usp": [
+    "Trusted by over 440 satisfied clients"
+  ],
+  "review_summary": "Friendly, Recommend, Excellent, Great, Top",
+  "recommended_sections": [
+    "Hero",
+    "About",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Hostel Milkaza",
+      "Bed & Breakfast Novi Sad",
+      "Bed & Breakfast bed_and_breakfast"
+    ],
+    "secondary": [
+      "best bed & breakfast in Novi Sad",
+      "bed & breakfast services Serbia",
+      "professional bed & breakfast"
+    ]
+  }
+}

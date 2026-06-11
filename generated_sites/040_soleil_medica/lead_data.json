@@ -1,0 +1,37 @@
+{
+  "company_name": "Soleil Medica",
+  "category": "Doctor",
+  "archetype": "Healthcare Professional",
+  "website_style": "clean, professional, trustworthy",
+  "website_goal": "book_appointment",
+  "phone": "060 3019399",
+  "email": "soleilmedica@gmail.com",
+  "address": "Branka Radičevića 29, Novi Sad 21000, Serbia",
+  "services": [
+    "Treatment"
+  ],
+  "usp": [
+    "Exceptional 4.8-star rating from customers",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Kind, Recommend, Excellent, Great",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Soleil Medica",
+      "Doctor Novi Sad",
+      "Doctor doctor"
+    ],
+    "secondary": [
+      "best doctor in Novi Sad",
+      "doctor services Serbia",
+      "professional doctor"
+    ]
+  }
+}

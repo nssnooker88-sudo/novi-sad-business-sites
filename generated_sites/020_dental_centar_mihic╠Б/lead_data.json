@@ -1,0 +1,39 @@
+{
+  "company_name": "Dental Centar Mihić",
+  "category": "Medical Clinic",
+  "archetype": "Healthcare Professional",
+  "website_style": "clean, professional, modern",
+  "website_goal": "book_appointment",
+  "phone": "066 251144",
+  "email": "mmihic28@gmail.com",
+  "address": "Karađorđeva 28, Novi Sad 21000, Serbia",
+  "services": [
+    "Professional Medical Clinic Services"
+  ],
+  "usp": [
+    "Exceptional 4.9-star rating from customers",
+    "Trusted by over 65 satisfied clients",
+    "Fast and efficient service",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Friendly, Recommend, Excellent, Best",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Dental Centar Mihić",
+      "Medical Clinic Novi Sad",
+      "Medical Clinic medical_clinic"
+    ],
+    "secondary": [
+      "best medical clinic in Novi Sad",
+      "medical clinic services Serbia",
+      "professional medical clinic"
+    ]
+  }
+}

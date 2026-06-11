@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartize Company Rent A Car | Car Rental Agency Novi Sad</title>
+    <meta name="description" content="Cartize Company Rent A Car — professional car rental agency in Novi Sad, Serbia. Trusted by 56+ clients. 4.6 ★ rating. Call 065 5501332.">
+    <meta property="og:title" content="Cartize Company Rent A Car | Car Rental Agency Novi Sad">
+    <meta property="og:description" content="Professional car rental agency in Novi Sad. 4.6 ★ rating. Trusted by 56+ clients. Call 065 5501332.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cartizecompany.com">
+    <meta property="og:phone" content="065 5501332">
+    <meta name="keywords" content="Cartize Company Rent A Car, Car Rental Agency Novi Sad, best car rental agency in Novi Sad, professional car rental agency">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            font-size: 1.0625rem;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background-color: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 2.75rem;
+            letter-spacing: -0.03em;
+        }
+
+        h2 {
+            font-size: 2.125rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.375rem;
+        }
+
+        h4 {
+            font-size: 1.125rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #5b5b7a;
+            max-width: 620px;
+            margin: 0 auto 3rem auto;
+            font-size: 1.1rem;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.9rem 2.4rem;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            font-family: inherit;
+            background: none;
+        }
+
+        .btn-primary {
+            background: #1a3a5c;
+            color: #ffffff;
+            box-shadow: 0 4px 16px rgba(26, 58, 92, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #0f2a44;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(26, 58, 92, 0.35);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-outline {
+            border: 2px solid #1a3a5c;
+            color: #1a3a5c;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: #1a3a5c;
+            color: #ffffff;
+        }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f5;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.92);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #1a3a5c;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: #1a3a5c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-list a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #2d2d4a;
+            transition: color 0.2s;
+        }
+
+        .nav-list a:hover {
+            color: #1a3a5c;
+        }
+
+        .header-cta {
+            display: none;
+        }
+
+        .header-cta-mobile {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: #1a3a5c;
+            font-size: 0.95rem;
+        }
+
+        .header-cta-mobile svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 5rem 0 4.5rem 0;
+            background: linear-gradient(165deg, #f8f9fc 0%, #edf0f7 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(26, 58, 92, 0.04) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(26, 58, 92, 0.08);
+            padding: 0.4rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1a3a5c;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .hero-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #1a3a5c;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.2rem;
+            max-width: 720px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #3d3d5c;
+            max-width: 580px;
+            margin-bottom: 2.2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(26, 58, 92, 0.1);
+        }
+
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-stat-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1a3a5c;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-stat-label {
+            font-size: 0.85rem;
+            color: #5b5b7a;
+            font-weight: 500;
+        }
+
+        .hero-visual {
+            display: none;
+        }
+
+        .hero-visual-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2rem 2rem 1.8rem 2rem;
+            box-shadow: 0 20px 50px rgba(26, 58, 92, 0.08);
+            border: 1px solid #f0f0f5;
+        }
+
+        .hero-visual-card .stars {
+            display: flex;
+            gap: 0.2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-visual-card .stars svg {
+            width: 22px;
+            height: 22px;
+            fill: #f5a623;
+        }
+
+        .hero-visual-card .review-text {
+            font-size: 0.95rem;
+            color: #2d2d4a;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-visual-card .review-author {
+            font-size: 0.8rem;
+            color: #7a7a9a;
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            padding: 5.5rem 0;
+            background: #ffffff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #f9fafc;
+            border-radius: 20px;
+            padding: 2.2rem 2rem;
+            border: 1px solid #f0f0f5;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: #d0d8e8;
+            box-shadow: 0 8px 30px rgba(26, 58, 92, 0.06);
+            transform: translateY(-3px);
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            background: #e8edf5;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            color: #1a3a5c;
+        }
+
+        .service-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: currentColor;
+        }
+
+        .service-card h3 {
+            margin-bottom: 0.6rem;
+        }
+
+        .service-card p {
+            color: #4a4a6a;
+            font-size: 0.95rem;
+        }
+
+        .service-features {
+            margin-top: 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.2rem;
+        }
+
+        .service-features li {
+            font-size: 0.9rem;
+            color: #2d2d4a;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            color: #1a3a5c;
+            font-weight: 700;
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-choose {
+            padding: 5.5rem 0;
+            background: #f8f9fc;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .why-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2.2rem 2rem;
+            border: 1px solid #f0f0f5;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .why-card:hover {
+            border-color: #d0d8e8;
+            box-shadow: 0 8px 30px rgba(26, 58, 92, 0.06);
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: #e8edf5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2rem auto;
+            color: #1a3a5c;
+        }
+
+        .why-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: currentColor;
+        }
+
+        .why-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .why-card p {
+            color: #4a4a6a;
+            font-size: 0.95rem;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .why-card .highlight {
+            font-weight: 700;
+            color: #1a3a5c;
+        }
+
+        /* ===== REVIEWS ===== */
+        .reviews {
+            padding: 5.5rem 0;
+            background: #ffffff;
+        }
+
+        .review-summary {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 0.3rem;
+        }
+
+        .review-stars svg {
+            width: 28px;
+            height: 28px;
+            fill: #f5a623;
+        }
+
+        .review-rating {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a3a5c;
+            letter-spacing: -0.02em;
+        }
+
+        .review-count {
+            font-size: 1rem;
+            color: #5b5b7a;
+            font-weight: 500;
+        }
+
+        .review-tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
+        .review-tag {
+            background: #f0f3f9;
+            padding: 0.4rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a3a5c;
+        }
+
+        .review-quote {
+            max-width: 720px;
+            margin: 2.5rem auto 0 auto;
+            text-align: center;
+            font-size: 1.15rem;
+            color: #2d2d4a;
+            font-style: italic;
+            line-height: 1.7;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        .review-quote::before {
+            content: '“';
+            font-size: 4rem;
+            color: #1a3a5c;
+            opacity: 0.15;
+            position: absolute;
+            top: -1.2rem;
+            left: -0.2rem;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            padding: 5.5rem 0;
+            background: #f8f9fc;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: #e8edf5;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a3a5c;
+        }
+
+        .contact-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        .contact-item-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-item-content .label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #7a7a9a;
+            margin-bottom: 0.15rem;
+        }
+
+        .contact-item-content .value {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .contact-item-content .value a {
+            transition: color 0.2s;
+        }
+
+        .contact-item-content .value a:hover {
+            color: #1a3a5c;
+        }
+
+        .contact-cta-box {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            border: 1px solid #f0f0f5;
+            text-align: center;
+        }
+
+        .contact-cta-box h3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-cta-box p {
+            color: #4a4a6a;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .contact-cta-box .btn {
+            width: 100%;
+            max-width: 320px;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            padding: 2rem 0;
+            background: #1a1a2e;
+            color: #c8c8e0;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .site-footer a {
+            color: #e0e0f0;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .site-footer a:hover {
+            color: #ffffff;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .footer-inner .brand {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 3.25rem;
+            }
+
+            h2 {
+                font-size: 2.375rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-stats {
+                gap: 3.5rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .header-cta {
+                display: inline-flex;
+            }
+
+            .header-cta-mobile {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+
+            .hero-visual {
+                display: block;
+            }
+
+            .hero {
+                padding: 5rem 0 4.5rem 0;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+            }
+
+            .review-quote {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3.75rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                max-width: 720px;
+                margin: 0 auto;
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero-stats {
+                gap: 4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-stat-value {
+                font-size: 1.4rem;
+            }
+
+            .btn {
+                padding: 0.8rem 1.8rem;
+                font-size: 1rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+            }
+
+            .service-card {
+                padding: 1.8rem 1.4rem;
+            }
+
+            .why-card {
+                padding: 1.8rem 1.4rem;
+            }
+
+            .contact-cta-box {
+                padding: 2rem 1.2rem;
+            }
+        }
+
+        /* ===== UTILITY ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="Cartize Company Rent A Car home">
+                <span class="logo-icon" aria-hidden="true">C</span>
+                Cartize<span style="font-weight:400;color:#5b5b7a;">Company</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why">Why Us</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="tel:0655501332" class="header-cta btn btn-primary" aria-label="Call Cartize Company">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                065 5501332
+            </a>
+            <a href="tel:0655501332" class="header-cta-mobile" aria-label="Call 065 5501332">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Call
+            </a>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        Trusted car rental in Novi Sad
+                    </div>
+                    <h1 id="hero-title">Rent a car in Novi Sad —<br>professional, reliable, &amp; easy.</h1>
+                    <p>Cartize Company Rent A Car offers well-maintained vehicles and a seamless rental experience. Whether you need a car for a day or a week, we’ve got you covered with friendly service and transparent terms.</p>
+                    <div class="hero-actions">
+                        <a href="tel:0655501332" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Call Now — 065 5501332
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <span class="hero-stat-value">4.6 ★</span>
+                            <span class="hero-stat-label">Customer rating</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-value">56+</span>
+                            <span class="hero-stat-label">Satisfied clients</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-value">Novi Sad</span>
+                            <span class="hero-stat-label">Local &amp; trusted</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-visual-card">
+                        <div class="stars" aria-label="4.6 out of 5 stars">
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg viewBox="0 0 24 24" style="opacity:0.4;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <p class="review-text">"Professional, friendly, and the whole process was seamless. Highly recommend!"</p>
+                        <p class="review-author">— Verified client, Novi Sad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="section-title">Our rental service</h2>
+            <p class="section-subtitle">We provide a straightforward, professional car rental experience tailored to your needs in Novi Sad and beyond.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M5 17a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2M5 17l2 3h10l2-3"/><circle cx="7" cy="14" r="1.5"/><circle cx="17" cy="14" r="1.5"/></svg>
+                    </div>
+                    <h3>Rent a Car</h3>
+                    <p>Daily, weekly, and flexible long-term rentals with clean, well-maintained vehicles. We make booking simple so you can focus on your journey.</p>
+                    <ul class="service-features">
+                        <li>Flexible pick-up &amp; drop-off</li>
+                        <li>Transparent pricing — no hidden fees</li>
+                        <li>Friendly local support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-choose" id="why" aria-labelledby="why-title">
+        <div class="container">
+            <h2 id="why-title" class="section-title">Why choose Cartize Company</h2>
+            <p class="section-subtitle">We’re a local car rental agency built on trust, transparency, and a genuine commitment to our clients.</p>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3>Exceptional <span class="highlight">4.6-star</span> rating</h3>
+                    <p>Our customers consistently rate us highly for professionalism, vehicle quality, and overall experience.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Trusted by <span class="highlight">56+</span> clients</h3>
+                    <p>We’ve built a loyal customer base in Novi Sad through reliable service and a personal touch.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Professional &amp; reliable</h3>
+                    <p>From booking to return, we ensure a smooth, no-stress rental process every time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+        <div class="container">
+            <h2 id="reviews-title" class="section-title">What our clients say</h2>
+            <p class="section-subtitle">Real feedback from people who’ve rented with us in Novi Sad.</p>
+            <div class="review-summary">
+                <div class="review-stars" aria-label="4.6 out of 5 stars">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    <svg viewBox="0 0 24 24" style="opacity:0.4;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <span class="review-rating">4.6 / 5</span>
+                <span class="review-count">Based on reviews from 56+ satisfied clients</span>
+                <div class="review-tag-list">
+                    <span class="review-tag">Professional</span>
+                    <span class="review-tag">Friendly</span>
+                    <span class="review-tag">Recommend</span>
+                    <span class="review-tag">Great</span>
+                    <span class="review-tag">Perfect</span>
+                </div>
+            </div>
+            <div class="review-quote">
+                “Cartize Company made renting a car effortless. The team was professional, friendly, and the vehicle was in perfect condition. I highly recommend them to anyone in Novi Sad.”
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <h2 id="contact-title" class="section-title">Get in touch</h2>
+            <p class="section-subtitle">Ready to rent a car? Call us, send an email, or visit our location in Novi Sad. We’re here to help.</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <span class="label">Phone</span>
+                            <span class="value"><a href="tel:0655501332" aria-label="Call 065 5501332">065 5501332</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <span class="label">Email</span>
+                            <span class="value"><a href="mailto:cartizecompany@gmail.com" aria-label="Email Cartize Company">cartizecompany@gmail.com</a></span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <span class="label">Address</span>
+                            <span class="value">Futoška 22, Novi Sad 21000, Serbia</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta-box">
+                    <h3>Call us to book your car</h3>
+                    <p>Speak directly with our team. We’ll help you find the right vehicle and confirm your reservation in minutes.</p>
+                    <a href="tel:0655501332" class="btn btn-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Call Now — 065 5501332
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <span><span class="brand">Cartize Company Rent A Car</span> — Car Rental Agency, Novi Sad</span>
+            <span>Futoška 22, Novi Sad 21000, Serbia &nbsp;|&nbsp; <a href="tel:0655501332">065 5501332</a> &nbsp;|&nbsp; <a href="mailto:cartizecompany@gmail.com">cartizecompany@gmail.com</a></span>
+            <span style="opacity:0.6; font-size:0.8rem;">&copy; 2026 Cartize Company. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT (smooth scroll enhancement) ===== -->
+    <script>
+        (function() {
+            // Smooth anchor scroll without jump
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    var targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    var target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        var headerHeight = document.querySelector('.site-header').offsetHeight || 0;
+                        var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 16;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Log phone click for analytics (simple)
+            document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    console.log('[CTA] Phone call initiated: ' + this.getAttribute('href'));
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

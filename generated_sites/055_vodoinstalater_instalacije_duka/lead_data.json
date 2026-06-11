@@ -1,0 +1,38 @@
+{
+  "company_name": "VODOINSTALATER -Instalacije Duka",
+  "category": "Plumber",
+  "archetype": "Local Service Provider",
+  "website_style": "trustworthy, straightforward, modern",
+  "website_goal": "call_now",
+  "phone": "064 3853836",
+  "email": "sijakovic89@hotmail.rs",
+  "address": "Bulevar patrijarha Pavla, Novi Sad, Serbia",
+  "services": [
+    "Professional Plumber Services"
+  ],
+  "usp": [
+    "Exceptional 4.5-star rating from customers",
+    "Fast and efficient service",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Recommend, Fast",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "VODOINSTALATER -Instalacije Duka",
+      "Plumber Novi Sad",
+      "Plumber plumber"
+    ],
+    "secondary": [
+      "best plumber in Novi Sad",
+      "plumber services Serbia",
+      "professional plumber"
+    ]
+  }
+}

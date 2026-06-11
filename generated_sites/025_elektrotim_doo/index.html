@@ -1,0 +1,889 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEKTROTIM DOO | Trusted Electrician in Novi Sad | Electrical & Installation Services</title>
+    <meta name="description" content="ELEKTROTIM DOO – professional electrician in Novi Sad, Serbia. 4.7★ rated. Expert electrical installation and reliable service. Call now: 021 6750488.">
+    <meta property="og:title" content="ELEKTROTIM DOO | Electrician Novi Sad – Professional Electrical Services">
+    <meta property="og:description" content="Trusted electrician in Novi Sad with 4.7★ rating. Expert electrical and installation services. Call ELEKTROTIM DOO today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elektrotimdoo.com">
+    <meta property="og:locale" content="sr_RS">
+    <meta name="keywords" content="ELEKTROTIM DOO, Electrician Novi Sad, Electrician electrician, best electrician in Novi Sad, electrician services Serbia, professional electrician">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-size: 1.0625rem;
+            line-height: 1.65;
+            color: #1a1a2e;
+            background-color: #f8f9fa;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            line-height: 1.25;
+            color: #0b1a2e;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.875rem;
+            letter-spacing: -0.015em;
+            margin-bottom: 0.75rem;
+        }
+
+        h3 {
+            font-size: 1.375rem;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #2d3a4a;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #b8862c;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #4a5a6a;
+            max-width: 640px;
+            margin-bottom: 2.5rem;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 1.0625rem;
+            padding: 0.875rem 2.25rem;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .btn-primary {
+            background-color: #b8862c;
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(184, 134, 44, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: #a37424;
+            box-shadow: 0 6px 24px rgba(184, 134, 44, 0.45);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(184, 134, 44, 0.3);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #1a2a3a;
+            border: 2px solid #1a2a3a;
+        }
+
+        .btn-outline:hover {
+            background-color: #1a2a3a;
+            color: #fff;
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 0.75rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 800;
+            font-size: 1.375rem;
+            color: #0b1a2e;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #b8862c;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.25rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .logo span {
+            color: #b8862c;
+        }
+
+        .nav-cta {
+            display: none;
+        }
+
+        .nav-cta .btn {
+            font-size: 0.9375rem;
+            padding: 0.6rem 1.5rem;
+        }
+
+        .header-phone-mobile {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #0b1a2e;
+            padding: 0.4rem 0.8rem;
+            border-radius: 40px;
+            border: 1px solid #e0e4e8;
+            transition: background 0.2s;
+        }
+
+        .header-phone-mobile:hover {
+            background: #f0f2f5;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 4rem 0 3.5rem;
+            background: linear-gradient(165deg, #f0f4f9 0%, #e6ecf3 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(184, 134, 44, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(27, 42, 74, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            gap: 2.5rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(184, 134, 44, 0.12);
+            color: #8a6a2a;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            margin-bottom: 1.25rem;
+            width: fit-content;
+        }
+
+        .hero-badge svg {
+            flex-shrink: 0;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.25rem;
+            color: #0b1a2e;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .hero-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9375rem;
+            color: #2d3a4a;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-rating-stars {
+            display: flex;
+            gap: 0.15rem;
+            color: #e8a838;
+            font-size: 1.25rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-rating strong {
+            color: #0b1a2e;
+            font-weight: 700;
+        }
+
+        .hero-image-wrap {
+            display: none;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        section {
+            padding: 4.5rem 0;
+        }
+
+        section+section {
+            padding-top: 0;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa;
+        }
+
+        /* ===== SERVICES ===== */
+        .services-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.07);
+        }
+
+        .service-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            background: #eef3f9;
+            border-radius: 14px;
+            margin-bottom: 1.25rem;
+            color: #1a2a3a;
+        }
+
+        .service-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card p {
+            font-size: 0.975rem;
+            color: #4a5a6a;
+            margin-bottom: 0;
+        }
+
+        .service-card .service-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #b8862c;
+            background: rgba(184, 134, 44, 0.08);
+            padding: 0.2rem 0.75rem;
+            border-radius: 30px;
+            margin-top: 1rem;
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .why-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            text-align: center;
+            transition: transform 0.25s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .why-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: #eef3f9;
+            border-radius: 50%;
+            margin: 0 auto 1.25rem;
+            color: #b8862c;
+        }
+
+        .why-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-card p {
+            font-size: 0.975rem;
+            color: #4a5a6a;
+            margin-bottom: 0;
+        }
+
+        .why-rating-large {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0b1a2e;
+            margin-bottom: 0.25rem;
+        }
+
+        .why-rating-large .stars {
+            font-size: 1.5rem;
+            color: #e8a838;
+            letter-spacing: 3px;
+        }
+
+        .why-rating-label {
+            font-size: 0.9375rem;
+            color: #4a5a6a;
+        }
+
+        /* ===== REVIEWS ===== */
+        .reviews-summary {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .review-highlight {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        .review-highlight .big-stars {
+            font-size: 2.5rem;
+            color: #e8a838;
+            letter-spacing: 6px;
+            margin-bottom: 0.5rem;
+        }
+
+        .review-highlight .rating-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0b1a2e;
+            line-height: 1.1;
+        }
+
+        .review-highlight .rating-count {
+            font-size: 1rem;
+            color: #4a5a6a;
+            margin-bottom: 1.25rem;
+        }
+
+        .review-themes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .review-theme-tag {
+            display: inline-block;
+            background: #eef3f9;
+            color: #1a2a3a;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            padding: 0.5rem 1.25rem;
+            border-radius: 40px;
+            border: 1px solid #e0e4e8;
+        }
+
+        .review-theme-tag.highlight {
+            background: rgba(184, 134, 44, 0.1);
+            border-color: rgba(184, 134, 44, 0.25);
+            color: #8a6a2a;
+        }
+
+        .review-note {
+            font-size: 0.9375rem;
+            color: #4a5a6a;
+            margin-top: 1.25rem;
+            font-style: italic;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 1.75rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            text-align: center;
+            transition: transform 0.25s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            background: #eef3f9;
+            border-radius: 14px;
+            margin: 0 auto 1rem;
+            color: #b8862c;
+        }
+
+        .contact-card h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-card a {
+            color: #1a2a3a;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .contact-card a:hover {
+            color: #b8862c;
+        }
+
+        .contact-card .label {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #8a9aab;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-cta-wrap {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-cta-wrap .btn {
+            font-size: 1.25rem;
+            padding: 1rem 3rem;
+        }
+
+        .contact-cta-wrap .btn svg {
+            margin-right: 0.25rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: #0b1a2e;
+            color: #b0c0d0;
+            padding: 2.5rem 0;
+            text-align: center;
+            font-size: 0.9375rem;
+        }
+
+        .site-footer .container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .site-footer strong {
+            color: #e0e8f0;
+        }
+
+        .site-footer a {
+            color: #b8862c;
+            font-weight: 500;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-divider {
+            width: 40px;
+            height: 2px;
+            background: rgba(184, 134, 44, 0.3);
+            margin: 0.25rem auto;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+            h2 {
+                font-size: 2.125rem;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .reviews-summary {
+                grid-template-columns: 1fr;
+            }
+            .review-highlight {
+                padding: 3rem 2.5rem;
+            }
+            .nav-cta {
+                display: flex;
+            }
+            .header-phone-mobile {
+                display: none;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                gap: 3rem;
+            }
+            .hero-image-wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .hero-image-wrap .visual {
+                width: 100%;
+                max-width: 480px;
+                aspect-ratio: 1/1;
+                background: linear-gradient(145deg, #dce4ee, #e8eef6);
+                border-radius: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+            }
+            .hero-image-wrap .visual svg {
+                width: 70%;
+                height: 70%;
+                opacity: 0.4;
+                color: #1a2a3a;
+            }
+            .hero h1 {
+                font-size: 3.25rem;
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            section {
+                padding: 5.5rem 0;
+            }
+            .hero {
+                padding: 5rem 0 4.5rem;
+            }
+        }
+
+        @media (min-width: 1100px) {
+            .hero h1 {
+                font-size: 3.75rem;
+            }
+            .services-grid {
+                gap: 2rem;
+            }
+            .why-grid {
+                gap: 2rem;
+            }
+            .contact-grid {
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 639px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .hero-actions .btn {
+                width: 100%;
+            }
+            .hero-rating {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .section-subtitle {
+                font-size: 1rem;
+            }
+            .service-card {
+                padding: 1.5rem 1.25rem;
+            }
+            .why-card {
+                padding: 1.5rem 1.25rem;
+            }
+            .contact-card {
+                padding: 1.5rem 1.25rem;
+            }
+            .review-highlight {
+                padding: 1.75rem 1.25rem;
+            }
+            .review-highlight .big-stars {
+                font-size: 2rem;
+            }
+            .review-highlight .rating-number {
+                font-size: 2.25rem;
+            }
+            .contact-cta-wrap .btn {
+                width: 100%;
+                font-size: 1.125rem;
+            }
+            .logo {
+                font-size: 1.125rem;
+            }
+            .logo-icon {
+                width: 34px;
+                height: 34px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            .container {
+                padding: 0 1rem;
+            }
+            .service-card {
+                padding: 1.25rem 1rem;
+            }
+        }
+
+        /* ===== UTILITY ===== */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mt-1 {
+            margin-top: 1rem;
+        }
+
+        .gap-1 {
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="ELEKTROTIM DOO home">
+                <span class="logo-icon" aria-hidden="true">ET</span>
+                ELEKTROTIM<span>.</span>
+            </a>
+            <div class="nav-cta">
+                <a href="tel:0216750488" class="btn btn-primary" aria-label="Call ELEKTROTIM DOO at 021 6750488">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    Call Now
+                </a>
+            </div>
+            <a href="tel:0216750488" class="header-phone-mobile" aria-label="Call 021 6750488">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                021 6750488
+            </a>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero" aria-label="Hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8a6a2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <span>4.7 ★ — Trusted in Novi Sad</span>
+                    </div>
+                    <h1>Expert Electrical &amp; Installation Services — Delivered with Precision &amp; Care</h1>
+                    <p>ELEKTROTIM DOO brings professional, reliable electrical solutions to homes and businesses across Novi Sad. From complex installations to everyday repairs, we handle every job with skill, safety, and a 4.7-star commitment to quality.</p>
+                    <div class="hero-actions">
+                        <a href="tel:0216750488" class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Call Now: 021 6750488
+                        </a>
+                    </div>
+                    <div class="hero-rating">
+                        <span class="hero-rating-stars" aria-label="4.7 out of 5 stars">★★★★★</span>
+                        <span><strong>4.7</strong> average rating — Professional, kvalitet, and trusted service</span>
+                    </div>
+                </div>
+                <div class="hero-image-wrap">
+                    <div class="visual" aria-hidden="true">
+                        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="85" stroke="#1a2a3a" stroke-width="1.5" fill="none" opacity="0.15"/>
+                            <path d="M100 40 L100 160 M40 100 L160 100" stroke="#1a2a3a" stroke-width="2.5" stroke-linecap="round" opacity="0.2"/>
+                            <circle cx="100" cy="100" r="28" stroke="#b8862c" stroke-width="2" fill="none" opacity

@@ -1,0 +1,39 @@
+{
+  "company_name": "Golub Vet",
+  "category": "Pet Store",
+  "archetype": "Retail Business",
+  "website_style": "friendly, colorful, welcoming",
+  "website_goal": "visit_store",
+  "phone": "021 6610598",
+  "email": "golubpetshop@gmail.com",
+  "address": "Bulevar kralja Petra I 28, Novi Sad, Serbia",
+  "services": [
+    "Professional Pet Store Services"
+  ],
+  "usp": [
+    "Exceptional 4.8-star rating from customers",
+    "Trusted by over 416 satisfied clients",
+    "Fast and efficient service",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Kind, Recommend, Best, Quick",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Golub Vet",
+      "Pet Store Novi Sad",
+      "Pet Store pet_store"
+    ],
+    "secondary": [
+      "best pet store in Novi Sad",
+      "pet store services Serbia",
+      "professional pet store"
+    ]
+  }
+}

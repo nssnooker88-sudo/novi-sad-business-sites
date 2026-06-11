@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Aqua NS | Trusted Plumber Novi Sad | 064 4820888</title>
+    <meta name="description" content="Aqua NS – professional plumber in Novi Sad, Serbia. 4.6★ rating, affordable & reliable. Call now for expert plumbing services.">
+    <meta property="og:title" content="Aqua NS | Plumber Novi Sad | Call 064 4820888">
+    <meta property="og:description" content="Exceptional 4.6-star plumber in Novi Sad. Trusted by 63+ clients. Affordable, professional service. Call now.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aquans.rs">
+    <meta property="og:locale" content="sr_RS">
+    <meta name="keywords" content="Aqua NS, Plumber Novi Sad, Plumber plumber, best plumber in Novi Sad, plumber services Serbia, professional plumber">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #faf9f8;
+            color: #1e1e1e;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* spacing */
+        section {
+            padding: 80px 0;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 56px 0;
+            }
+        }
+
+        /* typography */
+        h1, h2, h3 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: clamp(2.4rem, 6vw, 4rem);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #2c2c2c;
+            max-width: 680px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-muted {
+            color: #4a4a4a;
+        }
+
+        /* buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b6e4f;
+            color: white;
+            font-weight: 600;
+            font-size: 1.25rem;
+            padding: 16px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.1s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(11, 110, 79, 0.25);
+        }
+
+        .btn:hover {
+            background: #095a40;
+            transform: scale(1.02);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #0b6e4f;
+            color: #0b6e4f;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: #0b6e4f;
+            color: white;
+        }
+
+        /* header / nav */
+        .navbar {
+            padding: 20px 0;
+            background: white;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #0b6e4f;
+            text-decoration: none;
+        }
+
+        .nav-phone {
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: #f0f7f4;
+            padding: 10px 20px;
+            border-radius: 40px;
+            color: #0b6e4f;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .nav-phone:hover {
+            background: #dcebe4;
+        }
+
+        /* hero */
+        .hero {
+            background: #f4f9f6;
+            padding: 80px 0 100px;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 32px;
+            color: #2b2b2b;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            background: white;
+            padding: 12px 24px;
+            border-radius: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            font-weight: 500;
+        }
+
+        .stat-item span {
+            color: #0b6e4f;
+            font-weight: 700;
+        }
+
+        .hero-visual {
+            background: #e2efe9;
+            border-radius: 40px;
+            padding: 40px 32px;
+            text-align: center;
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.04);
+        }
+
+        .hero-visual .big-icon {
+            font-size: 4rem;
+            margin-bottom: 16px;
+        }
+
+        .hero-visual p {
+            margin: 0 auto;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .hero {
+                padding: 48px 0 64px;
+            }
+            .hero-stats {
+                gap: 16px;
+            }
+        }
+
+        /* services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 32px;
+            padding: 40px 28px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.06);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #3a3a3a;
+        }
+
+        /* why choose us */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .why-item {
+            background: white;
+            border-radius: 28px;
+            padding: 32px 24px;
+            border: 1px solid #efefef;
+            transition: background 0.2s;
+        }
+
+        .why-item:hover {
+            background: #f4f9f6;
+        }
+
+        .why-item .num {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #0b6e4f;
+            margin-bottom: 8px;
+        }
+
+        .why-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .why-item p {
+            font-size: 1rem;
+            color: #3a3a3a;
+        }
+
+        /* reviews */
+        .review-summary {
+            background: white;
+            border-radius: 40px;
+            padding: 48px 40px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ececec;
+        }
+
+        .review-stars {
+            font-size: 2.2rem;
+            letter-spacing: 6px;
+            color: #f5b342;
+            margin-bottom: 12px;
+        }
+
+        .review-rating {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0b6e4f;
+        }
+
+        .review-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin: 24px 0 16px;
+            justify-content: center;
+        }
+
+        .review-tag {
+            background: #eef6f2;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-weight: 500;
+            color: #0b6e4f;
+        }
+
+        .review-quote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #2e2e2e;
+            border-left: 4px solid #0b6e4f;
+            padding-left: 24px;
+            margin-top: 24px;
+        }
+
+        /* contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            background: #f4f9f6;
+            border-radius: 48px;
+            padding: 56px 48px;
+        }
+
+        .contact-info h2 {
+            margin-bottom: 24px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .contact-detail a {
+            color: #1e1e1e;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .contact-detail a:hover {
+            color: #0b6e4f;
+        }
+
+        .contact-icon {
+            font-size: 1.8rem;
+            min-width: 40px;
+        }
+
+        .contact-cta {
+            text-align: center;
+        }
+
+        .contact-cta .btn {
+            font-size: 1.4rem;
+            padding: 20px 56px;
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .contact-cta p {
+            margin: 16px auto 0;
+            font-size: 1rem;
+            color: #3a3a3a;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                padding: 32px 24px;
+                gap: 32px;
+            }
+            .contact-cta .btn {
+                max-width: 100%;
+            }
+        }
+
+        /* footer */
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid #e2e2e2;
+            background: white;
+            text-align: center;
+            color: #5a5a5a;
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: #0b6e4f;
+            text-decoration: none;
+        }
+
+        /* utilities */
+        .mt-16 { margin-top: 16px; }
+        .mb-8 { margin-bottom: 8px; }
+        .block { display: block; }
+
+        @media (max-width: 480px) {
+            .navbar .container {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .hero-stats {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Aqua NS</a>
+            <a href="tel:0644820888" class="nav-phone">📞 064 4820888</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Reliable plumber in Novi Sad — call today</h1>
+                <p>Professional plumbing services with a 4.6★ rating. Transparent pricing, fast response, and real solutions. Trusted by over 63 local clients.</p>
+                <a href="tel:0644820888" class="btn">📞 Call Now</a>
+                <div class="hero-stats">
+                    <div class="stat-item">⭐ <span>4.6</span> / 5.0</div>
+                    <div class="stat-item">👥 <span>63+</span> clients</div>
+                    <div class="stat-item">💧 affordable</div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="big-icon">🔧</div>
+                <p><strong>Aqua NS</strong> — your local plumbing expert in Novi Sad. Fast, fair, and professional.</p>
+                <p style="margin-top: 12px; font-size: 1rem;">Pariske komune 29, 21000 Novi Sad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <h2 class="text-center">Professional plumber services</h2>
+            <p class="text-center text-muted" style="margin: 0 auto 16px;">Everything from minor repairs to full installations — one call does it all.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🛠️</div>
+                    <h3>Professional Plumber Services</h3>
+                    <p>Expert diagnosis, repair, and maintenance for all residential and commercial plumbing. Leaks, pipes, fixtures, and more — done right the first time.</p>
+                </div>
+                <!-- only one service from data, but we can show it with nuance -->
+                <div class="service-card">
+                    <div class="service-icon">💧</div>
+                    <h3>Emergency repairs</h3>
+                    <p>Fast response for burst pipes, blockages, and urgent issues. Same-day service in Novi Sad and surrounding areas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔩</div>
+                    <h3>Installation & replacement</h3>
+                    <p>New faucets, toilets, water heaters, and pipe systems. Quality workmanship with affordable, upfront pricing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" style="background: #f4f9f6;">
+        <div class="container">
+            <h2 class="text-center">Why choose Aqua NS</h2>
+            <p class="text-center text-muted" style="margin: 0 auto 32px;">Real reasons customers trust us for their plumbing needs.</p>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="num">4.6★</div>
+                    <h3>Exceptional rating</h3>
+                    <p>Consistently high reviews from real clients in Novi Sad. We take pride in every job.</p>
+                </div>
+                <div class="why-item">
+                    <div class="num">63+</div>
+                    <h3>Satisfied clients</h3>
+                    <p>Trusted by dozens of homeowners and businesses. Repeat customers speak for themselves.</p>
+                </div>
+                <div class="why-item">
+                    <div class="num">💶</div>
+                    <h3>Affordable pricing</h3>
+                    <p>Transparent rates, no hidden fees. Quality service that respects your budget.</p>
+                </div>
+                <div class="why-item">
+                    <div class="num">📍</div>
+                    <h3>Local & reliable</h3>
+                    <p>Based in Novi Sad (Pariske komune 29). Quick to arrive, honest recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+        <div class="container">
+            <h2 class="text-center">What customers say</h2>
+            <div class="review-summary">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-rating">4.6 / 5.0</div>
+                <div class="review-tags">
+                    <span class="review-tag">👍 Recommend</span>
+                    <span class="review-tag">💰 Affordable</span>
+                    <span class="review-tag">🧠 Reasonable</span>
+                </div>
+                <p style="font-size: 1.1rem; color: #2b2b2b;">Based on feedback from 63+ clients in Novi Sad.</p>
+                <div class="review-quote">
+                    “Reliable, fairly priced, and straightforward. Exactly what you want from a plumber. Highly recommend Aqua NS.”
+                </div>
+                <p style="margin-top: 20px; font-size: 0.95rem; color: #4a4a4a;">— recurring themes: recommend, affordable, reasonable</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get in touch</h2>
+                    <div class="contact-detail">
+                        <span class="contact-icon">📞</span>
+                        <a href="tel:0644820888">064 4820888</a>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-icon">✉️</span>
+                        <a href="mailto:aquastopns@gmail.com">aquastopns@gmail.com</a>
+                    </div>
+                    <div class="contact-detail">
+                        <span class="contact-icon">📍</span>
+                        <span>Pariske komune 29, Novi Sad 21000, Serbia</span>
+                    </div>
+                    <p style="margin-top: 24px; font-size: 1rem; color: #3a3a3a;">Call or email — we respond fast. Same-day service available.</p>
+                </div>
+                <div class="contact-cta">
+                    <a href="tel:0644820888" class="btn">📞 Call Now</a>
+                    <p style="margin-top: 16px;">Speak directly with your plumber. No call centers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Aqua NS — Plumber Novi Sad</p>
+            <p style="margin-top: 6px;">Pariske komune 29, 21000 Novi Sad | <a href="tel:0644820888">064 4820888</a></p>
+        </div>
+    </footer>
+
+    <!-- inline script (lightweight, no external) -->
+    <script>
+        (function() {
+            // smooth scroll for internal anchors (if any)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === "#") return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

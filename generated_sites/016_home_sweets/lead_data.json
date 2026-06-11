@@ -1,0 +1,37 @@
+{
+  "company_name": "Home Sweets",
+  "category": "General Contractor",
+  "archetype": "Service Provider",
+  "website_style": "professional, reliable, modern",
+  "website_goal": "request_quote",
+  "phone": "021 2701159",
+  "email": ".ns@gmail.com",
+  "address": "Bulevar Evrope 28, Novi Sad, Serbia",
+  "services": [
+    "Decoration"
+  ],
+  "usp": [
+    "Exceptional 4.7-star rating from customers",
+    "Trusted by over 76 satisfied clients"
+  ],
+  "review_summary": "Kind, Recommend, Great, Top, Wonderful",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Home Sweets",
+      "General Contractor Novi Sad",
+      "General Contractor general_contractor"
+    ],
+    "secondary": [
+      "best general contractor in Novi Sad",
+      "general contractor services Serbia",
+      "professional general contractor"
+    ]
+  }
+}

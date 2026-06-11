@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stomatoliška ordinacija "MM DENT" | Dentist Novi Sad | Professional Dentist Services</title>
+  <meta name="description" content="Stomatoliška ordinacija MM DENT in Novi Sad, Serbia. Professional dentist services with exceptional 4.9-star rating. Book your appointment today.">
+  <meta property="og:title" content="Stomatoliška ordinacija MM DENT – Trusted Dentist in Novi Sad">
+  <meta property="og:description" content="Exceptional 4.9-star dental care in Novi Sad. Professional, friendly, and reliable dentist services. Book your appointment today.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mmdent.rs">
+  <meta property="og:locale" content="sr_RS">
+  <meta name="keywords" content="Stomatoliška ordinacija MM DENT, Dentist Novi Sad, dentist dentist, best dentist in Novi Sad, dentist services Serbia, professional dentist">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f7f5f3;
+      color: #1e2b2c;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- color palette ---------- */
+    :root {
+      --primary: #2b7a78;
+      --primary-dark: #1e5f5d;
+      --accent: #e8c4a0;
+      --accent-soft: #f5ebe0;
+      --bg-light: #faf8f6;
+      --bg-card: #ffffff;
+      --text-dark: #1e2b2c;
+      --text-muted: #4e5b5c;
+      --text-light: #7a8b8c;
+      --border-soft: #e4dfda;
+      --shadow-sm: 0 4px 20px rgba(0,0,0,0.04);
+      --shadow-md: 0 8px 40px rgba(0,0,0,0.06);
+      --radius: 20px;
+      --radius-sm: 12px;
+    }
+
+    /* ---------- typography ---------- */
+    h1, h2, h3, h4 {
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      max-width: 680px;
+    }
+
+    .section-label {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: var(--primary);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 36px;
+      border-radius: 60px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(43, 122, 120, 0.25);
+      letter-spacing: 0.01em;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      box-shadow: 0 8px 28px rgba(43, 122, 120, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(43, 122, 120, 0.2);
+    }
+
+    /* ---------- header / nav ---------- */
+    header {
+      padding: 20px 0;
+      background: var(--bg-light);
+      border-bottom: 1px solid var(--border-soft);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(250, 248, 246, 0.92);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      letter-spacing: -0.01em;
+    }
+
+    .logo span {
+      color: var(--primary);
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      transition: color 0.2s;
+      font-weight: 450;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-cta {
+      padding: 10px 24px;
+      border-radius: 60px;
+      background: var(--primary);
+      color: #fff !important;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-dark) !important;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.8rem;
+      color: var(--text-dark);
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      padding: 100px 0 80px;
+      background: var(--bg-light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(232,196,160,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 24px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 36px;
+      color: var(--text-muted);
+      max-width: 540px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-soft);
+      padding: 8px 20px;
+      border-radius: 60px;
+      font-size: 0.9rem;
+      color: var(--primary-dark);
+      margin-bottom: 28px;
+      font-weight: 450;
+    }
+
+    .hero-badge svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--primary);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: var(--bg-card);
+      padding: 40px 36px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      width: 100%;
+      max-width: 420px;
+      border: 1px solid var(--border-soft);
+    }
+
+    .hero-card .rating {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .hero-card .stars {
+      display: flex;
+      gap: 4px;
+    }
+
+    .hero-card .stars svg {
+      width: 22px;
+      height: 22px;
+      fill: #e8b84b;
+    }
+
+    .hero-card .rating-text {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .hero-card .rating-sub {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    .hero-card .review-blurb {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-soft);
+      font-style: normal;
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .hero-card .review-blurb strong {
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    /* ---------- sections common ---------- */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header p {
+      margin: 0 auto;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .section-header .section-label {
+      margin-bottom: 8px;
+    }
+
+    /* ---------- services ---------- */
+    .services {
+      background: var(--bg-card);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .service-card {
+      background: var(--bg-light);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--accent-soft);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--primary);
+    }
+
+    .service-icon svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--primary);
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      font-weight: 450;
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- why choose us ---------- */
+    .why {
+      background: var(--bg-light);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+    }
+
+    .why-item {
+      text-align: center;
+      padding: 32px 20px;
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+    }
+
+    .why-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 20px;
+      background: var(--accent-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+    }
+
+    .why-icon svg {
+      width: 30px;
+      height: 30px;
+      fill: var(--primary);
+    }
+
+    .why-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      font-weight: 450;
+    }
+
+    .why-item p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* ---------- reviews ---------- */
+    .reviews {
+      background: var(--bg-card);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .review-card {
+      background: var(--bg-light);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+
+    .review-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 18px;
+    }
+
+    .review-stars svg {
+      width: 20px;
+      height: 20px;
+      fill: #e8b84b;
+    }
+
+    .review-card blockquote {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      font-style: normal;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .review-card blockquote strong {
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+
+    .review-author {
+      font-weight: 500;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+
+    .review-source {
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    .review-summary-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--accent-soft);
+      padding: 14px 28px;
+      border-radius: 60px;
+      margin-top: 48px;
+      font-size: 1rem;
+      color: var(--primary-dark);
+      font-weight: 450;
+    }
+
+    .review-summary-badge svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--primary);
+    }
+
+    /* ---------- contact ---------- */
+    .contact {
+      background: var(--bg-light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 16px;
+    }
+
+    .contact-info > p {
+      margin-bottom: 32px;
+      font-size: 1.1rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .contact-item svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: var(--text-dark);
+      font-weight: 450;
+      transition: color 0.2s;
+    }
+
+    .contact-item a:hover {
+      color: var(--primary);
+    }
+
+    .contact-card {
+      background: var(--bg-card);
+      padding: 40px 36px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-soft);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 16px;
+      font-weight: 450;
+    }
+
+    .contact-card p {
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+
+    .contact-card .btn {
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* ---------- footer ---------- */
+    footer {
+      background: var(--text-dark);
+      color: #d4dcdd;
+      padding: 48px 0 32px;
+      font-size: 0.9rem;
+    }
+
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    footer .footer-logo {
+      color: #fff;
+      font-weight: 400;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    footer a {
+      color: #d4dcdd;
+      transition: color 0.2s;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    footer .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    footer .footer-legal {
+      opacity: 0.6;
+      font-size: 0.85rem;
+      width: 100%;
+      text-align: center;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ---------- mobile ---------- */
+    @media (max-width: 820px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero {
+        padding: 60px 0 50px;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .hero-card {
+        max-width: 100%;
+        padding: 32px 28px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 0 8px;
+        gap: 16px;
+        align-items: flex-start;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .nav-cta {
+        width: 100%;
+        text-align: center;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .section-header {
+        margin-bottom: 40px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .container {
+        padding: 0 18px;
+      }
+
+      .contact-card {
+        padding: 28px 22px;
+      }
+    }
+
+    /* ---------- utilities ---------- */
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-16 { margin-top: 16px; }
+    .mt-24 { margin-top: 24px; }
+    .mb-16 { margin-bottom: 16px; }
+
+    .flex-center {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- header -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">MM <span>DENT</span></div>
+      <button class="mobile-toggle" aria-label="Menu" id="menuToggle">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Book Appointment</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          4.9 ★ &nbsp;— Exceptional care in Novi Sad
+        </div>
+        <h1>Your smile deserves<br>a gentle touch</h1>
+        <p>At Stomatoliška ordinacija "MM DENT", we combine professional expertise with a warm, calming approach. Experience dental care that truly puts you at ease.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn">Book Appointment</a>
+          <a href="#services" class="btn btn-outline">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="rating">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <span class="rating-text">4.9</span>
+          </div>
+          <div class="rating-sub">Exceptional rating from our patients</div>
+          <div class="review-blurb">
+            “<strong>Professional, friendly, and truly caring.</strong> I always recommend MM DENT to everyone. A great experience every time.”<br>
+            <span style="display:block;margin-top:10px;font-size:0.85rem;color:var(--text-light);">— based on patient reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Services</span>
+        <h2>Professional dentist services</h2>
+        <p>Comprehensive dental care tailored to your needs — always delivered with warmth and precision.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <h3>General Dentistry</h3>
+          <p>Thorough check-ups, cleanings, and preventive care to keep your smile healthy and bright. Gentle, professional treatment every visit.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 14l-7 7-7-7 1.41-1.41L11 16.17V4h2v12.17l4.59-4.58L19 14z"/></svg>
+          </div>
+          <h3>Restorative Care</h3>
+          <p>High-quality fillings, crowns, and bridges to restore function and aesthetics. We use durable materials for lasting results.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <h3>Preventive Dentistry</h3>
+          <p>Regular exams, professional cleaning, and personalized advice to prevent issues before they start. Your long-term oral health is our priority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- why choose us -->
+  <section class="why" id="why">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Why Choose Us</span>
+        <h2>Care you can trust</h2>
+        <p>We believe in building lasting relationships with every patient through honesty, comfort, and exceptional results.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Exceptional 4.9 ★ Rating</h3>
+          <p>Our patients consistently rate us among the best. Every visit is focused on your comfort and satisfaction.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <h3>Professional &amp; Reliable</h3>
+          <p>You deserve a dental team you can count on. We bring reliability, transparency, and expertise to every appointment.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10.12h-6.78l-2.22-6.5-2.22 6.5H3l5.39 3.82-2.22 6.5L12 16.5l5.39 3.82-2.22-6.5L21 10.12z"/></svg>
+          </div>
+          <h3>Calming Environment</h3>
+          <p>From the moment you walk in, we've designed every detail to help you feel relaxed and at ease. Your comfort matters.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <h3>Personalized Attention</h3>
+          <p>We take time to understand your unique needs and goals. No rushed appointments — just thoughtful, individualized care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- reviews -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What Patients Say</span>
+        <h2>Kind words from our community</h2>
+        <p>We're proud of the trust our patients place in us. Here's what they say about their experience at MM DENT.</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <blockquote>“<strong>Professional</strong> and <strong>friendly</strong> — the team at MM DENT made me feel truly cared for. I recommend them to everyone.”</blockquote>
+          <div class="review-author">— Satisfied Patient</div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/

@@ -1,0 +1,37 @@
+{
+  "company_name": "SKOČKO",
+  "category": "Restaurant",
+  "archetype": "Local Business",
+  "website_style": "warm, appetizing, modern",
+  "website_goal": "call_now",
+  "phone": "021 511071",
+  "email": "skockorestoran@gmail.com",
+  "address": "9, Rumenačka 21000, Novi Sad 21000, Serbia",
+  "services": [
+    "Dinner"
+  ],
+  "usp": [
+    "Trusted by over 1287 satisfied clients",
+    "Fast and efficient service"
+  ],
+  "review_summary": "Kind, Recommend, Great, Fast, Love",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "SKOČKO",
+      "Restaurant Novi Sad",
+      "Restaurant restaurant"
+    ],
+    "secondary": [
+      "best restaurant in Novi Sad",
+      "restaurant services Serbia",
+      "professional restaurant"
+    ]
+  }
+}

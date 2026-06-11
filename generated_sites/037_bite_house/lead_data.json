@@ -1,0 +1,38 @@
+{
+  "company_name": "Bite House",
+  "category": "Restaurant",
+  "archetype": "Local Business",
+  "website_style": "warm, appetizing, modern",
+  "website_goal": "call_now",
+  "phone": "060 6087870",
+  "email": "eat@thebitehouse.com",
+  "address": "Slovačka, Novi Sad, Serbia",
+  "services": [
+    "Lunch"
+  ],
+  "usp": [
+    "Exceptional 4.7-star rating from customers",
+    "Trusted by over 159 satisfied clients",
+    "Affordable pricing"
+  ],
+  "review_summary": "Friendly, Recommend, Great, Affordable",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Bite House",
+      "Restaurant Novi Sad",
+      "Restaurant restaurant"
+    ],
+    "secondary": [
+      "best restaurant in Novi Sad",
+      "restaurant services Serbia",
+      "professional restaurant"
+    ]
+  }
+}

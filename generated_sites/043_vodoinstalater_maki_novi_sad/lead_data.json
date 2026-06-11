@@ -1,0 +1,37 @@
+{
+  "company_name": "Vodoinstalater Maki Novi Sad",
+  "category": "Plumber",
+  "archetype": "Local Service Provider",
+  "website_style": "trustworthy, straightforward, modern",
+  "website_goal": "call_now",
+  "phone": "061 6244922",
+  "email": "duleras1985@gmail.com",
+  "address": "Bulevar oslobođenja 2, Novi Sad 21000, Serbia",
+  "services": [
+    "Professional Plumber Services"
+  ],
+  "usp": [
+    "Exceptional 5.0-star rating from customers",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Recommend, Top",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Vodoinstalater Maki Novi Sad",
+      "Plumber Novi Sad",
+      "Plumber plumber"
+    ],
+    "secondary": [
+      "best plumber in Novi Sad",
+      "plumber services Serbia",
+      "professional plumber"
+    ]
+  }
+}

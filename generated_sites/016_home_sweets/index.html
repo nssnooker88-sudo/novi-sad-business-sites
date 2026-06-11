@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Home Sweets | General Contractor Novi Sad | Professional Decoration Services</title>
+    <meta name="description" content="Home Sweets is a trusted general contractor in Novi Sad, Serbia. Specializing in decoration, we deliver professional, reliable craftsmanship. Request a quote today.">
+    <meta property="og:title" content="Home Sweets – General Contractor Novi Sad">
+    <meta property="og:description" content="Exceptional 4.7-star rating. Trusted by 76+ clients. Professional decoration services in Novi Sad, Serbia. Request a quote.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://homesweets.rs">
+    <meta property="og:locale" content="en_RS">
+    <meta name="keywords" content="Home Sweets, General Contractor Novi Sad, General Contractor general_contractor, best general contractor in Novi Sad, general contractor services Serbia, professional general contractor">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #faf9f7;
+            color: #1e1e1e;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* utility */
+        .text-center {
+            text-align: center;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-sub {
+            font-size: 1.125rem;
+            color: #5a5a5a;
+            max-width: 680px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1e3a3a;
+            color: white;
+            font-weight: 600;
+            font-size: 1.125rem;
+            padding: 16px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.1s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .btn:hover {
+            background: #142a2a;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        /* header / nav */
+        .navbar {
+            padding: 20px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #eae7e2;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 650;
+            letter-spacing: -0.02em;
+            color: #1e3a3a;
+        }
+
+        .logo span {
+            font-weight: 300;
+            color: #7e8a8a;
+        }
+
+        .nav-contact {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-phone {
+            font-weight: 500;
+            color: #1e3a3a;
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+
+        .nav-phone:hover {
+            text-decoration: underline;
+        }
+
+        /* hero */
+        .hero {
+            background: #f4f2ee;
+            padding: 100px 0 90px;
+        }
+
+        .hero-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-content {
+            flex: 1 1 50%;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #dce8e0;
+            color: #1e3a3a;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 6px 16px;
+            border-radius: 40px;
+            margin-bottom: 24px;
+            letter-spacing: 0.01em;
+        }
+
+        .hero h1 {
+            font-size: 3.4rem;
+            font-weight: 650;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 600px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #3a3a3a;
+            max-width: 540px;
+            margin-bottom: 36px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 36px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 650;
+            color: #1e3a3a;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #5a5a5a;
+        }
+
+        .hero-visual {
+            flex: 1 1 40%;
+            background: #e2ddd6;
+            min-height: 280px;
+            border-radius: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3a3a3a;
+            font-size: 1.2rem;
+            padding: 20px;
+            background-image: radial-gradient(circle at 30% 40%, #d6cfc4 0%, #d0c7bb 100%);
+        }
+
+        .hero-visual p {
+            background: rgba(255,255,255,0.5);
+            backdrop-filter: blur(2px);
+            padding: 12px 24px;
+            border-radius: 60px;
+            font-weight: 500;
+        }
+
+        /* services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            margin-top: 16px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 28px;
+            padding: 36px 28px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+            border: 1px solid #ece8e2;
+            transition: box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #4a4a4a;
+        }
+
+        /* why choose us */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px 32px;
+            margin-top: 24px;
+        }
+
+        .why-item {
+            background: white;
+            padding: 32px 24px;
+            border-radius: 24px;
+            border: 1px solid #ece8e2;
+            text-align: center;
+        }
+
+        .why-item .why-number {
+            font-size: 2.2rem;
+            font-weight: 650;
+            color: #1e3a3a;
+            margin-bottom: 8px;
+        }
+
+        .why-item h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .why-item p {
+            color: #4a4a4a;
+        }
+
+        /* reviews */
+        .review-summary {
+            background: #ffffff;
+            padding: 48px 32px;
+            border-radius: 40px;
+            border: 1px solid #eae5de;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .review-stars {
+            font-size: 2.4rem;
+            letter-spacing: 6px;
+            color: #d9b650;
+            margin-bottom: 12px;
+        }
+
+        .review-rating {
+            font-size: 2rem;
+            font-weight: 650;
+            color: #1e3a3a;
+        }
+
+        .review-meta {
+            color: #5a5a5a;
+            margin-bottom: 24px;
+        }
+
+        .review-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 16px;
+            margin-top: 16px;
+        }
+
+        .review-tag {
+            background: #f0ede8;
+            padding: 8px 20px;
+            border-radius: 60px;
+            font-weight: 500;
+            color: #1e3a3a;
+        }
+
+        /* contact */
+        .contact-section {
+            background: #1e3a3a;
+            color: white;
+        }
+
+        .contact-section .section-sub {
+            color: #d0dcdc;
+        }
+
+        .contact-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin: 40px 0 32px;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(2px);
+            padding: 28px 32px;
+            border-radius: 32px;
+            min-width: 200px;
+            flex: 1 1 200px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .contact-item .label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            opacity: 0.7;
+            margin-bottom: 6px;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-cta {
+            margin-top: 24px;
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            box-shadow: none;
+        }
+
+        .btn-outline-light:hover {
+            background: white;
+            color: #1e3a3a;
+        }
+
+        /* footer */
+        .footer {
+            padding: 32px 0;
+            background: #f4f2ee;
+            color: #3a3a3a;
+            font-size: 0.95rem;
+            border-top: 1px solid #e0dad2;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* responsive */
+        @media (max-width: 720px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            .hero-grid {
+                flex-direction: column;
+            }
+            .hero-visual {
+                width: 100%;
+                min-height: 200px;
+            }
+            .navbar .container {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .nav-contact {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .contact-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-item {
+                width: 100%;
+                max-width: 340px;
+                text-align: center;
+            }
+            .review-summary {
+                padding: 32px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            .hero-stats {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Home<span>Sweets</span></div>
+            <div class="nav-contact">
+                <a href="tel:0212701159" class="nav-phone">021 2701159</a>
+                <a href="mailto:.ns@gmail.com" class="btn" style="padding: 10px 28px; font-size: 0.95rem;">Request Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">★ General Contractor · Novi Sad</div>
+                <h1>Decoration that feels like home — trusted contractor in Novi Sad</h1>
+                <p>Professional, reliable decoration services for your space. We bring precision and care to every project, backed by a 4.7★ customer rating.</p>
+                <a href="mailto:.ns@gmail.com" class="btn">Request Quote</a>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4.7★</span>
+                        <span class="stat-label">Customer rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">76+</span>
+                        <span class="stat-label">Satisfied clients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <p>Interior · Exterior · Detail</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- services -->
+    <section class="section-padding" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Decoration services</h2>
+                <p class="section-sub">Specialized decoration for residential and commercial spaces — precise, clean, and tailored to your style.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🖌️</div>
+                    <h3>Interior Decoration</h3>
+                    <p>Wall finishes, trim work, color consulting, and detail-oriented interior upgrades that refresh your space.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Exterior Decoration</h3>
+                    <p>Facade accents, entryway details, porch & balcony finishes — curb appeal with lasting quality.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Custom Detail Work</h3>
+                    <p>Molding, panels, decorative elements — we bring character and precision to every corner.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- why choose us -->
+    <section class="section-padding" style="background: #f4f2ee;" id="why">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">Why choose Home Sweets</h2>
+                <p class="section-sub">Reliable, transparent, and focused on your satisfaction — here’s what sets us apart.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-number">4.7★</div>
+                    <h4>Exceptional rating</h4>
+                    <p>Consistently high marks from customers who appreciate our quality and care.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">76+</div>
+                    <h4>Trusted clients</h4>
+                    <p>Over 76 homeowners and businesses have chosen us for their decoration projects.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">✓</div>
+                    <h4>Reliable & professional</h4>
+                    <p>Clear communication, on-time execution, and respect for your space.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-number">🎯</div>
+                    <h4>Focused on decoration</h4>
+                    <p>Specialized expertise means every detail gets the attention it deserves.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- reviews -->
+    <section class="section-padding" id="reviews">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-title">What clients say</h2>
+                <p class="section-sub">Real feedback from real projects — recurring themes from our reviews.</p>
+            </div>
+            <div class="review-summary">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-rating">4.7 / 5.0</div>
+                <div class="review-meta">Based on verified customer reviews</div>
+                <p style="font-size: 1.2rem; max-width: 500px; margin: 0 auto; color: #2e2e2e;">“Kind, recommend, great, top, wonderful” — these words appear most often in our feedback.</p>
+                <div class="review-keywords">
+                    <span class="review-tag">Kind</span>
+                    <span class="review-tag">Recommend</span>
+                    <span class="review-tag">Great</span>
+                    <span class="review-tag">Top</span>
+                    <span class="review-tag">Wonderful</span>
+                </div>
+                <p style="margin-top: 24px; color: #5a5a5a;">Clients value our clear communication, attention to detail, and the comfort of a job done right.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section class="section-padding contact-section" id="contact">
+        <div class="container text-center">
+            <h2 class="section-title" style="color: white;">Get in touch</h2>
+            <p class="section-sub" style="color: #d0dcdc;">Ready to start your decoration project? Reach out — we’ll get back to you quickly.</p>
+            <div class="contact-cards">
+                <div class="contact-item">
+                    <div class="label">Phone</div>
+                    <a href="tel:0212701159">021 2701159</a>
+                </div>
+                <div class="contact-item">
+                    <div class="label">Email</div>
+                    <a href="mailto:.ns@gmail.com">.ns@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <div class="label">Address</div>
+                    <a href="https://maps.google.com/?q=Bulevar+Evrope+28+Novi+Sad+Serbia" target="_blank" rel="noopener">Bulevar Evrope 28, Novi Sad, Serbia</a>
+                </div>
+            </div>
+            <div class="contact-cta">
+                <a href="mailto:.ns@gmail.com" class="btn btn-outline-light">Request Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <span>© 2026 Home Sweets — General Contractor Novi Sad</span>
+            <span>Decoration with care</span>
+        </div>
+    </footer>
+
+    <!-- no extra scripts, lightweight -->
+</body>
+</html>

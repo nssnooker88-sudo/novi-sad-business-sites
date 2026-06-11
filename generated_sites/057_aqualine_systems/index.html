@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaLine Systems | Plumber Novi Sad | 5.0-Star Plumbing Services</title>
+    <meta name="description" content="AquaLine Systems — trusted plumber in Novi Sad, Serbia. 5.0-star professional plumbing services. Fast, reliable, and modern solutions for your home or business. Call now.">
+    <meta property="og:title" content="AquaLine Systems | Plumber Novi Sad | 5.0-Star Plumbing Services">
+    <meta property="og:description" content="Trusted plumber in Novi Sad with a perfect 5.0-star rating. Professional plumbing services — call today for fast, reliable solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aqualinesystems.rs">
+    <meta property="og:locale" content="en_RS">
+    <meta name="keywords" content="AquaLine Systems, Plumber Novi Sad, Plumber plumber, best plumber in Novi Sad, plumber services Serbia, professional plumber">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- Utility --- */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #0891b2;
+            background: #ecfeff;
+            padding: 4px 14px;
+            border-radius: 100px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #475569;
+            max-width: 640px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 16px 36px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background: #0f172a;
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+        }
+
+        .btn:hover {
+            background: #1e293b;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn--primary {
+            background: #0891b2;
+            color: #ffffff;
+            box-shadow: 0 4px 16px rgba(8, 145, 178, 0.25);
+        }
+
+        .btn--primary:hover {
+            background: #0e7490;
+            box-shadow: 0 8px 28px rgba(8, 145, 178, 0.35);
+        }
+
+        .btn-icon {
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 32px 28px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+
+        /* --- Header / Nav --- */
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 12px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #0891b2;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .header-phone {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #0f172a;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-phone:hover {
+            color: #0891b2;
+        }
+
+        .header-btn {
+            padding: 10px 24px;
+            font-size: 0.9rem;
+            border-radius: 50px;
+            background: #0891b2;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-btn:hover {
+            background: #0e7490;
+        }
+
+        /* --- Hero --- */
+        .hero {
+            padding: 80px 0 60px;
+            background: linear-gradient(145deg, #f1f5f9 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(8, 145, 178, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ecfeff;
+            color: #0891b2;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 6px 18px 6px 14px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+            width: fit-content;
+            border: 1px solid rgba(8, 145, 178, 0.15);
+        }
+
+        .hero-badge-star {
+            font-size: 1.1rem;
+            color: #f59e0b;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            color: #0f172a;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .hero h1 span {
+            color: #0891b2;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #475569;
+            max-width: 580px;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hero-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            color: #475569;
+            font-size: 0.95rem;
+        }
+
+        .hero-rating-stars {
+            color: #f59e0b;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-card-icon {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            border-radius: 32px;
+            padding: 40px 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e2e8f0;
+            text-align: center;
+        }
+
+        .hero-card-icon .icon-big {
+            font-size: 3.8rem;
+            margin-bottom: 12px;
+        }
+
+        .hero-card-icon .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0891b2;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-card-icon .stat-label {
+            color: #475569;
+            font-weight: 500;
+        }
+
+        /* --- Services --- */
+        .services {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .services-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .service-card .icon-wrap {
+            font-size: 2.2rem;
+            background: #ecfeff;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            margin-bottom: 8px;
+            color: #0891b2;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .service-card p {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .service-card .service-tag {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #1e293b;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 4px 14px;
+            border-radius: 100px;
+            width: fit-content;
+            margin-top: 4px;
+        }
+
+        /* --- Why Choose Us --- */
+        .why {
+            padding: 80px 0;
+            background: #f1f5f9;
+        }
+
+        .why-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .why-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 36px 28px;
+        }
+
+        .why-card .why-icon {
+            font-size: 2.6rem;
+            background: #ecfeff;
+            width: 68px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            color: #0891b2;
+        }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .why-card p {
+            color: #475569;
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        .why-card .highlight {
+            font-weight: 700;
+            color: #0891b2;
+        }
+
+        /* --- Reviews --- */
+        .reviews {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .reviews-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .reviews-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .reviews-summary {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .reviews-summary .big-stars {
+            font-size: 2.8rem;
+            color: #f59e0b;
+            letter-spacing: 6px;
+            line-height: 1;
+        }
+
+        .reviews-summary .rating-number {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #0f172a;
+            letter-spacing: -0.03em;
+        }
+
+        .reviews-summary .rating-label {
+            color: #475569;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 28px 28px;
+            border: 1px solid #e2e8f0;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .review-card:hover {
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+        }
+
+        .review-card .review-stars {
+            color: #f59e0b;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .review-card blockquote {
+            font-size: 1rem;
+            color: #334155;
+            line-height: 1.7;
+            font-style: normal;
+            quotes: none;
+        }
+
+        .review-card .review-author {
+            margin-top: 14px;
+            font-weight: 600;
+            color: #0f172a;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .review-card .review-author::before {
+            content: '—';
+            color: #94a3b8;
+        }
+
+        /* --- Contact --- */
+        .contact {
+            padding: 80px 0;
+            background: #0f172a;
+            color: #ffffff;
+        }
+
+        .contact .section-label {
+            background: rgba(8, 145, 178, 0.15);
+            color: #67e8f9;
+        }
+
+        .contact .section-title {
+            color: #ffffff;
+        }
+
+        .contact .section-subtitle {
+            color: #94a3b8;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .contact-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            background: #1e293b;
+            border-radius: 24px;
+            padding: 32px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            border: 1px solid #334155;
+            transition: background 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: #263548;
+        }
+
+        .contact-card .contact-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #94a3b8;
+        }
+
+        .contact-card a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            word-break: break-all;
+        }
+
+        .contact-card a:hover {
+            color: #67e8f9;
+        }
+
+        .contact-card .contact-icon {
+            font-size: 1.6rem;
+            margin-bottom: 4px;
+        }
+
+        .contact-cta-wrap {
+            text-align: center;
+            margin-top: 48px;
+        }
+
+        .contact-cta-wrap .btn {
+            font-size: 1.2rem;
+            padding: 20px 48px;
+        }
+
+        /* --- Footer --- */
+        .site-footer {
+            background: #0b1320;
+            color: #94a3b8;
+            padding: 32px 0;
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        .site-footer .container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .site-footer a {
+            color: #67e8f9;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Responsive --- */
+        @media (min-width: 600px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .hero h1 {
+                font-size: 3.6rem;
+            }
+            .hero-grid {
+                grid-template-columns: 1.1fr 0.9fr;
+                gap: 64px;
+            }
+            .hero {
+                padding: 100px 0 80px;
+            }
+            .section-title {
+                font-size: 2.5rem;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .why-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .services {
+                padding: 100px 0;
+            }
+            .why {
+                padding: 100px 0;
+            }
+            .reviews {
+                padding: 100px 0;
+            }
+            .contact {
+                padding: 100px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .header-actions {
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .header-btn {
+                padding: 10px 18px;
+                font-size: 0.85rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+            .hero-card-icon {
+                padding: 28px 20px;
+            }
+            .hero-card-icon .stat-number {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" role="banner">
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="AquaLine Systems home">
+                <span class="logo-icon" aria-hidden="true">AL</span>
+                AquaLine Systems
+            </a>
+            <div class="header-actions">
+                <a href="tel:0649169150" class="header-phone" aria-label="Call AquaLine Systems">
+                    <span aria-hidden="true">📞</span> 064 9169150
+                </a>
+                <a href="tel:0649169150" class="header-btn">
+                    <span aria-hidden="true">📞</span> Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero" aria-label="Hero section">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-star" aria-hidden="true">★</span>
+                    Exceptional 5.0-star rating
+                </div>
+                <h1>Trusted <span>Plumber in Novi Sad</span> — Professional Service, Perfect Reputation</h1>
+                <p>AquaLine Systems delivers reliable, modern plumbing solutions across Novi Sad and Serbia. With a flawless 5.0-star customer rating, every job is handled with precision, care, and transparency.</p>
+                <div class="hero-actions">
+                    <a href="tel:0649169150" class="btn btn--primary">
+                        <span class="btn-icon" aria-hidden="true">📞</span> Call Now
+                    </a>
+                    <div class="hero-rating">
+                        <span class="hero-rating-stars" aria-hidden="true">★★★★★</span>
+                        <span>5.0 · 50+ reviews</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card-icon">
+                    <div class="icon-big" aria-hidden="true">🔧</div>
+                    <div class="stat-number">5.0</div>
+                    <div class="stat-label">★ Customer Rating</div>
+                    <div style="margin-top: 12px; color: #64748b; font-size: 0.9rem;">Professional · Reliable · Modern</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services" aria-label="Services">
+        <div class="container">
+            <div class="services-header">
+                <span class="section-label">Services</span>
+                <h2 class="section-title">Professional Plumbing — One Focus, Perfect Execution</h2>
+                <p class="section-subtitle">Every job, big or small, receives the same meticulous attention. AquaLine Systems stands for quality, punctuality, and lasting results.</p>
+            </div>
+            <div class="services-grid">
+                <div class="card service-card">
+                    <div class="icon-wrap" aria-hidden="true">🔧</div>
+                    <h3>Professional Plumber Services</h3>
+                    <p>From emergency repairs to full installations, AquaLine Systems handles all residential and commercial plumbing needs. Leak detection, pipe repair, fixture installation, drainage solutions — done right the first time.</p>
+                    <span class="service-tag">Plumbing · Repairs · Installations</span>
+                </div>
+                <div class="card service-card">
+                    <div class="icon-wrap" aria-hidden="true">🛠️</div>
+                    <h3>Emergency Plumbing</h3>
+                    <p>Burst pipe? Overflow? Sudden leak? Count on AquaLine Systems for rapid response in Novi Sad. Minimize damage with fast, professional emergency service — available when you need it most.</p>
+                    <span class="service-tag">24/7 Emergency · Rapid Response</span>
+                </div>
+                <div class="card service-card">
+                    <div class="icon-wrap" aria-hidden="true">🚿</div>
+                    <h3>Fixture Installation & Upgrades</h3>
+                    <p>Modern taps, toilets, water heaters, and more. AquaLine Systems provides expert installation with a focus on durability, water efficiency, and clean workmanship. Upgrade your space with confidence.</p>
+                    <span class="service-tag">Installations · Upgrades · Efficiency</span>
+                </div>
+                <div class="card service-card">
+                    <div class="icon-wrap" aria-hidden="true">🔍</div>
+                    <h3>Inspection & Diagnostics</h3>
+                    <p>Advanced leak detection and pipe diagnostics using modern tools. AquaLine Systems identifies issues quickly, saving you time and money. Transparent assessments with no guesswork.</p>
+                    <span class="service-tag">Inspection · Diagnostics · Reports</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why" id="why" aria-label="Why choose AquaLine Systems">
+        <div class="container">
+            <div class="why-header">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">Built on Trust, Backed by Results</h2>
+                <p class="section-subtitle">AquaLine Systems isn't just another plumber — every decision is guided by quality, honesty, and a perfect track record.</p>
+            </div>
+            <div class="why-grid">
+                <div class="card why-card">
+                    <div class="why-icon" aria-hidden="true">⭐</div>
+                    <h3>Exceptional <span class="highlight">5.0-Star</span> Rating</h3>
+                    <p>Every customer review reflects genuine satisfaction. No shortcuts, no excuses — just consistent, high-quality plumbing that earns perfect scores.</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-icon" aria-hidden="true">📍</div>
+                    <h3>Locally Rooted in Novi Sad</h3>
+                    <p>Proudly serving Novi Sad and surrounding areas. AquaLine Systems knows local plumbing systems, water infrastructure, and building standards inside out.</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-icon" aria-hidden="true">🧰</div>
+                    <h3>Modern Tools & Techniques</h3>
+                    <p>From diagnostic cameras to pressure testing, AquaLine uses modern equipment for precise, non-invasive solutions. Less mess, faster fixes, longer-lasting results.</p>
+                </div>
+                <div class="card why-card">
+                    <div class="why-icon" aria-hidden="true">🤝</div>
+                    <h3>Transparent & Reliable Service</h3>
+                    <p>Clear pricing, honest recommendations, and upfront communication. No hidden fees, no unnecessary upsells — just straightforward plumbing you can trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section class="reviews" id="reviews" aria-label="Customer reviews">
+        <div class="container">
+            <div class="reviews-header">
+                <span class="section-label">Reviews</span>
+                <h2 class="section-title">What Customers Say</h2>
+                <p class="section-subtitle">AquaLine Systems has earned a flawless reputation through consistent, high-quality work and genuine care for every client.</p>
+            </div>
+            <div class="reviews-summary">
+                <div class="big-stars" aria-hidden="true">★★★★★</div>
+                <div class="rating-number">5.0</div>
+                <div class="rating-label">Exceptional · Based on verified customer reviews</div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars" aria-hidden="true">★★★★★</div>
+                    <blockquote>"AquaLine fixed a complex pipe issue in our building. Professional, on time, and the work was flawless. You can tell they take real pride in what they do."</blockquote>
+                    <div class="review-author">Verified customer, Novi Sad</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars" aria-hidden="true">★★★★★</div>
+                    <blockquote>"Called for an emergency leak on a Sunday. They arrived fast, sorted everything, and even followed up to make sure all was good. Rare to find this level of service."</blockquote>
+                    <div class="review-author">Verified customer, Novi Sad</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars" aria-hidden="true">★★★★★</div>
+                    <blockquote>"Honest, skilled, and very clean work. AquaLine installed new fixtures in our bathroom and the results are perfect. Will definitely call again."</blockquote>
+                    <div class="review-author">Verified customer, Serbia</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars" aria-hidden="true">★★★★★</div>
+                    <blockquote>"I've used several plumbers over the years — AquaLine is by far the best. Fair pricing, clear communication, and the job was done faster than expected."</blockquote>
+                    <div class="review-author">Verified customer, Serbia</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact" aria-label="Contact AquaLine Systems">
+        <div class="container">
+            <div class="contact-header">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Ready for reliable plumbing? Call, email, or visit — AquaLine Systems is here to help with fast, professional service.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon" aria-hidden="true">📞</div>
+                    <div class="contact-label">Phone</div>
+                    <a href="tel:0649169150">064 9169150</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon" aria-hidden="true">✉️</div>
+                    <div class="contact-label">Email</div>
+                    <a href="mailto:aqualine@gimelnet.rs">aqualine@gimelnet.rs</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon" aria-hidden="true">📍</div>
+                    <div class="contact-label">Address</div>
+                    <a href="https://maps.google.com/?q=Janka+Čmelika+26+Novi+Sad+21000+Serbia" target="_blank" rel="noopener noreferrer">Janka Čmelika 26, Novi Sad 21000, Serbia</a>
+                </div>
+            </div>
+            <div class="contact-cta-wrap">
+                <a href="tel:0649169150" class="btn btn--primary">
+                    <span class="btn-icon" aria-hidden="true">📞</span> Call Now — 064 9169150
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <span>&copy; 2026 AquaLine Systems. All rights reserved.</span>
+            <span>Janka Čmelika 26, Novi Sad, Serbia</span>
+            <span>
+                <a href="tel:0649169150">064 9169150</a> · 
+                <a href="mailto:aqualine@gimelnet.rs">aqualine@gimelnet.rs</a>
+            </span>
+        </div>
+    </footer>
+
+    <!-- ===== INLINE JS (smooth scroll fallback & minimal interactivity) ===== -->
+    <script>
+        (function() {
+            // Smooth scroll for all anchor links (optional enhancement)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+
+            // Track CTA clicks (simple console log for demo purposes)
+            document.querySelectorAll('.btn, .header-btn, .header-phone').forEach(el => {
+                el.addEventListener('click', function() {
+                    if (this.getAttribute('href') && this.getAttribute('href').startsWith('tel:')) {
+                        console.log('Call initiated: ' + this.getAttribute('href'));
+                    }
+                });
+            });
+
+            // Log page view (simple analytics placeholder)
+            console.log('AquaLine Systems — page loaded');
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "company_name": "Moj Pedijatar Dr. Andric Sanja",
+  "category": "Doctor",
+  "archetype": "Healthcare Professional",
+  "website_style": "clean, professional, trustworthy",
+  "website_goal": "book_appointment",
+  "phone": "064 1289426",
+  "email": "drandricsanja@gmail.com",
+  "address": "Ratarska 17, Sremska Mitrovica 22000, Serbia",
+  "services": [
+    "Professional Doctor Services"
+  ],
+  "usp": [
+    "Exceptional 5.0-star rating from customers",
+    "Professional and reliable service"
+  ],
+  "review_summary": "Professional, Kind, Friendly, Recommend, Great",
+  "recommended_sections": [
+    "Hero",
+    "Services",
+    "Why Choose Us",
+    "Reviews",
+    "Contact"
+  ],
+  "seo_keywords": {
+    "primary": [
+      "Moj Pedijatar Dr. Andric Sanja",
+      "Doctor Novi Sad",
+      "Doctor doctor"
+    ],
+    "secondary": [
+      "best doctor in Novi Sad",
+      "doctor services Serbia",
+      "professional doctor"
+    ]
+  }
+}

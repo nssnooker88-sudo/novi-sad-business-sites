@@ -1,100 +1,137 @@
-"""Debug: extract APR email from PIB response, find name-search endpoint."""
-import http.cookiejar, json, re, ssl, sys, urllib.request
-from urllib.parse import urlencode
-
+"""
+Debug APR with correct route + API interception.
+Routes from JS bundle:
+  /search/PrivrednaDrustva/PretragaNaziva  — company name search
+  /searchPru                               — entrepreneur search
+  /details/PrivrednaDrustva                — company detail
+"""
+import re, sys, time
 sys.stdout.reconfigure(encoding="utf-8")
-ctx = ssl._create_unverified_context()
-cj = http.cookiejar.CookieJar()
-opener = urllib.request.build_opener(
-    urllib.request.HTTPSHandler(context=ctx),
-    urllib.request.HTTPCookieProcessor(cj),
-)
+from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
 BASE = "https://pretraga.apr.gov.rs"
 
-HEADERS_HTML = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "sr-RS,sr;q=0.9,en;q=0.8",
-}
-HEADERS_JSON = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Accept": "application/json, text/plain, */*",
-    "Accept-Language": "sr-RS,sr;q=0.9,en;q=0.8",
-    "Referer": "https://pretraga.apr.gov.rs/searchBD",
-}
+with sync_playwright() as pw:
+    browser = pw.chromium.launch(headless=True, timeout=15000)
+    ctx = browser.new_context(
+        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124",
+        locale="sr-RS",
+        ignore_https_errors=True,
+    )
+    page = ctx.new_page()
+    page.set_default_timeout(20000)
 
-
-def fetch(url, params=None, headers=None):
-    h = headers or HEADERS_HTML
-    full_url = (url + "?" + urlencode(params)) if params else url
-    req = urllib.request.Request(full_url, headers=h)
-    try:
-        with opener.open(req, timeout=25) as resp:
-            raw = resp.read().decode("utf-8", errors="replace")
-            print(f"  GET {full_url[:100]}  -> {resp.status}  len={len(raw)}")
+    # Capture every /api/ call + response
+    api_log = []
+    def on_resp(resp):
+        if "/api/" in resp.url:
             try:
-                return json.loads(raw)
+                body = resp.body().decode("utf-8", errors="replace")
             except Exception:
-                return raw
-    except urllib.error.HTTPError as e:
-        print(f"  GET {full_url[:100]}  -> HTTP {e.code}")
-        return None
-    except Exception as e:
-        print(f"  GET {full_url[:100]}  -> ERROR: {e}")
-        return None
+                body = "<unreadable>"
+            api_log.append({"url": resp.url, "status": resp.status, "body": body[:800]})
+    page.on("response", on_resp)
 
+    # 1) Warm-up — prime WAF session
+    print("Warm up...")
+    page.goto(BASE, wait_until="domcontentloaded", timeout=20000)
+    try: page.wait_for_load_state("networkidle", timeout=6000)
+    except PWTimeout: pass
+    time.sleep(1)
 
-# Prime session
-fetch(BASE, headers=HEADERS_HTML)
-fetch(f"{BASE}/searchBD", headers=HEADERS_HTML)
+    # 2) Load the name-search route
+    print("Loading /search/PrivrednaDrustva/PretragaNaziva ...")
+    page.goto(f"{BASE}/search/PrivrednaDrustva/PretragaNaziva",
+              wait_until="domcontentloaded", timeout=20000)
+    try: page.wait_for_load_state("networkidle", timeout=8000)
+    except PWTimeout: pass
+    time.sleep(2)
 
-# 1) Full response from PIB search
-print("\n=== PIB 115210171 (The Pub) full response ===")
-r = fetch(f"{BASE}/api/BD/search", params={"pib": "115210171"}, headers=HEADERS_JSON)
-print(json.dumps(r, indent=2, ensure_ascii=False) if isinstance(r, (dict,list)) else r)
+    print(f"URL: {page.url}")
+    print(f"Title: {page.title()}")
+    body = page.inner_text("body")
+    print(f"Body[:400]: {body[:400]}")
 
-# 2) PIB search for Radio Cafe (pib 115147664)
-print("\n=== PIB 115147664 (Radio Cafe) ===")
-r2 = fetch(f"{BASE}/api/BD/search", params={"pib": "115147664"}, headers=HEADERS_JSON)
-print(json.dumps(r2, indent=2, ensure_ascii=False) if isinstance(r2, (dict,list)) else r2)
+    inputs = page.query_selector_all("input")
+    print(f"\nInputs ({len(inputs)}):")
+    for inp in inputs:
+        print(f"  type={inp.get_attribute('type')!r}  "
+              f"ph={inp.get_attribute('placeholder')!r}  "
+              f"id={inp.get_attribute('id')!r}")
 
-# 3) Try name-based search with different param names  (needs session cookies)
-print("\n=== Name search attempts ===")
-for p in [
-    {"naziv": "Pekara Krosti"},
-    {"name": "Pekara Krosti"},
-    {"searchNaziv": "Pekara"},
-    {"searchTerm": "Pekara"},
-    {"filter": "Pekara"},
-    {"q": "Pekara"},
-]:
-    r3 = fetch(f"{BASE}/api/BD/search", params=p, headers=HEADERS_JSON)
-    if r3 and r3 != {"title": "404 Not Found"}:
-        print(f"  HIT with params {p}: {str(r3)[:200]}")
+    # 3) Fill in name + submit
+    print("\nFilling search: 'Pekara Krosti'")
+    txt = page.query_selector('input[type="text"], input:not([type="hidden"]):not([type="submit"])')
+    if txt:
+        txt.fill("Pekara Krosti")
+        txt.press("Enter")
+        try: page.wait_for_load_state("networkidle", timeout=10000)
+        except PWTimeout: pass
+        time.sleep(2)
+        print(f"After search body[:600]: {page.inner_text('body')[:600]}")
+    else:
+        print("  No text input found. All elements:")
+        for el in page.query_selector_all("*")[:20]:
+            tag = el.evaluate("el => el.tagName")
+            print(f"    {tag}")
 
-# 4) Try /api/BD/searchByName  /api/BD/list  etc.
-print("\n=== Alternative BD endpoints ===")
-for ep in [
-    "/api/BD/searchByName",
-    "/api/BD/list",
-    "/api/BD/pretraga",
-    "/api/BD/find",
-    "/api/BD/getAll",
-    "/api/BD/searchNaziv",
-    "/api/BD/naziv",
-    "/api/PRU/search",
-    "/api/PRU/search",
-]:
-    fetch(f"{BASE}{ep}", params={"naziv": "Pekara"}, headers=HEADERS_JSON)
+    print(f"\n=== API calls captured ({len(api_log)}) ===")
+    for entry in api_log:
+        print(f"  [{entry['status']}] {entry['url']}")
+        print(f"    body: {entry['body'][:300]}")
 
-# 5) If we got an ID from the PIB lookup, try detail endpoint
-if isinstance(r, (dict, list)):
-    # look for IDs in the response
-    rstr = json.dumps(r)
-    ids = re.findall(r'"(?:id|Id|ID|registrationId|subjectId)"\s*:\s*(\d+)', rstr)
-    mbs = re.findall(r'"(?:mb|MB|maticniBroj)"\s*:\s*"?(\d{8})"?', rstr)
-    print(f"\nIDs found: {ids},  MBs found: {mbs}")
-    for mb in mbs[:3]:
-        for ep in [f"/api/BD/{mb}", f"/api/BD/detail/{mb}", f"/api/BD/details/{mb}"]:
-            fetch(f"{BASE}{ep}", headers=HEADERS_JSON)
+    # 4) Click first result if present
+    rows = page.query_selector_all("table tbody tr")
+    print(f"\nResult table rows: {len(rows)}")
+    if rows:
+        rows[0].click()
+        try: page.wait_for_load_state("networkidle", timeout=10000)
+        except PWTimeout: pass
+        time.sleep(2)
+        print(f"Detail URL: {page.url}")
+        detail_body = page.inner_text("body")
+        print(f"Detail body[:800]: {detail_body[:800]}")
+        emails = re.findall(r"[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}", detail_body)
+        print(f"Emails found: {emails}")
+        mailtos = [a.get_attribute("href") for a in page.query_selector_all('a[href^="mailto:"]')]
+        print(f"Mailto links: {mailtos}")
+
+    # 5) Also try PIB search
+    print("\n=== PIB search: 115210171 ===")
+    page.goto(f"{BASE}/search/PrivrednaDrustva/PretragaNaziva",
+              wait_until="domcontentloaded", timeout=20000)
+    try: page.wait_for_load_state("networkidle", timeout=6000)
+    except PWTimeout: pass
+    time.sleep(1)
+    pib_input = page.query_selector('input[placeholder*="PIB" i], input[id*="pib" i]')
+    if pib_input:
+        pib_input.fill("115210171")
+        pib_input.press("Enter")
+    else:
+        # Try all inputs — fill second one if there are two (name + PIB)
+        all_inputs = page.query_selector_all('input:not([type="hidden"])')
+        print(f"  Inputs available: {len(all_inputs)}")
+        for i, inp in enumerate(all_inputs):
+            print(f"  [{i}] ph={inp.get_attribute('placeholder')!r} id={inp.get_attribute('id')!r}")
+        if len(all_inputs) >= 2:
+            all_inputs[1].fill("115210171")
+            all_inputs[1].press("Enter")
+        elif all_inputs:
+            all_inputs[0].fill("115210171")
+            all_inputs[0].press("Enter")
+    try: page.wait_for_load_state("networkidle", timeout=8000)
+    except PWTimeout: pass
+    time.sleep(2)
+    pib_body = page.inner_text("body")
+    print(f"PIB search body[:400]: {pib_body[:400]}")
+
+    print(f"\n=== Final API log ({len(api_log)}) ===")
+    for entry in api_log:
+        print(f"  [{entry['status']}] {entry['url']}")
+        print(f"    {entry['body'][:400]}")
+
+    page.screenshot(path="apr_screenshot.png")
+    print("\nScreenshot: apr_screenshot.png")
+    browser.close()
+
+print("Done.")
