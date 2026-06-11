@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLM Cezar Company | Premier Shopping Mall in Novi Sad, Serbia</title>
+  <meta name="description" content="SLM Cezar Company – trusted shopping mall in Novi Sad. Explore premium materials, paint, and shopping services. Rated 4.7 stars by 91+ satisfied clients. Visit us today.">
+  <meta property="og:title" content="SLM Cezar Company | Shopping Mall Novi Sad">
+  <meta property="og:description" content="Premier shopping mall in Novi Sad offering materials, paint, and exceptional shopping. Trusted by 91+ clients with a 4.7-star rating.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://slmcezarcompany.rs">
+  <meta property="og:locale" content="sr_RS">
+  <meta name="keywords" content="SLM Cezar Company, Shopping Mall Novi Sad, Shopping Mall shopping_mall, best shopping mall in Novi Sad, shopping mall services Serbia, professional shopping mall">
+
+  <style>
+    /* --- Reset & Base --- */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 400;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: #1E1E1E;
+      background-color: #FAFAF8;
+    }
+
+    /* --- Typography --- */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 600;
+      line-height: 1.2;
+      color: #161615;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+    }
+
+    p {
+      margin-bottom: 1rem;
+      color: #404040;
+    }
+
+    a {
+      color: #2A6B4A;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #1D4F36;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* --- Buttons --- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 2.4rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      font-family: inherit;
+      line-height: 1.2;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      background-color: #2A6B4A;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(42, 107, 74, 0.25);
+    }
+
+    .btn:hover {
+      background-color: #1F5538;
+      box-shadow: 0 6px 24px rgba(42, 107, 74, 0.35);
+      transform: translateY(-2px);
+      color: #fff;
+    }
+
+    .btn:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 8px rgba(42, 107, 74, 0.2);
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: #2A6B4A;
+      border: 2px solid #2A6B4A;
+      box-shadow: none;
+    }
+
+    .btn--outline:hover {
+      background: #2A6B4A;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(42, 107, 74, 0.2);
+    }
+
+    /* --- Header / Nav --- */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(250, 250, 248, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #161615;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      color: #2A6B4A;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #404040;
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #2A6B4A;
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      width: 100%;
+    }
+
+    .nav-links a:hover {
+      color: #2A6B4A;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 26px;
+      height: 2.5px;
+      background: #1E1E1E;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* --- Hero --- */
+    .hero {
+      padding: 8rem 1.5rem 5rem;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #F4F7F2 0%, #EAF0E6 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      right: -15%;
+      width: 60%;
+      height: 140%;
+      background: radial-gradient(ellipse, rgba(42, 107, 74, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #4A4A4A;
+      max-width: 540px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.04);
+      width: 100%;
+      max-width: 420px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-card .rating-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-card .stars {
+      display: flex;
+      gap: 2px;
+    }
+
+    .hero-card .stars svg {
+      width: 20px;
+      height: 20px;
+      fill: #E8A63F;
+    }
+
+    .hero-card .rating-text {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #1E1E1E;
+    }
+
+    .hero-card .stat-row {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #ECECE8;
+      padding-top: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .hero-card .stat-item {
+      text-align: center;
+    }
+
+    .hero-card .stat-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2A6B4A;
+      line-height: 1.2;
+    }
+
+    .hero-card .stat-label {
+      font-size: 0.8rem;
+      color: #6B6B6B;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* --- Section Shared --- */
+    .section {
+      padding: 5rem 1.5rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #2A6B4A;
+      margin-bottom: 0.75rem;
+      background: rgba(42, 107, 74, 0.08);
+      padding: 0.3rem 1rem;
+      border-radius: 100px;
+    }
+
+    .section-title {
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: #5A5A5A;
+      max-width: 640px;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* --- Services --- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2.5rem 2rem 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.07);
+    }
+
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: #EEF4EB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-icon svg {
+      width: 26px;
+      height: 26px;
+      stroke: #2A6B4A;
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .service-card h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      font-size: 0.98rem;
+      color: #5A5A5A;
+      margin-bottom: 0;
+    }
+
+    /* --- Why Choose Us --- */
+    .why-bg {
+      background: #F4F7F2;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .why-item {
+      background: #fff;
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .why-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+    }
+
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .why-item h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .why-item p {
+      font-size: 0.93rem;
+      color: #5A5A5A;
+      margin-bottom: 0;
+    }
+
+    /* --- Reviews --- */
+    .reviews-summary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .reviews-visual {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      text-align: center;
+    }
+
+    .reviews-visual .big-star {
+      font-size: 3.5rem;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .reviews-visual .rating-number {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #161615;
+      line-height: 1.1;
+    }
+
+    .reviews-visual .rating-stars {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin: 0.5rem 0 0.25rem;
+    }
+
+    .reviews-visual .rating-stars svg {
+      width: 28px;
+      height: 28px;
+      fill: #E8A63F;
+    }
+
+    .reviews-visual .rating-count {
+      color: #6B6B6B;
+      font-size: 1rem;
+    }
+
+    .reviews-themes {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .theme-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #fff;
+      padding: 0.7rem 1.25rem;
+      border-radius: 100px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #1E1E1E;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .theme-tag .tag-icon {
+      font-size: 1.2rem;
+    }
+
+    .theme-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+
+    /* --- Contact --- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .contact-item-icon {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #EEF4EB;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-item-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: #2A6B4A;
+      fill: none;
+      stroke-width: 1.8;
+    }
+
+    .contact-item h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6B6B6B;
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-item a,
+    .contact-item span {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1E1E1E;
+    }
+
+    .contact-item a:hover {
+      color: #2A6B4A;
+    }
+
+    .contact-map-placeholder {
+      background: #EAF0E6;
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(42, 107, 74, 0.1);
+    }
+
+    .contact-map-placeholder .map-icon {
+      font-size: 2.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-map-placeholder p {
+      color: #4A4A4A;
+      font-size: 0.98rem;
+      max-width: 280px;
+      margin-bottom: 0;
+    }
+
+    /* --- Footer --- */
+    .site-footer {
+      background: #161615;
+      color: #B0B0A8;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .site-footer .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .site-footer .footer-logo {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #E8E8E0;
+      letter-spacing: -0.02em;
+    }
+
+    .site-footer .footer-logo span {
+      color: #6B9F7A;
+    }
+
+    .site-footer p {
+      font-size: 0.88rem;
+      color: #8A8A82;
+      margin-bottom: 0;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 968px) {
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .hero {
+        padding: 7rem 1.5rem 3.5rem;
+        min-height: auto;
+      }
+
+      .hero-content p {
+        max-width: 100%;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .hero-card {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+      }
+
+      .reviews-summary {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .section {
+        padding: 3.5rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 320px;
+        height: 100vh;
+        background: #FAFAF8;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 2rem 2rem;
+        gap: 1.5rem;
+        box-shadow: -8px 0 32px rgba(0, 0, 0, 0.08);
+        transition: right 0.35s ease;
+        z-index: 200;
+        border-left: 1px solid rgba(0, 0, 0, 0.04);
+      }
+
+      .nav-links.open {
+        right: 0;
+      }
+
+      .nav-links a {
+        font-size: 1.15rem;
+      }
+
+      .nav-toggle {
+        display: flex;
+        z-index: 300;
+      }
+
+      .nav-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        z-index: 150;
+      }
+
+      .nav-overlay.show {
+        display: block;
+      }
+
+      .header-inner {
+        padding: 0.7rem 1.5rem;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-card .stat-row {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-cta .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .theme-tag {
+        font-size: 0.95rem;
+        padding: 0.5rem 1rem;
+      }
+
+      .hero-card .rating-badge {
+        flex-wrap: wrap;
+      }
+    }
+
+    /* --- Utility --- */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#" class="logo">SLM <span>Cezar</span></a>
+      <nav aria-label="Main navigation">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" class="btn btn--outline" style="padding:0.5rem 1.5rem; font-size:0.9rem;">Visit Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-overlay" id="navOverlay"></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Your Premier Shopping Destination in Novi Sad</h1>
+        <p>SLM Cezar Company brings you a curated selection of premium materials, paint, and everyday essentials — all under one roof. Experience shopping that's professional, reliable, and genuinely welcoming.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn">Visit Us</a>
+          <a href="#services" class="btn btn--outline">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="rating-badge">
+            <div class="stars" aria-label="4.7 out of 5 stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg viewBox="0 0 24 24" style="opacity:0.45;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <span class="rating-text">4.7 / 5.0</span>
+          </div>
+          <p style="font-size:0.98rem; color:#4A4A4A; margin-bottom:1.25rem;">"Professional, friendly, and always reliable — the best shopping experience in Novi Sad."</p>
+          <div class="stat-row">
+            <div class="stat-item">
+              <div class="stat-number">91+</div>
+              <div class="stat-label">Satisfied Clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">4.7</div>
+              <div class="stat-label">Star Rating</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Years Trusted</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">What We Offer</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle mx-auto">Everything you need for your projects and daily shopping — delivered with professionalism and care.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          </div>
+          <h3>Materials</h3>
+          <p>High-quality building and renovation materials for every project. From hardware to finishes, we stock what professionals and homeowners trust.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><path d="M9 22V12h6v10"/></svg>
+          </div>
+          <h3>Shopping</h3>
+          <p>A curated retail experience with everyday essentials, specialty goods, and convenient one-stop shopping. We make every visit productive and pleasant.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Paint</h3>
+          <p>Premium paints and coatings for interior and exterior surfaces. Expert colour advice and consistent quality for a flawless finish every time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section why-bg" id="why">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Why Choose Us</span>
+        <h2 class="section-title">Trusted by the Community</h2>
+        <p class="section-subtitle mx-auto">We earn your trust through consistent quality, transparent service, and genuine care for every client.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="why-icon">⭐</span>
+          <h4>Exceptional 4.7-Star Rating</h4>
+          <p>Our customers consistently rate us among the best — a reflection of our commitment to quality and service.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">🤝</span>
+          <h4>Trusted by 91+ Clients</h4>
+          <p>From homeowners to contractors, our growing community of satisfied clients speaks for itself.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">⚡</span>
+          <h4>Fast &amp; Efficient Service</h4>
+          <p>We respect your time. Our streamlined process means less waiting and more doing.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">🏆</span>
+          <h4>Professional &amp; Reliable</h4>
+          <p>Every interaction is handled with expertise and integrity. We stand behind every product and every promise.</p>
+        </div>
+        <div class="why-item">
+          <span class="why-icon">💰</span>
+          <h4>Affordable Pricing</h4>
+          <p>Quality doesn't have to come at a premium. We offer competitive prices without compromising on service.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Client Feedback</span>
+        <h2 class="section-title">What People Say</h2>
+        <p class="section-subtitle mx-auto">Real themes from real reviews — our reputation is built on the words of our community.</p>
+      </div>
+      <div class="reviews-summary">
+        <div class="reviews-visual">
+          <div class="big-star">★</div>
+          <div class="rating-number">4.7</div>
+          <div class="rating-stars" aria-label="4.7 out of 5 stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" style="opacity:0.45;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="rating-count">Based on reviews from satisfied clients</p>
+        </div>
+        <div class="reviews-themes">
+          <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">Recurring Themes</h3>
+          <p style="color:#5A5A5A; font-size:0.98rem; margin-bottom:0.75rem;">Across every review, these words appear again and again:</p>
+          <div class="theme-list">
+            <span class="theme-tag"><span class="tag-icon">👍</span> Professional</span>
+            <span class="theme-tag"><span class="tag-icon">😊</span> Friendly</span>
+            <span class="theme-tag"><span class="tag-icon">📢</span> Recommend</span>
+            <span class="theme-tag"><span class="tag-icon">🌟</span> Excellent</span>
+            <span class="theme-tag"><span class="tag-icon">🏅</span> Best</span>
+          </div>
+          <p style="color:#4A4A4A; font-size:0.95rem; margin-top:1rem; font-style:italic;">"Professional, friendly, and always recommend — our clients call it the best shopping experience in Novi Sad."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section why-bg" id="contact">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Get in Touch</span>
+        <h2 class="section-title">Visit Our Mall</h2>
+        <p class="section-subtitle mx-auto">We're ready to welcome you. Reach out or stop by during business hours.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:0216411696">021 6411696</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:slm.cezar@gmail.com">slm.cezar@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Address</h4>
+              <span>20, Primorska 21000, Novi Sad 21000, Serbia</span>
+            </div>
+          </div>
+          <div style="margin-top:0.5rem;">
+            <a href="tel:0216411696" class="btn" style="margin-right:0.75rem; margin-bottom:0.5rem;">Call Us</a>
+            <a href="mailto:slm.cezar@gmail.com" class="btn btn--outline">Send Email</a>
+          </div>
+        </div>
+        <div class="contact-map-placeholder">
+          <div class="map-icon">📍</div>
+          <p><strong>SLM Cezar Company</strong><br>20, Primorska<br>21000 Novi Sad, Serbia</p>
+          <p style="margin-top:0.75rem; font-size:0.9rem; color:#6B6B6B;">Come visit us — we look forward to welcoming you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-logo">SLM <span>Cezar</span> Company</div>
+      <p>20, Primorska 21000, Novi Sad 21000, Serbia</p>
+      <p style="font-size:0.82rem; color:#6B6B62;">&copy; 2026 SLM Cezar Company. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    (function() {
+      'use strict';
+
+      const header = document.getElementById('siteHeader');
+      const navToggle = document.getElementById('navToggle');
+      const navLinks = document.getElementById('navLinks');
+      const navOverlay = document.getElementById('navOverlay');
+
+      // Scroll shadow
+      let ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(function() {
+            if (window.scrollY > 20) {
+              header.classList.add('scrolled');
+            } else {
+              header.classList.remove('scrolled');
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Mobile menu toggle
+      function toggleMenu(forceClose) {
+        const isOpen = navLinks.classList.contains('open');
+        if (forceClose && !isOpen) return;
+        navLinks.classList.toggle('open');
+        navOverlay.classList.toggle('show');
+        navToggle.classList.toggle('active');
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true';
+        navToggle.setAttribute('aria-expanded', expanded);
+      }
+
+      navToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMenu();
+      });
+
+      navOverlay.addEventListener('click', function() {
+        toggleMenu(true);
+      });
+
+      // Close menu on link click (mobile)
+      const menuLinks = navLinks.querySelectorAll('a');
+      menuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (window.innerWidth <= 768) {
+            toggleMenu(true);
+          }
+        });
+      });
+
+      // Close menu on escape
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+          toggleMenu(true);
+        }
+      });
+
+      // Close menu on resize
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navLinks.classList.contains('open')) {
+          toggleMenu(true);
+        }
+      });
+
+      // Smooth scroll for anchor links (with offset for fixed header)
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            const headerHeight = header.offsetHeight;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 16;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+    })();
+  </script>
+
+</body>
+</html>

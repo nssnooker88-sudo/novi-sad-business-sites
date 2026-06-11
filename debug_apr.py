@@ -1,25 +1,39 @@
 """Debug script: fetch one APR page and dump HTML structure."""
-import requests, urllib3, re, sys
+import json, re, ssl, sys, urllib.request
 from bs4 import BeautifulSoup
 
-urllib3.disable_warnings()
 sys.stdout.reconfigure(encoding="utf-8")
+
+# Same SSL bypass used in verify_and_pages.py — proven to work on this machine
+ctx = ssl._create_unverified_context()
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-    "Accept-Language": "sr-RS,sr;q=0.9",
+    "Accept-Language": "sr-RS,sr;q=0.9,en;q=0.8",
 }
 
 APR_SEARCH = "https://www.apr.gov.rs/reg/skr/skrHome.aspx"
 APR_DETAIL = "https://www.apr.gov.rs/reg/skr/skrIndividualResult.aspx"
 
-s = requests.Session()
+
+def get(url, params=None):
+    if params:
+        from urllib.parse import urlencode
+        url = url + "?" + urlencode(params)
+    req = urllib.request.Request(url, headers=HEADERS)
+    try:
+        with urllib.request.urlopen(req, context=ctx, timeout=20) as resp:
+            raw = resp.read()
+            return raw.decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"ERROR {url}: {e}")
+        return ""
 
 # 1) Search by name
 name = "Pekara Krosti"
 print(f"\n=== SEARCH for '{name}' (BDP) ===")
 r = s.get(APR_SEARCH, params={"reg": "BDP", "Naziv": name, "showType": "1"},
-          headers=HEADERS, verify=False, timeout=20)
+          headers=HEADERS, timeout=20)
 r.encoding = "utf-8"
 html = r.text
 print(f"Status: {r.status_code}, Length: {len(html)}")
@@ -44,7 +58,7 @@ for name, href in links[:10]:
 # 2) Also try PR (entrepreneurs)
 print(f"\n=== SEARCH for '{name}' (PR) ===")
 r2 = s.get(APR_SEARCH, params={"reg": "PR", "Naziv": name, "showType": "1"},
-           headers=HEADERS, verify=False, timeout=20)
+           headers=HEADERS, timeout=20)
 r2.encoding = "utf-8"
 html2 = r2.text
 print(f"Status: {r2.status_code}, Length: {len(html2)}")
@@ -61,7 +75,7 @@ for i, t in enumerate(tables2):
 # 3) Try PIB lookup (The Pub has PIB 115210171)
 print("\n=== SEARCH by PIB 115210171 ===")
 r3 = s.get(APR_SEARCH, params={"reg": "BDP", "PIB": "115210171", "showType": "1"},
-           headers=HEADERS, verify=False, timeout=20)
+           headers=HEADERS, timeout=20)
 r3.encoding = "utf-8"
 html3 = r3.text
 print(f"Status: {r3.status_code}, Length: {len(html3)}")

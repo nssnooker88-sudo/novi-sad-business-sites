@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordinacija Dermoven | Doctor Novi Sad | Professional Doctor Services</title>
+  <meta name="description" content="Ordinacija Dermoven in Novi Sad offers professional doctor services with a 5.0-star rating. Book an appointment today for expert treatment.">
+  <meta property="og:title" content="Ordinacija Dermoven | Doctor Novi Sad">
+  <meta property="og:description" content="Professional doctor services in Novi Sad. 5.0-star rating. Book your appointment now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ordinacijadermoven.com">
+  <meta property="og:image" content="">
+  <meta name="keywords" content="Ordinacija Dermoven, Doctor Novi Sad, Doctor doctor, best doctor in Novi Sad, doctor services Serbia, professional doctor">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: #fafafa;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0f4c5c 0%, #1b6b7a 100%);
+      color: #fff;
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: #fafafa;
+      border-radius: 50% 50% 0 0;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      opacity: 0.9;
+    }
+
+    .hero .btn {
+      display: inline-block;
+      background: #e8aa42;
+      color: #1a1a2e;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+
+    .hero .btn:hover {
+      background: #d99a2e;
+      transform: translateY(-2px);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 16px;
+      color: #0f4c5c;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto 48px;
+      font-size: 1.1rem;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    }
+
+    .service-card .icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: #0f4c5c;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    /* Why Choose Us */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .why-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 36px 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    .why-card .icon {
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .why-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #0f4c5c;
+    }
+
+    .why-card p {
+      color: #555;
+    }
+
+    /* Reviews */
+    .reviews-summary {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .reviews-summary .stars {
+      font-size: 2.5rem;
+      color: #e8aa42;
+      margin-bottom: 16px;
+      letter-spacing: 4px;
+    }
+
+    .reviews-summary .rating {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #0f4c5c;
+    }
+
+    .reviews-summary .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .reviews-summary .keyword {
+      background: #eef5f7;
+      color: #0f4c5c;
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .reviews-summary .desc {
+      margin-top: 20px;
+      color: #555;
+      font-size: 1.05rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 32px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-item {
+      background: #fff;
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .contact-item .icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .contact-item h4 {
+      font-size: 1.1rem;
+      color: #0f4c5c;
+      margin-bottom: 8px;
+    }
+
+    .contact-item a {
+      color: #1a1a2e;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+
+    .contact-item a:hover {
+      color: #e8aa42;
+    }
+
+    .contact-item .label {
+      color: #777;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f4c5c;
+      color: #fff;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #e8aa42;
+      text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .services-grid, .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews-summary {
+        padding: 32px 20px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 60px 0 40px;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .hero .btn {
+        padding: 14px 32px;
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Expert Care at Ordinacija Dermoven</h1>
+      <p>Professional treatment in Novi Sad with a 5.0-star rating. Your health and comfort are our priority.</p>
+      <a href="mailto:vesnamiona2@gmail.com" class="btn">Book Appointment</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Professional treatment tailored to your needs.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="icon">🩺</span>
+          <h3>Treatment</h3>
+          <p>Comprehensive medical treatment with a focus on quality and patient well-being. Professional care you can trust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-choose-us">
+    <div class="container">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="section-subtitle">What sets Ordinacija Dermoven apart.</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="icon">⭐</span>
+          <h3>Exceptional 5.0-Star Rating</h3>
+          <p>Our customers consistently rate us 5.0 stars — a testament to our dedication and quality of care.</p>
+        </div>
+        <div class="why-card">
+          <span class="icon">🤝</span>
+          <h3>Professional &amp; Reliable</h3>
+          <p>We provide professional and reliable service every time. Your trust is earned through consistent excellence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="container">
+      <h2 class="section-title">What Our Patients Say</h2>
+      <p class="section-subtitle">Real feedback from real people.</p>
+      <div class="reviews-summary">
+        <div class="stars">★★★★★</div>
+        <div class="rating">5.0 / 5.0</div>
+        <div class="keywords">
+          <span class="keyword">Professional</span>
+          <span class="keyword">Kind</span>
+          <span class="keyword">Recommend</span>
+          <span class="keyword">Great</span>
+          <span class="keyword">Top</span>
+        </div>
+        <p class="desc">Patients describe Ordinacija Dermoven as professional, kind, and highly recommended. The recurring themes are exceptional care, a welcoming approach, and top-quality treatment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-subtitle">Book your appointment today.</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <h4>Phone</h4>
+          <a href="tel:0612068907">061 2068907</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">✉️</span>
+          <h4>Email</h4>
+          <a href="mailto:vesnamiona2@gmail.com">vesnamiona2@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <h4>Address</h4>
+          <p>Janka Čmelika 26a, Novi Sad 21000, Serbia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Ordinacija Dermoven. All rights reserved.</p>
+      <p style="margin-top: 8px; font-size: 0.85rem; opacity: 0.8;">Janka Čmelika 26a, Novi Sad | <a href="tel:0612068907">061 2068907</a> | <a href="mailto:vesnamiona2@gmail.com">vesnamiona2@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for anchor links (if any)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== "#") {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

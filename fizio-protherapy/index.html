@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Fizio Protherapy | Physical Therapist Novi Sad | 5.0 ★</title>
+  <meta name="description" content="Fizio Protherapy – professional physical therapist in Novi Sad. 5.0-star rating, 150+ clients. Call 063 520482 for expert care.">
+  <meta property="og:title" content="Fizio Protherapy – Physical Therapist Novi Sad">
+  <meta property="og:description" content="Exceptional 5.0-star physical therapy. Trusted by 150+ clients. Professional, kind, top-rated. Call now: 063 520482.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fizioprotherapy.rs">
+  <meta property="og:locale" content="sr_RS">
+  <meta name="keywords" content="Fizio Protherapy, Physical Therapist Novi Sad, Physical Therapist physiotherapist, best physical therapist in Novi Sad, physical therapist services Serbia, professional physical therapist">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #fafbfc;
+      color: #1a1e24;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* spacing */
+    section {
+      padding: 80px 0;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: #2c353f;
+      max-width: 680px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f2b3c;
+      color: white;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 16px 40px;
+      border-radius: 60px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 8px 20px rgba(15, 43, 60, 0.15);
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    .btn:hover {
+      background: #1a4057;
+      transform: scale(1.02);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    /* header / nav */
+    .navbar {
+      padding: 20px 0;
+      background: white;
+      border-bottom: 1px solid #e9edf2;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+      color: #0f2b3c;
+    }
+
+    .logo span {
+      color: #4b7a9c;
+    }
+
+    .nav-phone {
+      font-weight: 600;
+      font-size: 1.1rem;
+      background: #eef3f8;
+      padding: 10px 20px;
+      border-radius: 40px;
+      color: #0f2b3c;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .nav-phone:hover {
+      background: #dce6ef;
+    }
+
+    /* hero */
+    .hero {
+      padding: 100px 0 80px;
+      background: linear-gradient(145deg, #ffffff 0%, #f2f6fa 100%);
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      color: #2f3b47;
+    }
+
+    .hero .btn {
+      font-size: 1.3rem;
+      padding: 18px 48px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem 3rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid #dce3ec;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #1f2a36;
+    }
+
+    .hero-meta-item svg {
+      width: 24px;
+      height: 24px;
+      fill: #0f2b3c;
+    }
+
+    .badge {
+      background: #e1e9f2;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    /* services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 32px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      border: 1px solid #eef2f7;
+      transition: box-shadow 0.2s;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    }
+
+    .service-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .service-card h3::before {
+      content: "⚕️";
+      font-size: 1.8rem;
+    }
+
+    .service-card p {
+      font-size: 1.05rem;
+      margin-top: 12px;
+      color: #2f3b47;
+    }
+
+    /* why choose us */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .why-item {
+      background: white;
+      border-radius: 28px;
+      padding: 32px 28px;
+      border: 1px solid #eef2f7;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .why-item .icon {
+      font-size: 2.2rem;
+      margin-bottom: 4px;
+    }
+
+    .why-item h3 {
+      margin-bottom: 4px;
+    }
+
+    .why-item p {
+      font-size: 1rem;
+      color: #2f3b47;
+    }
+
+    /* reviews */
+    .review-summary {
+      background: white;
+      border-radius: 40px;
+      padding: 40px 32px;
+      border: 1px solid #eef2f7;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .review-stars {
+      font-size: 2.2rem;
+      letter-spacing: 6px;
+      color: #f5b342;
+      margin-bottom: 12px;
+    }
+
+    .review-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: 24px 0 12px;
+    }
+
+    .review-tag {
+      background: #eef3f8;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #0f2b3c;
+    }
+
+    .review-note {
+      font-size: 1.1rem;
+      color: #2f3b47;
+      margin-top: 16px;
+    }
+
+    /* contact */
+    .contact-card {
+      background: white;
+      border-radius: 40px;
+      padding: 48px 32px;
+      border: 1px solid #eef2f7;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+      font-size: 1.2rem;
+    }
+
+    .contact-item a {
+      color: #0f2b3c;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border 0.15s;
+    }
+
+    .contact-item a:hover {
+      border-bottom: 1px solid #0f2b3c;
+    }
+
+    .contact-item svg {
+      width: 26px;
+      height: 26px;
+      fill: #0f2b3c;
+      flex-shrink: 0;
+    }
+
+    .contact-address {
+      font-style: normal;
+      font-size: 1.1rem;
+      color: #2f3b47;
+      margin-top: 8px;
+    }
+
+    .btn-phone-large {
+      margin-top: 24px;
+    }
+
+    /* footer */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid #e9edf2;
+      color: #4a5a6a;
+      font-size: 0.95rem;
+    }
+
+    /* responsive */
+    @media (min-width: 640px) {
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 900px) {
+      h1 {
+        font-size: 3.8rem;
+      }
+      .hero-grid {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .hero-text {
+        flex: 1 1 60%;
+      }
+      .hero-extra {
+        flex: 0 0 30%;
+        text-align: right;
+      }
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+      .navbar .container {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .hero-meta {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    /* utility */
+    .mt-1 { margin-top: 1rem; }
+    .mb-1 { margin-bottom: 1rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Fizio <span>Protherapy</span></div>
+      <a href="tel:063520482" class="nav-phone">📞 063 520482</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="badge">⭐ 5.0 · 150+ clients</div>
+        <h1>Expert physical therapy in Novi Sad — kind, professional, top-rated</h1>
+        <p>Fizio Protherapy brings you individual care with a 5.0-star reputation. Trusted by over 150 clients for lasting relief and real results.</p>
+        <a href="tel:063520482" class="btn">📞 Call Now: 063 520482</a>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Janka Čmelika 21, Novi Sad</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg viewBox="0 0 24 24" width="24" height="24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span>bojanastanojevic82@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-extra">
+        <!-- subtle visual accent -->
+        <div style="background: #e9f0f7; border-radius: 40px; padding: 24px 20px; display: inline-block; max-width: 260px;">
+          <div style="font-weight: 600; font-size: 1.1rem;">⭐ 5.0 stars</div>
+          <div style="font-size: 0.95rem; color: #2f3b47; margin-top: 6px;">“Professional, kind, recommend”</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <h2 class="text-center">Professional physical therapist services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Individual therapy sessions</h3>
+          <p>One-on-one care focused on your recovery, mobility, and strength. Every session is tailored to your condition and goals.</p>
+        </div>
+        <div class="service-card">
+          <h3>Manual therapy & rehabilitation</h3>
+          <p>Hands-on techniques to reduce pain, restore movement, and support long-term healing. Used by top physiotherapists worldwide.</p>
+        </div>
+        <div class="service-card">
+          <h3>Postural & movement assessment</h3>
+          <p>Detailed analysis of your posture and movement patterns to identify root causes and prevent future injuries.</p>
+        </div>
+        <div class="service-card">
+          <h3>Personalized exercise programs</h3>
+          <p>Custom exercise plans designed to rebuild strength, flexibility, and confidence — all backed by clinical reasoning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-choose-us" style="background: #f2f6fa;">
+    <div class="container">
+      <h2 class="text-center">Why choose Fizio Protherapy</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="icon">⭐</div>
+          <h3>Exceptional 5.0-star rating</h3>
+          <p>Every review reflects genuine care. Our average rating stays at a perfect 5.0 — a rare sign of consistent quality.</p>
+        </div>
+        <div class="why-item">
+          <div class="icon">👥</div>
+          <h3>Trusted by 150+ clients</h3>
+          <p>Over 150 people have chosen Fizio Protherapy for their recovery. Word of mouth continues to grow.</p>
+        </div>
+        <div class="why-item">
+          <div class="icon">🤝</div>
+          <h3>Professional & reliable</h3>
+          <p>Punctual, clear communication, and evidence-based methods. You can count on a structured path to feeling better.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews">
+    <div class="container">
+      <h2 class="text-center">What clients say</h2>
+      <div class="review-summary text-center">
+        <div class="review-stars">★★★★★</div>
+        <div style="font-size: 1.5rem; font-weight: 600;">5.0 / 5.0</div>
+        <div class="review-tags">
+          <span class="review-tag">Professional</span>
+          <span class="review-tag">Kind</span>
+          <span class="review-tag">Recommend</span>
+          <span class="review-tag">Great</span>
+          <span class="review-tag">Top</span>
+        </div>
+        <p class="review-note">“Professional, kind, recommend, great, top” — these words appear most often in reviews. Clients value the respectful, effective approach and lasting results.</p>
+        <p style="margin-top: 20px; font-weight: 500; color: #0f2b3c;">⭐ 150+ sessions · 5.0 average</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="background: #f2f6fa;">
+    <div class="container">
+      <h2 class="text-center">Get in touch</h2>
+      <div class="contact-card">
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:063520482">063 520482</a>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:bojanastanojevic82@gmail.com">bojanastanojevic82@gmail.com</a>
+        </div>
+        <div class="contact-item" style="flex-direction: column; gap: 4px;">
+          <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <address class="contact-address">Janka Čmelika 21, Novi Sad 21000, Serbia</address>
+        </div>
+        <a href="tel:063520482" class="btn btn-phone-large">📞 Call Now: 063 520482</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p style="font-size: 0.95rem;">&copy; 2026 Fizio Protherapy — Physical Therapist Novi Sad</p>
+      <p style="font-size: 0.85rem; margin-top: 6px; color: #5a6a7a;">Janka Čmelika 21 · 063 520482</p>
+    </div>
+  </footer>
+
+  <!-- inline script (smooth scroll, no deps) -->
+  <script>
+    (function() {
+      // optional: add smooth scroll for anchor links (no external)
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === "#" || href === "") return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

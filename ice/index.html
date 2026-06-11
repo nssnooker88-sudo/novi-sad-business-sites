@@ -1,0 +1,1144 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice – Professional General Contractor Novi Sad | Reliable Construction Services</title>
+    <meta name="description" content="Ice provides professional general contractor services in Novi Sad, Serbia. Reliable, best-rated construction and renovation. Call 063 565177 today.">
+    <meta property="og:title" content="Ice – General Contractor Novi Sad | Professional & Reliable">
+    <meta property="og:description" content="Trusted general contractor in Novi Sad. Professional service, best reviews. Call now for your construction project.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://icegeneralcontractor.com">
+    <meta property="og:locale" content="en_RS">
+    <meta name="keywords" content="Ice, General Contractor Novi Sad, General Contractor general_contractor, best general contractor in Novi Sad, general contractor services Serbia, professional general contractor">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: clamp(2.4rem, 7vw, 4.2rem);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 0.5em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.6rem);
+        }
+
+        p {
+            font-size: 1rem;
+            color: #4a4a4a;
+            max-width: 680px;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #2b6f9e;
+            background: rgba(43, 111, 158, 0.08);
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== COLORS ===== */
+        :root {
+            --primary: #1a3d5c;
+            --primary-light: #2b6f9e;
+            --primary-dark: #0e2a3f;
+            --accent: #d48c3a;
+            --accent-hover: #c07a2a;
+            --neutral-100: #f8f9fb;
+            --neutral-200: #eef0f4;
+            --neutral-300: #dde1e8;
+            --neutral-800: #1a1a1a;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.08);
+            --radius: 20px;
+            --radius-sm: 12px;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 0.9rem 2.2rem;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            letter-spacing: -0.01em;
+            background: var(--accent);
+            color: var(--white);
+            box-shadow: 0 8px 28px rgba(212, 140, 58, 0.30);
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+            box-shadow: 0 12px 36px rgba(212, 140, 58, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 16px rgba(212, 140, 58, 0.25);
+        }
+
+        .btn--outline {
+            background: transparent;
+            color: var(--primary);
+            box-shadow: none;
+            border: 2px solid var(--primary);
+        }
+
+        .btn--outline:hover {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 8px 28px rgba(26, 61, 92, 0.20);
+        }
+
+        /* ===== HEADER / NAV ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+            transition: background 0.3s ease;
+        }
+
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 0.8rem;
+            padding-bottom: 0.8rem;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .logo span {
+            color: var(--primary-light);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2d2d2d;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-light);
+            transition: width 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--primary);
+            margin: 6px 0;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 0 80px;
+            background: var(--neutral-100);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(43, 111, 158, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 140, 58, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            color: var(--primary-dark);
+            margin-bottom: 0.4em;
+        }
+
+        .hero-content h1 .highlight {
+            color: var(--primary-light);
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 520px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            padding: 0.5rem 1.2rem 0.5rem 0.8rem;
+            border-radius: 100px;
+            box-shadow: var(--shadow-sm);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .hero-badge .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #2ecc71;
+            display: inline-block;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.6;
+                transform: scale(0.85);
+            }
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-visual-inner {
+            width: 100%;
+            max-width: 480px;
+            aspect-ratio: 4/3;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .hero-icon-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-icon-item {
+            background: var(--neutral-100);
+            border-radius: var(--radius-sm);
+            padding: 1.2rem 0.8rem;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .hero-icon-item .emoji-icon {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-icon-item .label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--neutral-200);
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat .number {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: -0.02em;
+        }
+
+        .hero-stat .desc {
+            font-size: 0.75rem;
+            color: #777;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-title h2 {
+            color: var(--primary-dark);
+        }
+
+        .section-title p {
+            margin: 0 auto;
+            color: #666;
+            font-size: 1.05rem;
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--neutral-100);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: transform 0.25s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-card .icon-wrap {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(43, 111, 158, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.2rem;
+            font-size: 1.8rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.6rem;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0 auto;
+            max-width: 320px;
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-choose {
+            background: var(--neutral-100);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2.2rem 1.8rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s;
+        }
+
+        .why-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .why-item .num {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--primary-light);
+            line-height: 1;
+            margin-bottom: 0.6rem;
+            opacity: 0.2;
+            font-feature-settings: "tnum";
+        }
+
+        .why-item h3 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .why-item p {
+            font-size: 0.92rem;
+            color: #666;
+        }
+
+        /* ===== REVIEWS ===== */
+        .reviews {
+            background: var(--white);
+        }
+
+        .reviews-summary {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .review-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .review-stats .big-rating {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: -0.03em;
+            line-height: 1;
+        }
+
+        .review-stats .stars {
+            font-size: 1.8rem;
+            color: #f1c40f;
+            letter-spacing: 4px;
+        }
+
+        .review-stats .sub {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .review-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .review-tag {
+            background: var(--neutral-100);
+            padding: 0.5rem 1.2rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary);
+            border: 1px solid var(--neutral-200);
+        }
+
+        .review-tag.highlight {
+            background: rgba(212, 140, 58, 0.12);
+            border-color: rgba(212, 140, 58, 0.2);
+            color: var(--accent-hover);
+        }
+
+        .review-quote {
+            background: var(--neutral-100);
+            border-radius: var(--radius);
+            padding: 2rem 2.2rem;
+            border-left: 4px solid var(--accent);
+            position: relative;
+        }
+
+        .review-quote .quote-text {
+            font-size: 1.05rem;
+            font-style: italic;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .review-quote .quote-author {
+            margin-top: 1rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            font-style: normal;
+        }
+
+        .review-quote .quote-source {
+            font-size: 0.8rem;
+            color: #999;
+            font-weight: 400;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 80px 0;
+        }
+
+        .contact .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            color: var(--white);
+            margin-bottom: 0.6rem;
+        }
+
+        .contact-info .lead {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            max-width: 440px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1rem;
+        }
+
+        .contact-detail-item .icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-item a {
+            color: var(--white);
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .contact-detail-item a:hover {
+            opacity: 0.8;
+        }
+
+        .contact-detail-item .label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+            display: block;
+        }
+
+        .contact-cta {
+            text-align: center;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .contact-cta .btn {
+            font-size: 1.2rem;
+            padding: 1.1rem 2.8rem;
+        }
+
+        .contact-cta .btn .phone-icon {
+            font-size: 1.3rem;
+        }
+
+        .contact-cta .small-note {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background: var(--primary);
+            padding: 2rem 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        .site-footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .site-footer a {
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.2s;
+        }
+
+        .site-footer a:hover {
+            color: var(--white);
+        }
+
+        /* ===== MOBILE NAV ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                padding: 6rem 2rem 2rem;
+                gap: 1.6rem;
+                box-shadow: -20px 0 60px rgba(0, 0, 0, 0.08);
+                transition: right 0.35s ease;
+                z-index: 200;
+                align-items: flex-start;
+                border-left: 1px solid var(--neutral-200);
+            }
+
+            .nav-links.open {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.1rem;
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+                z-index: 300;
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-badge {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-visual-inner {
+                max-width: 100%;
+                padding: 1.5rem;
+            }
+
+            .reviews-summary {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact .container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                text-align: center;
+            }
+
+            .contact-detail-item {
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info .lead {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .site-footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-icon-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.6rem;
+            }
+
+            .hero-icon-item {
+                padding: 0.8rem 0.4rem;
+            }
+
+            .hero-icon-item .emoji-icon {
+                font-size: 1.4rem;
+            }
+
+            .hero-icon-item .label {
+                font-size: 0.6rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .service-card {
+                padding: 2rem 1.2rem;
+            }
+
+            .contact-cta {
+                padding: 1.8rem 1.2rem;
+            }
+
+            .contact-cta .btn {
+                width: 100%;
+            }
+
+            .review-quote {
+                padding: 1.5rem;
+            }
+        }
+
+        /* ===== SCROLL ANIMATION (light) ===== */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== OVERLAY ===== */
+        .nav-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.25);
+            z-index: 150;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* ===== SKIP LINK ===== */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            z-index: 999;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SKIP LINK -->
+    <a href="#hero" class="skip-link">Skip to main content</a>
+
+    <!-- NAV OVERLAY -->
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <div class="container">
+            <a href="#" class="logo" aria-label="Ice home">Ice<span>.</span></a>
+            <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+                <a href="#hero">Home</a>
+                <a href="#services">Services</a>
+                <a href="#why">Why Us</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+                <a href="tel:063565177" class="btn btn--small nav-cta" style="display:inline-flex; margin-top:0.5rem;">Call Now</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero" aria-label="Hero banner">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    Trusted in Novi Sad
+                </div>
+                <h1>Built to Last.<br><span class="highlight">Professional</span> General Contracting.</h1>
+                <p>Ice delivers reliable, high-quality general contractor services across Novi Sad and Serbia. From foundation to finish — we build with integrity.</p>
+                <div class="hero-buttons">
+                    <a href="tel:063565177" class="btn">
+                        <span>📞</span> Call Now – 063 565177
+                    </a>
+                    <a href="#services" class="btn btn--outline">Explore Services</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-inner">
+                    <div class="hero-icon-grid">
+                        <div class="hero-icon-item">
+                            <span class="emoji-icon">🏗️</span>
+                            <span class="label">Foundation</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <span class="emoji-icon">🛠️</span>
+                            <span class="label">Renovation</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <span class="emoji-icon">🏠</span>
+                            <span class="label">New Builds</span>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="number">100%</div>
+                            <div class="desc">Reliability</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="number">⭐</div>
+                            <div class="desc">Best Rated</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="number">📋</div>
+                            <div class="desc">Full Service</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services" aria-label="Services">
+        <div class="container">
+            <div class="section-title fade-up">
+                <span class="section-label">What We Deliver</span>
+                <h2>Professional General Contractor Services</h2>
+                <p>Comprehensive construction management and execution — one team, one standard of excellence.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <div class="icon-wrap">🏗️</div>
+                    <h3>General Contracting</h3>
+                    <p>End-to-end project management, coordination, and execution for residential and commercial builds. We oversee every phase with precision.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="icon-wrap">🔨</div>
+                    <h3>Renovation & Remodeling</h3>
+                    <p>Transform existing spaces with expert structural updates, interior modernization, and quality finishes. Reliable work, on schedule.</p>
+                </div>
+                <div class="service-card fade-up">
+                    <div class="icon-wrap">📐</div>
+                    <h3>New Construction</h3>
+                    <p>From blueprint to handover — we build custom homes, extensions, and commercial structures with a focus on durability and design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="why" class="why-choose" aria-label="Why choose Ice">
+        <div class="container">
+            <div class="section-title fade-up">
+                <span class="section-label">Why Ice</span>
+                <h2>Built on Trust & Craft</h2>
+                <p>We don't just build structures — we build relationships. Here's what sets us apart.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-item fade-up">
+                    <div class="num">01</div>
+                    <h3>Professional & Reliable</h3>
+                    <p>Every project is backed by clear communication, punctuality, and a deep commitment to doing the job right the first time.</p>
+                </div>
+                <div class="why-item fade-up">
+                    <div class="num">02</div>
+                    <h3>Locally Rooted</h3>
+                    <p>Based in Novi Sad, we know local regulations, suppliers, and trades. This means faster timelines and fewer surprises.</p>
+                </div>
+                <div class="why-item fade-up">
+                    <div class="num">03</div>
+                    <h3>Client-First Approach</h3>
+                    <p>Your vision drives our process. We listen, plan, and execute with transparency — so you feel confident at every stage.</p>
+                </div>
+                <div class="why-item fade-up">
+                    <div class="num">04</div>
+                    <h3>Quality Craftsmanship</h3>
+                    <p>We use proven methods and quality materials. Our work stands the test of time — because mediocrity is not an option.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="reviews" aria-label="Client reviews">
+        <div class="container">
+            <div class="section-title fade-up">
+                <span class="section-label">What Clients Say</span>
+                <h2>Highly Recommended by Our Community</h2>
+                <p>Consistent praise for professionalism, reliability, and outstanding results.</p>
+            </div>
+            <div class="reviews-summary fade-up">
+                <div class="review-stats">
+                    <div class="big-rating">★ 5.0</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="sub">Based on authentic reviews — <strong>Professional, Recommend, Best</strong></div>
+                    <div class="review-tags">
+                        <span class="review-tag highlight">Professional</span>
+                        <span class="review-tag highlight">Highly Recommend</span>
+                        <span class="review-tag highlight">Best in Novi Sad</span>
+                        <span class="review-tag">Reliable</span>
+                        <span class="review-tag">Top Quality</span>
+                    </div>
+                </div>
+                <div class="review-quote">
+                    <p class="quote-text">“Ice delivered exactly what they promised — professional, on time, and the quality speaks for itself. I recommend them to anyone looking for a reliable general contractor in Novi Sad. Best decision we made for our project.”</p>
+                    <p class="quote-author">— Verified Client <span class="quote-source">(Novi Sad)</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact" aria-label="Contact Ice">
+        <div class="container">
+            <div class="contact-info fade-up">
+                <h2>Let's Build Together</h2>
+                <p class="lead">Ready to start your project? Reach out — we'll respond promptly and guide you every step of the way.</p>
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <div class="icon">📞</div>
+                        <div>
+                            <span class="label">Phone</span>
+                            <a href="tel:063565177">063 565177</a>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <div class="icon">✉️</div>
+                        <div>
+                            <span class

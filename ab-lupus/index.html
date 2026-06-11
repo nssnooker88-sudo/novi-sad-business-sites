@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A&B Lupus | Hotel Novi Sad – Elegant accommodation & breakfast</title>
+  <meta name="description" content="A&B Lupus in Novi Sad: trusted by 104+ guests, offering modern rooms, breakfast & warm hospitality. Call now for a relaxing stay.">
+  <meta property="og:title" content="A&B Lupus | Elegant hotel in Novi Sad">
+  <meta property="og:description" content="Modern rooms, breakfast & warm hospitality. Trusted by 104+ guests. Call now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ablupus.rs">
+  <meta property="og:locale" content="en_RS">
+  <meta name="keywords" content="A&B Lupus, Hotel Novi Sad, Hotel hotel, best hotel in Novi Sad, hotel services Serbia, professional hotel">
+  <style>
+    /* reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #faf8f5;
+      color: #1e1e1e;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* typography */
+    h1, h2, h3 {
+      font-weight: 350;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      font-weight: 380;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 370;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #3b3b3b;
+      max-width: 680px;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    /* header & nav minimal */
+    .top-bar {
+      padding: 1.2rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .top-bar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.5rem;
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: #1e1e1e;
+    }
+
+    .brand span {
+      font-weight: 300;
+      color: #7c6b5e;
+    }
+
+    .top-contact {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+      font-size: 1rem;
+    }
+
+    .top-contact a {
+      color: #1e1e1e;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .top-contact a:hover {
+      border-color: #b4a18b;
+    }
+
+    .top-contact .phone-link {
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    /* hero */
+    .hero {
+      padding: 4rem 0 5rem;
+      background: #f5f0eb;
+      margin-top: 0;
+    }
+
+    .hero .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .hero-content h1 {
+      margin-bottom: 1.2rem;
+      font-size: 2.8rem;
+    }
+
+    .hero-content h1 em {
+      font-style: normal;
+      color: #8a7a6b;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #3d342f;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.2rem;
+    }
+
+    .hero-stats span {
+      font-size: 1.1rem;
+      background: rgba(255,255,255,0.5);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      backdrop-filter: blur(2px);
+      color: #2e2a27;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1e1e1e;
+      color: white;
+      padding: 0.9rem 2.6rem;
+      border-radius: 60px;
+      font-size: 1.2rem;
+      font-weight: 450;
+      letter-spacing: 0.01em;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+    }
+
+    .btn:hover {
+      background: #353535;
+      transform: scale(1.01);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #1e1e1e;
+      color: #1e1e1e;
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: #eae3db;
+    }
+
+    .hero-image {
+      background: #ddd5cc;
+      min-height: 260px;
+      border-radius: 40px;
+      background-image: radial-gradient(circle at 20% 30%, rgba(255,245,235,0.5) 0%, transparent 60%), 
+                      linear-gradient(145deg, #d6cdc1, #c4b7a8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #3d332b;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+    }
+
+    .hero-image span {
+      background: rgba(255,250,245,0.65);
+      padding: 0.6rem 2rem;
+      border-radius: 60px;
+      backdrop-filter: blur(3px);
+      font-weight: 380;
+    }
+
+    /* services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .service-card {
+      background: #ffffff;
+      padding: 2.2rem 1.8rem;
+      border-radius: 32px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      transition: box-shadow 0.2s, transform 0.2s;
+      border: 1px solid #ece6e0;
+    }
+
+    .service-card:hover {
+      box-shadow: 0 16px 32px rgba(0,0,0,0.03);
+      transform: translateY(-4px);
+    }
+
+    .service-card h3 {
+      margin-bottom: 0.6rem;
+      font-weight: 400;
+    }
+
+    .service-card p {
+      font-size: 1rem;
+      color: #4a413b;
+    }
+
+    .service-icon {
+      font-size: 2.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* why choose us */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .reason {
+      background: transparent;
+      border-left: 4px solid #c4b4a2;
+      padding-left: 1.8rem;
+    }
+
+    .reason h3 {
+      margin-bottom: 0.6rem;
+      font-weight: 400;
+    }
+
+    .reason p {
+      font-size: 1rem;
+    }
+
+    /* reviews */
+    .review-block {
+      background: #f0ebe5;
+      border-radius: 48px;
+      padding: 3rem 2.5rem;
+      margin-top: 1rem;
+    }
+
+    .review-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .review-tag {
+      background: white;
+      padding: 0.5rem 1.8rem;
+      border-radius: 60px;
+      font-size: 1.2rem;
+      font-weight: 360;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      color: #2d2926;
+    }
+
+    .review-summary-text {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin-bottom: 0.5rem;
+      font-weight: 330;
+      line-height: 1.5;
+    }
+
+    .review-meta {
+      font-size: 1rem;
+      color: #5d5148;
+      margin-top: 0.8rem;
+    }
+
+    /* contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.8rem;
+      background: #ffffff;
+      border-radius: 48px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      border: 1px solid #ece6e0;
+    }
+
+    .contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .contact-item label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #7b6d60;
+    }
+
+    .contact-item a, .contact-item span {
+      font-size: 1.3rem;
+      font-weight: 380;
+      color: #1e1e1e;
+    }
+
+    .contact-item a:hover {
+      opacity: 0.7;
+    }
+
+    .contact-cta {
+      margin-top: 1.2rem;
+    }
+
+    /* footer */
+    .footer {
+      padding: 2.5rem 0 3rem;
+      border-top: 1px solid #e5ddd6;
+      color: #3d342f;
+      font-size: 0.95rem;
+    }
+
+    .footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* utility */
+    .text-center-mobile {
+      text-align: left;
+    }
+
+    @media (min-width: 700px) {
+      .hero .container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+      .hero-content h1 {
+        font-size: 3.2rem;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
+      .section { padding: 3.5rem 0; }
+      .top-bar .container { flex-direction: column; align-items: flex-start; }
+      .top-contact { gap: 1rem; }
+      .review-block { padding: 2rem 1.5rem; }
+      .contact-grid { padding: 2rem 1.5rem; }
+    }
+
+    /* micro interactions */
+    .btn-call-now {
+      background: #1e1e1e;
+      color: white;
+    }
+
+    .btn-call-now:hover {
+      background: #2f2f2f;
+    }
+
+    .address-block {
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- top bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="brand">A&B <span>Lupus</span></div>
+      <div class="top-contact">
+        <a href="tel:0645045504" class="phone-link">064 5045504</a>
+        <a href="mailto:ablupus.ns@gmail.com">ablupus.ns@gmail.com</a>
+        <span class="address-block">Branka Ćopića 62, Novi Sad</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Stay at <em>A&B Lupus</em><br>where every detail feels like home.</h1>
+        <p>Modern rooms, breakfast included, and a welcoming atmosphere in the heart of Novi Sad. Trusted by 104+ guests.</p>
+        <div class="hero-stats">
+          <span>★ 104+ happy guests</span>
+          <span>☕ breakfast & rooms</span>
+        </div>
+        <div class="btn-group">
+          <a href="tel:0645045504" class="btn btn-call-now">Call now</a>
+          <a href="#services" class="btn btn-outline">Our services</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <span>✦ elegant comfort</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🛏️</div>
+          <h3>Accommodation</h3>
+          <p>Quiet, well-appointed rooms with modern amenities. Designed for restful nights and productive days.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">☕</div>
+          <h3>Breakfast</h3>
+          <p>Start your morning with a fresh, locally sourced breakfast. Served in a calm, bright setting.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚪</div>
+          <h3>Rooms</h3>
+          <p>Single, double & family rooms — each with careful details, quality bedding, and a warm atmosphere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- why choose us -->
+  <section id="why" class="section" style="background: #f8f4f0; padding-top: 4rem; padding-bottom: 4rem;">
+    <div class="container">
+      <h2>Why choose us</h2>
+      <div class="why-grid">
+        <div class="reason">
+          <h3>✓ 104+ satisfied guests</h3>
+          <p>We’ve had the privilege of hosting over a hundred guests — many return for the genuine care and quiet comfort.</p>
+        </div>
+        <div class="reason">
+          <h3>✓ Fast & efficient service</h3>
+          <p>From check‑in to breakfast, we keep things smooth. No waiting, no hassle — just a relaxed stay.</p>
+        </div>
+        <div class="reason">
+          <h3>✓ Central Novi Sad location</h3>
+          <p>Branka Ćopića 62 — quiet street, yet steps from the city’s best cafes, parks & culture.</p>
+        </div>
+        <div class="reason">
+          <h3>✓ Personal, family‑run atmosphere</h3>
+          <p>We treat every guest like a friend. Expect warm welcomes, local tips, and a genuine smile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- reviews (thematic) -->
+  <section id="reviews" class="section">
+    <div class="container">
+      <h2>What guests say</h2>
+      <div class="review-block">
+        <div class="review-tags">
+          <span class="review-tag">⭐ Kind</span>
+          <span class="review-tag">⭐ Recommend</span>
+          <span class="review-tag">⭐ Excellent</span>
+          <span class="review-tag">⭐ Best</span>
+          <span class="review-tag">⭐ Top</span>
+        </div>
+        <div class="review-summary-text">
+          “Kind staff, excellent breakfast, and spotless rooms. Many guests highlight the warm hospitality and peaceful location — a true top choice in Novi Sad.”
+        </div>
+        <div class="review-meta">
+          — recurring themes from recent reviews
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="contact" class="section" style="padding-top: 2.5rem;">
+    <div class="container">
+      <h2>Get in touch</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <label>📞 phone</label>
+          <a href="tel:0645045504">064 5045504</a>
+        </div>
+        <div class="contact-item">
+          <label>✉️ email</label>
+          <a href="mailto:ablupus.ns@gmail.com">ablupus.ns@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <label>📍 address</label>
+          <span>Branka Ćopića 62, Novi Sad 406766, Serbia</span>
+        </div>
+        <div class="contact-cta" style="grid-column: 1 / -1; margin-top: 0.6rem;">
+          <a href="tel:0645045504" class="btn btn-call-now" style="width: fit-content;">Call Now – 064 5045504</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <span>A&B Lupus – Branka Ćopića 62, Novi Sad</span>
+      <span>© 2026 · hospitality with care</span>
+    </div>
+  </footer>
+
+  <!-- no extra JS needed – fully functional -->
+  <!-- smooth anchor behavior via css -->
+</body>
+</html>

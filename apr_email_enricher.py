@@ -138,7 +138,7 @@ def save_result(business_id: str, email: str, pib: str = "", reg_num: str = ""):
 # ---------------------------------------------------------------------------
 def get_html(session: requests.Session, url: str, params: dict = None) -> str:
     try:
-        r = session.get(url, params=params, headers=HEADERS, verify=False, timeout=20)
+        r = session.get(url, params=params, headers=HEADERS, timeout=20)
         r.raise_for_status()
         r.encoding = r.apparent_encoding or "utf-8"
         return r.text
@@ -272,6 +272,8 @@ def enrich_one(session: requests.Session, biz: dict, dry_run: bool) -> bool:
 # Main
 # ---------------------------------------------------------------------------
 def main():
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
     ap = argparse.ArgumentParser(description="APR Email Enricher")
     grp = ap.add_mutually_exclusive_group()
     grp.add_argument("--all-no-website", action="store_true")
@@ -291,6 +293,7 @@ def main():
     log.info("Targets: %d  |  mode: %s  |  dry_run: %s", len(targets), mode, args.dry_run)
 
     session = requests.Session()
+    session.mount("https://", NoVerifyAdapter())
     found = 0
 
     for i, biz in enumerate(targets, 1):

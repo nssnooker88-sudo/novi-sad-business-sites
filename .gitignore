@@ -19,3 +19,8 @@ output/
 .env.*
 
 create_github_repo.py
+
+# Sensitive data
+generated_sites/
+_site_data/
+_slug_mapping.json
