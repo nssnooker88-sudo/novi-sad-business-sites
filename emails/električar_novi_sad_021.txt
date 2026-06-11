@@ -8,7 +8,7 @@ Primetili smo da se bavite electrician delatnošću, sa uslugama: professional e
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nsdrimtim21.github.io/novi-sad-business-sites/električar-021/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/elektri%C4%8Dar-021/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

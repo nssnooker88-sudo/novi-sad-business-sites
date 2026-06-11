@@ -1,1135 +1,276 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moj Pedijatar Dr. Andric Sanja — Trusted Pediatrician in Sremska Mitrovica</title>
-    <meta name="description" content="Dr. Andric Sanja provides professional, kind and friendly pediatric care in Sremska Mitrovica. Book an appointment today. 5.0-star rated.">
-    <meta property="og:title" content="Moj Pedijatar Dr. Andric Sanja — Trusted Pediatrician">
-    <meta property="og:description" content="Professional, kind and friendly pediatric care in Sremska Mitrovica. 5.0-star rated. Book an appointment today.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://drandricsanja.com">
-    <meta property="og:locale" content="sr_RS">
-    <meta name="keywords" content="Moj Pedijatar Dr. Andric Sanja, Doctor Novi Sad, Doctor doctor, best doctor in Novi Sad, doctor services Serbia, professional doctor">
-
-    <style>
-        /* ---------- RESET & BASE ---------- */
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #0b6e6a;
-            --primary-light: #e0f2f1;
-            --primary-dark: #064a47;
-            --accent: #f5a623;
-            --accent-light: #fef3e0;
-            --gray-50: #f9fafb;
-            --gray-100: #f0f2f5;
-            --gray-200: #e2e6ea;
-            --gray-300: #c4cad0;
-            --gray-500: #7a828a;
-            --gray-700: #374151;
-            --gray-900: #1a1d23;
-            --white: #ffffff;
-            --radius: 20px;
-            --radius-sm: 12px;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);
-            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
-            --transition: 0.25s ease;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background: var(--white);
-            color: var(--gray-900);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* ---------- CONTAINER ---------- */
-        .container {
-            width: 100%;
-            max-width: 1120px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        @media (min-width: 768px) {
-            .container {
-                padding: 0 40px;
-            }
-        }
-
-        /* ---------- TYPOGRAPHY ---------- */
-        .heading-xl {
-            font-size: clamp(2.4rem, 6.5vw, 4.2rem);
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-        }
-
-        .heading-lg {
-            font-size: clamp(2rem, 4.5vw, 3rem);
-            font-weight: 700;
-            line-height: 1.15;
-            letter-spacing: -0.015em;
-        }
-
-        .heading-md {
-            font-size: clamp(1.4rem, 2.8vw, 1.8rem);
-            font-weight: 600;
-            line-height: 1.25;
-            letter-spacing: -0.01em;
-        }
-
-        .heading-sm {
-            font-size: clamp(1.1rem, 1.8vw, 1.25rem);
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        .text-body {
-            font-size: 1.0625rem;
-            line-height: 1.7;
-            color: var(--gray-700);
-        }
-
-        .text-small {
-            font-size: 0.9375rem;
-            line-height: 1.6;
-            color: var(--gray-500);
-        }
-
-        /* ---------- BUTTON ---------- */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px 36px;
-            background: var(--primary);
-            color: var(--white);
-            border: none;
-            border-radius: 60px;
-            font-size: 1.0625rem;
-            font-weight: 600;
-            font-family: inherit;
-            cursor: pointer;
-            transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-            box-shadow: 0 4px 16px rgba(11, 110, 106, 0.3);
-            text-decoration: none;
-            line-height: 1.2;
-        }
-
-        .btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(11, 110, 106, 0.35);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .btn--outline {
-            background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            box-shadow: none;
-        }
-
-        .btn--outline:hover {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            border-color: var(--primary-dark);
-            box-shadow: none;
-        }
-
-        /* ---------- SECTION ---------- */
-        .section {
-            padding: 80px 0;
-        }
-
-        @media (min-width: 768px) {
-            .section {
-                padding: 120px 0;
-            }
-        }
-
-        .section__label {
-            display: inline-block;
-            font-size: 0.8125rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: var(--primary);
-            background: var(--primary-light);
-            padding: 6px 18px;
-            border-radius: 40px;
-            margin-bottom: 16px;
-        }
-
-        .section__title {
-            margin-bottom: 20px;
-        }
-
-        .section__subtitle {
-            max-width: 640px;
-            margin-bottom: 48px;
-        }
-
-        @media (min-width: 768px) {
-            .section__subtitle {
-                margin-bottom: 64px;
-            }
-        }
-
-        .section--dark {
-            background: var(--gray-50);
-        }
-
-        .section--primary-light {
-            background: var(--primary-light);
-        }
-
-        /* ---------- HEADER / NAV ---------- */
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--gray-100);
-        }
-
-        .header__inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 0;
-            gap: 16px;
-        }
-
-        .header__logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 1.15rem;
-            color: var(--primary-dark);
-            letter-spacing: -0.01em;
-        }
-
-        .header__logo-icon {
-            width: 38px;
-            height: 38px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
-            flex-shrink: 0;
-        }
-
-        .header__nav {
-            display: none;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .header__nav a {
-            font-size: 0.9375rem;
-            font-weight: 500;
-            color: var(--gray-700);
-            transition: color var(--transition);
-            position: relative;
-        }
-
-        .header__nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: width var(--transition);
-            border-radius: 2px;
-        }
-
-        .header__nav a:hover {
-            color: var(--primary);
-        }
-
-        .header__nav a:hover::after {
-            width: 100%;
-        }
-
-        .header__cta {
-            display: none;
-        }
-
-        .header__cta .btn {
-            padding: 10px 24px;
-            font-size: 0.9rem;
-            box-shadow: none;
-        }
-
-        .header__menu-btn {
-            background: none;
-            border: none;
-            font-size: 1.6rem;
-            cursor: pointer;
-            color: var(--gray-700);
-            padding: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            transition: background var(--transition);
-        }
-
-        .header__menu-btn:hover {
-            background: var(--gray-100);
-        }
-
-        @media (min-width: 900px) {
-            .header__nav {
-                display: flex;
-            }
-            .header__cta {
-                display: block;
-            }
-            .header__menu-btn {
-                display: none;
-            }
-        }
-
-        /* ---------- MOBILE NAV ---------- */
-        .mobile-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            z-index: 200;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 32px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.35s ease;
-        }
-
-        .mobile-nav--open {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .mobile-nav__close {
-            position: absolute;
-            top: 20px;
-            right: 24px;
-            background: none;
-            border: none;
-            font-size: 2rem;
-            cursor: pointer;
-            color: var(--gray-700);
-            padding: 8px;
-        }
-
-        .mobile-nav a {
-            font-size: 1.6rem;
-            font-weight: 500;
-            color: var(--gray-700);
-            transition: color var(--transition);
-        }
-
-        .mobile-nav a:hover {
-            color: var(--primary);
-        }
-
-        /* ---------- HERO ---------- */
-        .hero {
-            padding: 60px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -20%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(11, 110, 106, 0.06) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -20%;
-            left: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(245, 166, 35, 0.05) 0%, transparent 70%);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-
-        @media (min-width: 768px) {
-            .hero {
-                padding: 100px 0 120px;
-            }
-        }
-
-        .hero__grid {
-            display: grid;
-            gap: 48px;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        @media (min-width: 768px) {
-            .hero__grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 64px;
-            }
-        }
-
-        .hero__content {
-            max-width: 600px;
-        }
-
-        .hero__badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--accent-light);
-            color: #a06810;
-            padding: 8px 18px;
-            border-radius: 40px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 24px;
-        }
-
-        .hero__badge svg {
-            width: 18px;
-            height: 18px;
-            fill: #a06810;
-        }
-
-        .hero__headline {
-            margin-bottom: 20px;
-            color: var(--gray-900);
-        }
-
-        .hero__headline span {
-            color: var(--primary);
-        }
-
-        .hero__text {
-            font-size: 1.125rem;
-            color: var(--gray-500);
-            margin-bottom: 36px;
-            max-width: 520px;
-            line-height: 1.7;
-        }
-
-        .hero__actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            align-items: center;
-        }
-
-        .hero__rating {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9375rem;
-            color: var(--gray-500);
-        }
-
-        .hero__stars {
-            display: flex;
-            gap: 2px;
-        }
-
-        .hero__stars svg {
-            width: 18px;
-            height: 18px;
-            fill: #f5a623;
-        }
-
-        .hero__rating strong {
-            color: var(--gray-900);
-            font-weight: 600;
-        }
-
-        .hero__visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero__card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 32px 28px;
-            box-shadow: var(--shadow-lg);
-            width: 100%;
-            max-width: 420px;
-            border: 1px solid var(--gray-100);
-        }
-
-        .hero__card-icon {
-            width: 64px;
-            height: 64px;
-            background: var(--primary-light);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        .hero__card h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .hero__card p {
-            font-size: 0.9375rem;
-            color: var(--gray-500);
-            line-height: 1.6;
-        }
-
-        .hero__card-meta {
-            margin-top: 20px;
-            padding-top: 16px;
-            border-top: 1px solid var(--gray-100);
-            display: flex;
-            gap: 20px;
-            font-size: 0.8125rem;
-            color: var(--gray-500);
-        }
-
-        .hero__card-meta span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* ---------- SERVICES ---------- */
-        .services__grid {
-            display: grid;
-            gap: 24px;
-        }
-
-        @media (min-width: 600px) {
-            .services__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 900px) {
-            .services__grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .service-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 32px 28px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--gray-100);
-            transition: box-shadow var(--transition), transform var(--transition);
-        }
-
-        .service-card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-4px);
-        }
-
-        .service-card__icon {
-            width: 52px;
-            height: 52px;
-            background: var(--primary-light);
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
-
-        .service-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 0.9375rem;
-            color: var(--gray-500);
-            line-height: 1.7;
-        }
-
-        /* ---------- WHY CHOOSE US ---------- */
-        .why__grid {
-            display: grid;
-            gap: 32px;
-        }
-
-        @media (min-width: 600px) {
-            .why__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 900px) {
-            .why__grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 48px;
-            }
-        }
-
-        .why-card {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            padding: 28px 24px;
-            background: var(--white);
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--gray-100);
-            transition: box-shadow var(--transition);
-        }
-
-        .why-card:hover {
-            box-shadow: var(--shadow-sm);
-        }
-
-        .why-card__icon {
-            flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            background: var(--primary-light);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            color: var(--primary);
-        }
-
-        .why-card h3 {
-            margin-bottom: 6px;
-        }
-
-        .why-card p {
-            font-size: 0.9375rem;
-            color: var(--gray-500);
-            line-height: 1.7;
-        }
-
-        /* ---------- REVIEWS ---------- */
-        .reviews__summary {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 40px 36px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--gray-100);
-            margin-bottom: 32px;
-        }
-
-        .reviews__top {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 24px 40px;
-            margin-bottom: 24px;
-        }
-
-        .reviews__score {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .reviews__score-number {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-        }
-
-        .reviews__score-stars {
-            display: flex;
-            gap: 3px;
-        }
-
-        .reviews__score-stars svg {
-            width: 22px;
-            height: 22px;
-            fill: #f5a623;
-        }
-
-        .reviews__score-label {
-            font-size: 0.875rem;
-            color: var(--gray-500);
-        }
-
-        .reviews__themes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .reviews__theme-tag {
-            background: var(--primary-light);
-            color: var(--primary-dark);
-            padding: 8px 20px;
-            border-radius: 40px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid rgba(11, 110, 106, 0.12);
-        }
-
-        .reviews__note {
-            font-size: 0.9375rem;
-            color: var(--gray-500);
-            border-top: 1px solid var(--gray-100);
-            padding-top: 20px;
-            margin-top: 8px;
-        }
-
-        .reviews__grid {
-            display: grid;
-            gap: 20px;
-        }
-
-        @media (min-width: 600px) {
-            .reviews__grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 900px) {
-            .reviews__grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .review-card {
-            background: var(--white);
-            border-radius: var(--radius-sm);
-            padding: 28px 24px;
-            border: 1px solid var(--gray-100);
-            box-shadow: var(--shadow-sm);
-            transition: box-shadow var(--transition);
-        }
-
-        .review-card:hover {
-            box-shadow: var(--shadow-md);
-        }
-
-        .review-card__stars {
-            display: flex;
-            gap: 3px;
-            margin-bottom: 14px;
-        }
-
-        .review-card__stars svg {
-            width: 16px;
-            height: 16px;
-            fill: #f5a623;
-        }
-
-        .review-card__text {
-            font-size: 0.9375rem;
-            color: var(--gray-700);
-            line-height: 1.7;
-            font-style: italic;
-        }
-
-        .review-card__text::before {
-            content: '\201C';
-            font-size: 1.4rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-right: 2px;
-        }
-
-        .review-card__text::after {
-            content: '\201D';
-            font-size: 1.4rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-left: 2px;
-        }
-
-        /* ---------- CONTACT ---------- */
-        .contact__grid {
-            display: grid;
-            gap: 40px;
-        }
-
-        @media (min-width: 768px) {
-            .contact__grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 64px;
-            }
-        }
-
-        .contact__info {
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
-
-        .contact__item {
-            display: flex;
-            gap: 18px;
-            align-items: flex-start;
-        }
-
-        .contact__item-icon {
-            flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            background: var(--primary-light);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            color: var(--primary);
-        }
-
-        .contact__item h4 {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--gray-500);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            margin-bottom: 4px;
-        }
-
-        .contact__item a,
-        .contact__item p {
-            font-size: 1.0625rem;
-            color: var(--gray-900);
-            font-weight: 500;
-            transition: color var(--transition);
-        }
-
-        .contact__item a:hover {
-            color: var(--primary);
-        }
-
-        .contact__cta {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 36px 32px;
-            border: 1px solid var(--gray-100);
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-        }
-
-        .contact__cta h3 {
-            margin-bottom: 12px;
-        }
-
-        .contact__cta p {
-            font-size: 0.9375rem;
-            color: var(--gray-500);
-            margin-bottom: 24px;
-        }
-
-        .contact__cta .btn {
-            width: 100%;
-            max-width: 300px;
-        }
-
-        /* ---------- FOOTER ---------- */
-        .footer {
-            padding: 40px 0;
-            border-top: 1px solid var(--gray-100);
-            background: var(--gray-50);
-        }
-
-        .footer__inner {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
-            font-size: 0.875rem;
-            color: var(--gray-500);
-        }
-
-        .footer__brand {
-            font-weight: 600;
-            color: var(--gray-700);
-        }
-
-        /* ---------- UTILITIES ---------- */
-        .text-center {
-            text-align: center;
-        }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .mt-16 {
-            margin-top: 16px;
-        }
-
-        .mt-24 {
-            margin-top: 24px;
-        }
-
-        .gap-8 {
-            gap: 8px;
-        }
-
-        /* ---------- RESPONSIVE TOUCHES ---------- */
-        @media (max-width: 599px) {
-            .hero__actions {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .hero__actions .btn {
-                width: 100%;
-                text-align: center;
-            }
-
-            .hero__rating {
-                justify-content: center;
-            }
-
-            .contact__cta .btn {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .reviews__top {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 16px;
-            }
-
-            .why-card {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-
-        /* ---------- ANIMATIONS ---------- */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in--visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ---------- SKIP LINK ---------- */
-        .skip-link {
-            position: absolute;
-            top: -100%;
-            left: 16px;
-            background: var(--primary);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            z-index: 300;
-            transition: top 0.2s;
-        }
-
-        .skip-link:focus {
-            top: 16px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moj Pedijatar Dr. Andric Sanja | Doctor in Novi Sad</title>
+  <meta name="description" content="Moj Pedijatar Dr. Andric Sanja offers doctor services in Novi Sad. Contact by phone or email.">
+  <meta property="og:title" content="Moj Pedijatar Dr. Andric Sanja">
+  <meta property="og:description" content="Doctor services in Novi Sad with direct contact information.">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: #102027;
+      background: #eef6f5;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(238,246,245,.94);
+      border-bottom: 1px solid #cfe1df;
+      backdrop-filter: blur(14px);
+    }
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { font-weight: 800; letter-spacing: 0; }
+    .nav-links { display: flex; gap: 18px; font-size: 0.94rem; color: #44515a; }
+    .nav-links a { text-decoration: none; }
+    .hero {
+      padding: 86px 0 72px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.94), rgba(214,236,234,.76)),
+        linear-gradient(145deg, transparent 0 52%, rgba(20,124,117,.12) 52% 100%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 42px;
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #147c75;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+    h1 {
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(2.3rem, 5vw, 4.9rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 680px;
+      margin: 22px 0 0;
+      color: #44515a;
+      font-size: 1.12rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      background: #147c75;
+      color: #fff;
+    }
+    .btn.secondary { background: #fff; color: #102027; border: 1px solid #cfe1df; }
+    .snapshot {
+      background: #ffffff;
+      border: 1px solid #cfe1df;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 18px 50px rgba(25, 31, 35, 0.08);
+    }
+    .snapshot h2 { margin: 0 0 14px; font-size: 1.15rem; }
+    .snapshot p { margin: 0 0 12px; color: #44515a; }
+    section { padding: 68px 0; }
+    .section-head { max-width: 720px; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(1.7rem, 3vw, 2.5rem); }
+    .section-head p { margin: 0; color: #5a666f; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card, .proof-item {
+      background: #fff;
+      border: 1px solid #cfe1df;
+      border-radius: 8px;
+      padding: 22px;
+    }
+    .card-kicker {
+      display: block;
+      color: #147c75;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .card h3 { margin: 0 0 10px; font-size: 1.16rem; }
+    .card p, .proof-item span { color: #5a666f; }
+    .proof {
+      background: #103c43;
+      color: #fff;
+    }
+    .proof .section-head p, .proof-item span { color: #c7d0d5; }
+    .proof-item { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); }
+    .proof-item strong { display: block; margin-bottom: 8px; }
+    .review-box {
+      background: #fff;
+      border-left: 5px solid #147c75;
+      padding: 26px;
+      border-radius: 8px;
+      color: #44515a;
+      font-size: 1.08rem;
+    }
+    .contact-band {
+      background: #147c75;
+      color: #fff;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 20px;
+      overflow-wrap: anywhere;
+    }
+    .contact-card span { display: block; color: #d7edf4; font-size: 0.82rem; margin-bottom: 8px; }
+    .contact-card a { font-weight: 800; text-decoration: none; }
+    .micro-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+    .micro { border-top: 1px solid #cfe1df; padding-top: 12px; color: #5a666f; font-size: .94rem; }
+    footer { padding: 24px 0; background: #11181d; color: #cad2d7; font-size: 0.92rem; }
+    @media (max-width: 820px) {
+      .hero-grid, .grid, .contact-grid, .micro-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { padding-top: 56px; }
+    }
+  </style>
 </head>
 <body>
-
-    <!-- SKIP LINK -->
-    <a href="#hero" class="skip-link">Skip to main content</a>
-
-    <!-- MOBILE NAV -->
-    <nav class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-        <button class="mobile-nav__close" id="mobileNavClose" aria-label="Close navigation">✕</button>
-        <a href="#hero" class="mobile-nav-link">Home</a>
-        <a href="#services" class="mobile-nav-link">Services</a>
-        <a href="#why" class="mobile-nav-link">Why Us</a>
-        <a href="#reviews" class="mobile-nav-link">Reviews</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
-        <a href="mailto:drandricsanja@gmail.com" class="btn" style="margin-top:8px;">Book Appointment</a>
+  <header>
+    <nav class="shell">
+      <div class="brand">Moj Pedijatar Dr. Andric Sanja</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
+  </header>
 
-    <!-- HEADER -->
-    <header class="header" role="banner">
-        <div class="container header__inner">
-            <a href="#hero" class="header__logo" aria-label="Moj Pedijatar Dr. Andric Sanja — Home">
-                <span class="header__logo-icon" aria-hidden="true">⚕</span>
-                <span>Moj Pedijatar</span>
-            </a>
-
-            <nav class="header__nav" aria-label="Main navigation">
-                <a href="#hero">Home</a>
-                <a href="#services">Services</a>
-                <a href="#why">Why Us</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#contact">Contact</a>
-            </nav>
-
-            <div class="header__cta">
-                <a href="mailto:drandricsanja@gmail.com" class="btn">Book Appointment</a>
-            </div>
-
-            <button class="header__menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <line x1="4" y1="7" x2="20" y2="7" />
-                    <line x1="4" y1="12" x2="20" y2="12" />
-                    <line x1="4" y1="17" x2="20" y2="17" />
-                </svg>
-            </button>
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Doctor / Novi Sad</p>
+          <h1>Moj Pedijatar Dr. Andric Sanja: doctor care in Novi Sad by appointment</h1>
+          <p class="lead">Contact Moj Pedijatar Dr. Andric Sanja directly for professional doctor services in Novi Sad. Key trust signal: exceptional 5.0-star rating from customers.</p>
+          <div class="actions">
+            <a class="btn" href="mailto:drandricsanja@gmail.com">Book Appointment</a>
+            <a class="btn secondary" href="#services">View Services</a>
+          </div>
+          <div class="micro-grid">
+            <div class="micro">Service area: Novi Sad</div>
+            <div class="micro">Category: Doctor</div>
+            <div class="micro">Direct contact: 064 1289426</div>
+          </div>
         </div>
-    </header>
-
-    <!-- HERO -->
-    <section id="hero" class="hero" aria-label="Hero">
-        <div class="container hero__grid">
-            <div class="hero__content">
-                <div class="hero__badge">
-                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    <span>5.0 ★ — Trusted by families</span>
-                </div>
-
-                <h1 class="heading-xl hero__headline">
-                    Your Child’s Health,<br>
-                    <span>Warmly Cared For</span>
-                </h1>
-
-                <p class="hero__text">
-                    Dr. Sanja Andric provides professional, kind, and friendly pediatric care 
-                    in Sremska Mitrovica. Every visit is built on trust, attention, and 
-                    a genuine love for children.
-                </p>
-
-                <div class="hero__actions">
-                    <a href="mailto:drandricsanja@gmail.com" class="btn">
-                        Book Appointment
-                        <span aria-hidden="true">→</span>
-                    </a>
-                    <div class="hero__rating">
-                        <div class="hero__stars" aria-label="5.0 out of 5 stars">
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        </div>
-                        <span><strong>5.0</strong> — Exceptional rating</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero__visual">
-                <div class="hero__card">
-                    <div class="hero__card-icon" aria-hidden="true">🩺</div>
-                    <h3>Dr. Sanja Andric</h3>
-                    <p>Dedicated pediatrician with a warm, professional approach. Every child receives attentive, individualized care in a calm and friendly environment.</p>
-                    <div class="hero__card-meta">
-                        <span>📍 Sremska Mitrovica</span>
-                        <span>⭐ 5.0</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <aside class="snapshot" aria-label="Business snapshot">
+          <h2>Business Snapshot</h2>
+          <p><strong>Category:</strong> Doctor</p>
+          <p><strong>Goal:</strong> Book Appointment</p>
+          <p><strong>Address:</strong> Ratarska 17, Sremska Mitrovica 22000, Serbia</p>
+        </aside>
+      </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section section--dark" aria-labelledby="services-title">
-        <div class="container">
-            <div class="text-center">
-                <span class="section__label">Services</span>
-                <h2 id="services-title" class="heading-lg section__title">Professional Pediatric Care</h2>
-                <p class="text-body section__subtitle mx-auto">
-                    Comprehensive doctor services tailored to your child’s needs — from routine check-ups to preventive care, all delivered with kindness and expertise.
-                </p>
-            </div>
+    <section id="services">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Available services from the business profile.</p>
+        </div>
+        <div class="grid">
+        <article class="card">
+          <span class="card-kicker">Care</span>
+          <h3>Professional Doctor Services</h3>
+          <p>Professional Doctor Services is the available doctor service listed for Moj Pedijatar Dr. Andric Sanja. Use the contact details below to ask for current availability.</p>
+        </article>
+        </div>
+      </div>
+    </section>
 
-            <div class="services__grid">
-                <article class="service-card fade-in">
-                    <div class="service-card__icon" aria-hidden="true">👶</div>
-                    <h3 class="heading-sm">Well-Child Visits</h3>
-                    <p>Regular developmental check-ups, growth monitoring, and preventive screenings to ensure your child is thriving at every stage.</p>
-                </article>
+    <section class="proof">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Why Choose Us</h2>
+          <p>Helpful signals before you call, book, or request details.</p>
+        </div>
+        <div class="grid">
+        <article class="proof-item">
+          <strong>Exceptional 5.0-star rating from customers</strong>
+          <span>A useful signal when comparing local doctor providers in Novi Sad.</span>
+        </article>
 
-                <article class="service-card fade-in">
-                    <div class="service-card__icon" aria-hidden="true">💉</div>
-                    <h3 class="heading-sm">Vaccinations</h3>
-                    <p>Safe, up-to-date immunizations following the national schedule, administered with care to keep your child protected.</p>
-                </article>
+        <article class="proof-item">
+          <strong>Professional and reliable service</strong>
+          <span>A useful signal when comparing local doctor providers in Novi Sad.</span>
+        </article>
+        </div>
+      </div>
+    </section>
 
-                <article class="service-card fade-in">
-                    <div class="service-card__icon" aria-hidden="true">🩺</div>
-                    <h3 class="heading-sm">Acute Care</h3>
+    <section id="reviews">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Reviews</h2>
+          <p>Recurring themes from the available review information.</p>
+        </div>
+        <div class="review-box">Recurring review themes: Professional, Kind, Friendly, Recommend, Great.</div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-band">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Call, email, or use the address below.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card"><span>Phone</span><a href="tel:0641289426">064 1289426</a></div>
+          <div class="contact-card"><span>Email</span><a href="mailto:drandricsanja@gmail.com">drandricsanja@gmail.com</a></div>
+          <div class="contact-card"><span>Address</span>Ratarska 17, Sremska Mitrovica 22000, Serbia</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">&copy; 2026 Moj Pedijatar Dr. Andric Sanja. Doctor in Novi Sad.</div>
+  </footer>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        var target = document.querySelector(link.getAttribute("href"));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,1094 +1,288 @@
-I've created a complete, single-file HTML website for Tiffany Apartment, a real estate agency in Novi Sad. It's a modern, professional landing page designed to build trust and generate quote requests.
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tiffany Apartment | Real Estate Agency Novi Sad | Professional Property Services</title>
-    <meta name="description" content="Tiffany Apartment – trusted real estate agency in Novi Sad, Serbia. 5.0-star rated. Professional apartment, property & long-term services. Request a quote today." />
-    <meta property="og:title" content="Tiffany Apartment | Real Estate Agency Novi Sad" />
-    <meta property="og:description" content="Trusted real estate agency in Novi Sad with a 5.0-star rating. Professional apartment, property & long-term services. Request a quote." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.mktiffany.com" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="keywords" content="Tiffany Apartment, Real Estate Agency Novi Sad, best real estate agency in Novi Sad, real estate agency services Serbia, professional real estate agency" />
-    <style>
-        /* ===== RESET & BASE ===== */
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --color-bg: #fafaf9;
-            --color-white: #ffffff;
-            --color-black: #1a1a1a;
-            --color-gray-50: #f7f7f6;
-            --color-gray-100: #e8e7e5;
-            --color-gray-300: #b8b6b0;
-            --color-gray-500: #7a7872;
-            --color-gray-700: #4a4844;
-            --color-gray-900: #1f1e1b;
-            --color-accent: #2b6f6e;
-            --color-accent-light: #3e8f8e;
-            --color-accent-dark: #1e5251;
-            --color-accent-bg: #eaf3f2;
-            --color-gold: #c9a84c;
-            --color-gold-light: #f5edd6;
-            --font-primary: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            --font-secondary: 'Georgia', 'Times New Roman', serif;
-            --max-width: 1200px;
-            --section-padding: 5rem 1.5rem;
-            --radius-sm: 8px;
-            --radius-md: 16px;
-            --radius-lg: 24px;
-            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.08);
-            --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-primary);
-            background-color: var(--color-bg);
-            color: var(--color-gray-900);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* ===== CONTAINER ===== */
-        .container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* ===== TYPOGRAPHY ===== */
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-weight: 600;
-            line-height: 1.25;
-            letter-spacing: -0.01em;
-        }
-
-        h1 {
-            font-size: clamp(2.4rem, 6vw, 4rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        h2 {
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            margin-bottom: 0.5rem;
-        }
-
-        h3 {
-            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-        }
-
-        .section-label {
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--color-accent);
-            background: var(--color-accent-bg);
-            padding: 0.35rem 1rem;
-            border-radius: 100px;
-            margin-bottom: 1rem;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .text-muted {
-            color: var(--color-gray-500);
-        }
-
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            font-family: var(--font-primary);
-            font-weight: 600;
-            font-size: 1rem;
-            padding: 0.9rem 2.2rem;
-            border-radius: 60px;
-            border: none;
-            cursor: pointer;
-            transition: var(--transition);
-            text-decoration: none;
-            line-height: 1.2;
-        }
-
-        .btn-primary {
-            background: var(--color-accent);
-            color: var(--color-white);
-            box-shadow: 0 4px 16px rgba(43, 111, 110, 0.25);
-        }
-
-        .btn-primary:hover {
-            background: var(--color-accent-light);
-            box-shadow: 0 8px 28px rgba(43, 111, 110, 0.35);
-            transform: translateY(-2px);
-        }
-
-        .btn-primary:active {
-            transform: translateY(0);
-        }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--color-accent);
-            border: 2px solid var(--color-accent);
-        }
-
-        .btn-outline:hover {
-            background: var(--color-accent);
-            color: var(--color-white);
-        }
-
-        /* ===== HEADER / NAV ===== */
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(250, 250, 249, 0.88);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-            padding: 0.8rem 0;
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .logo {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--color-accent-dark);
-            letter-spacing: -0.02em;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .logo span {
-            font-weight: 400;
-            color: var(--color-gray-500);
-            font-size: 0.9rem;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--color-gray-700);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-accent);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--color-accent);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-cta {
-            display: none;
-        }
-
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.6rem;
-            color: var(--color-gray-900);
-            cursor: pointer;
-            padding: 0.25rem;
-        }
-
-        /* ===== HERO ===== */
-        .hero {
-            padding: 4rem 1.5rem 5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -20%;
-            width: 60%;
-            height: 80%;
-            background: radial-gradient(ellipse at center, rgba(43, 111, 110, 0.06) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .hero-content {
-            max-width: 620px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--color-gold-light);
-            color: #8a6f2b;
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 0.4rem 1.2rem;
-            border-radius: 100px;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-badge svg {
-            width: 18px;
-            height: 18px;
-            fill: #c9a84c;
-        }
-
-        .hero h1 {
-            margin-bottom: 1.2rem;
-            color: var(--color-black);
-        }
-
-        .hero h1 .highlight {
-            color: var(--color-accent);
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--color-gray-500);
-            max-width: 480px;
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .hero-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 2.5rem;
-            margin-top: 2.5rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--color-gray-100);
-        }
-
-        .hero-stat {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-stat-number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--color-accent-dark);
-            line-height: 1.2;
-        }
-
-        .hero-stat-label {
-            font-size: 0.85rem;
-            color: var(--color-gray-500);
-        }
-
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem 2rem;
-            box-shadow: var(--shadow-lg);
-            width: 100%;
-            max-width: 400px;
-            border: 1px solid rgba(0, 0, 0, 0.04);
-        }
-
-        .hero-card-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.25rem;
-            border-bottom: 1px solid var(--color-gray-100);
-        }
-
-        .hero-card-icon {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: var(--color-accent-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.4rem;
-            color: var(--color-accent);
-        }
-
-        .hero-card-title {
-            font-weight: 600;
-            font-size: 1.05rem;
-        }
-
-        .hero-card-sub {
-            font-size: 0.85rem;
-            color: var(--color-gray-500);
-        }
-
-        .hero-card-list {
-            display: flex;
-            flex-direction: column;
-            gap: 0.9rem;
-        }
-
-        .hero-card-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 0.95rem;
-            color: var(--color-gray-700);
-        }
-
-        .hero-card-item svg {
-            width: 20px;
-            height: 20px;
-            fill: var(--color-accent);
-            flex-shrink: 0;
-        }
-
-        /* ===== SERVICES ===== */
-        .services {
-            padding: var(--section-padding);
-            background: var(--color-white);
-        }
-
-        .services-header {
-            max-width: 640px;
-            margin: 0 auto 3.5rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--color-bg);
-            border-radius: var(--radius-md);
-            padding: 2.5rem 2rem;
-            border: 1px solid var(--color-gray-100);
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--color-accent-bg);
-        }
-
-        .service-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 14px;
-            background: var(--color-accent-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-            color: var(--color-accent);
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            margin-bottom: 0.6rem;
-            color: var(--color-black);
-        }
-
-        .service-card p {
-            color: var(--color-gray-500);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .service-card .service-tag {
-            display: inline-block;
-            margin-top: 1.25rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--color-accent);
-            background: var(--color-accent-bg);
-            padding: 0.25rem 0.9rem;
-            border-radius: 100px;
-        }
-
-        /* ===== WHY CHOOSE US ===== */
-        .why-choose {
-            padding: var(--section-padding);
-            background: var(--color-bg);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .why-content h2 {
-            margin-bottom: 1rem;
-        }
-
-        .why-content>p {
-            color: var(--color-gray-500);
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-            max-width: 480px;
-        }
-
-        .why-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .why-item {
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .why-item-icon {
-            flex-shrink: 0;
-            width: 40px;
-            height: 40px;
-            border-radius: 12px;
-            background: var(--color-accent-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--color-accent);
-        }
-
-        .why-item h4 {
-            font-size: 1.05rem;
-            margin-bottom: 0.2rem;
-            color: var(--color-black);
-        }
-
-        .why-item p {
-            font-size: 0.9rem;
-            color: var(--color-gray-500);
-            line-height: 1.6;
-        }
-
-        .why-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .why-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem 2rem;
-            box-shadow: var(--shadow-md);
-            width: 100%;
-            max-width: 380px;
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            text-align: center;
-        }
-
-        .why-card-stars {
-            font-size: 2.2rem;
-            color: var(--color-gold);
-            letter-spacing: 4px;
-            margin-bottom: 0.75rem;
-        }
-
-        .why-card-number {
-            font-size: 3.2rem;
-            font-weight: 700;
-            color: var(--color-accent-dark);
-            line-height: 1.1;
-        }
-
-        .why-card-label {
-            font-size: 1rem;
-            color: var(--color-gray-500);
-            margin-bottom: 0.5rem;
-        }
-
-        .why-card-sub {
-            font-size: 0.9rem;
-            color: var(--color-gray-500);
-            background: var(--color-gray-50);
-            padding: 0.6rem 1.2rem;
-            border-radius: 100px;
-            display: inline-block;
-            margin-top: 0.75rem;
-        }
-
-        /* ===== REVIEWS ===== */
-        .reviews {
-            padding: var(--section-padding);
-            background: var(--color-white);
-        }
-
-        .reviews-header {
-            max-width: 640px;
-            margin: 0 auto 3.5rem;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .review-card {
-            background: var(--color-bg);
-            border-radius: var(--radius-md);
-            padding: 2rem 1.5rem;
-            border: 1px solid var(--color-gray-100);
-            transition: var(--transition);
-        }
-
-        .review-card:hover {
-            box-shadow: var(--shadow-sm);
-        }
-
-        .review-stars {
-            color: var(--color-gold);
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            margin-bottom: 0.75rem;
-        }
-
-        .review-card h4 {
-            font-size: 1.05rem;
-            margin-bottom: 0.4rem;
-            color: var(--color-black);
-        }
-
-        .review-card p {
-            font-size: 0.92rem;
-            color: var(--color-gray-500);
-            line-height: 1.7;
-        }
-
-        .review-card .review-tag {
-            display: inline-block;
-            margin-top: 0.75rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--color-accent);
-            background: var(--color-accent-bg);
-            padding: 0.2rem 0.8rem;
-            border-radius: 100px;
-        }
-
-        .review-summary-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            justify-content: center;
-            margin-top: 2.5rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--color-gray-100);
-        }
-
-        .review-summary-bar .pill {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--color-gray-700);
-            background: var(--color-gray-50);
-            padding: 0.4rem 1.2rem;
-            border-radius: 100px;
-            border: 1px solid var(--color-gray-100);
-        }
-
-        .review-summary-bar .pill strong {
-            color: var(--color-accent-dark);
-        }
-
-        /* ===== CONTACT ===== */
-        .contact {
-            padding: var(--section-padding);
-            background: var(--color-bg);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .contact-info h2 {
-            margin-bottom: 0.75rem;
-        }
-
-        .contact-info>p {
-            color: var(--color-gray-500);
-            font-size: 1.05rem;
-            margin-bottom: 2rem;
-            max-width: 440px;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .contact-item-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: var(--color-accent-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--color-accent);
-            flex-shrink: 0;
-        }
-
-        .contact-item a,
-        .contact-item span {
-            font-size: 1rem;
-            color: var(--color-gray-700);
-            transition: var(--transition);
-        }
-
-        .contact-item a:hover {
-            color: var(--color-accent);
-        }
-
-        .contact-item .label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--color-gray-500);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            display: block;
-            margin-bottom: 0.1rem;
-        }
-
-        .contact-cta-card {
-            background: var(--color-white);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem 2rem;
-            box-shadow: var(--shadow-md);
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            text-align: center;
-        }
-
-        .contact-cta-card h3 {
-            margin-bottom: 0.75rem;
-            color: var(--color-black);
-        }
-
-        .contact-cta-card p {
-            color: var(--color-gray-500);
-            font-size: 0.95rem;
-            margin-bottom: 1.75rem;
-        }
-
-        .contact-cta-card .btn {
-            width: 100%;
-        }
-
-        /* ===== FOOTER ===== */
-        .site-footer {
-            padding: 2rem 1.5rem;
-            background: var(--color-gray-900);
-            color: var(--color-gray-300);
-            font-size: 0.85rem;
-        }
-
-        .footer-inner {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footer-inner a {
-            color: var(--color-gray-300);
-            transition: var(--transition);
-        }
-
-        .footer-inner a:hover {
-            color: var(--color-white);
-        }
-
-        .footer-logo {
-            font-weight: 600;
-            color: var(--color-white);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
-            .hero .container {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .hero-content {
-                max-width: 100%;
-            }
-
-            .hero p {
-                max-width: 100%;
-            }
-
-            .hero-visual {
-                order: -1;
-            }
-
-            .hero-card {
-                max-width: 100%;
-            }
-
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .why-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .why-content>p {
-                max-width: 100%;
-            }
-
-            .why-visual {
-                order: -1;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--color-white);
-                padding: 1.5rem 2rem;
-                border-bottom: 1px solid var(--color-gray-100);
-                box-shadow: var(--shadow-md);
-                gap: 1.2rem;
-                align-items: flex-start;
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .mobile-toggle {
-                display: block;
-            }
-
-            .nav-cta {
-                display: inline-flex;
-                margin-top: 0.5rem;
-            }
-
-            .hero {
-                padding: 2rem 1.5rem 3rem;
-            }
-
-            .hero-stats {
-                gap: 1.5rem;
-                flex-wrap: wrap;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-inner {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            :root {
-                --section-padding: 3rem 1.25rem;
-            }
-
-            .hero-card {
-                padding: 1.5rem 1.25rem;
-            }
-
-            .service-card {
-                padding: 1.75rem 1.25rem;
-            }
-
-            .why-card {
-                padding: 1.75rem 1.25rem;
-            }
-
-            .contact-cta-card {
-                padding: 1.75rem 1.25rem;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .hero-actions {
-                flex-direction: column;
-            }
-        }
-
-        /* ===== UTILITY ===== */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiffany Apartment | Real Estate Agency in Novi Sad</title>
+  <meta name="description" content="Tiffany Apartment offers real estate agency services in Novi Sad. Contact by phone or email.">
+  <meta property="og:title" content="Tiffany Apartment">
+  <meta property="og:description" content="Real Estate Agency services in Novi Sad with direct contact information.">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: #171a22;
+      background: #f6f4ef;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(246,244,239,.94);
+      border-bottom: 1px solid #ded6c9;
+      backdrop-filter: blur(14px);
+    }
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { font-weight: 800; letter-spacing: 0; }
+    .nav-links { display: flex; gap: 18px; font-size: 0.94rem; color: #44515a; }
+    .nav-links a { text-decoration: none; }
+    .hero {
+      padding: 86px 0 72px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.9), rgba(229,221,207,.7)),
+        linear-gradient(145deg, transparent 0 52%, rgba(118,90,42,.12) 52% 100%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 42px;
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #765a2a;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+    h1 {
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(2.3rem, 5vw, 4.9rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 680px;
+      margin: 22px 0 0;
+      color: #44515a;
+      font-size: 1.12rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      background: #171a22;
+      color: #fff;
+    }
+    .btn.secondary { background: #fff; color: #171a22; border: 1px solid #ded6c9; }
+    .snapshot {
+      background: #ffffff;
+      border: 1px solid #ded6c9;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 18px 50px rgba(25, 31, 35, 0.08);
+    }
+    .snapshot h2 { margin: 0 0 14px; font-size: 1.15rem; }
+    .snapshot p { margin: 0 0 12px; color: #44515a; }
+    section { padding: 68px 0; }
+    .section-head { max-width: 720px; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(1.7rem, 3vw, 2.5rem); }
+    .section-head p { margin: 0; color: #5a666f; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card, .proof-item {
+      background: #fff;
+      border: 1px solid #ded6c9;
+      border-radius: 8px;
+      padding: 22px;
+    }
+    .card-kicker {
+      display: block;
+      color: #765a2a;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .card h3 { margin: 0 0 10px; font-size: 1.16rem; }
+    .card p, .proof-item span { color: #5a666f; }
+    .proof {
+      background: #20202a;
+      color: #fff;
+    }
+    .proof .section-head p, .proof-item span { color: #c7d0d5; }
+    .proof-item { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); }
+    .proof-item strong { display: block; margin-bottom: 8px; }
+    .review-box {
+      background: #fff;
+      border-left: 5px solid #765a2a;
+      padding: 26px;
+      border-radius: 8px;
+      color: #44515a;
+      font-size: 1.08rem;
+    }
+    .contact-band {
+      background: #765a2a;
+      color: #fff;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 20px;
+      overflow-wrap: anywhere;
+    }
+    .contact-card span { display: block; color: #d7edf4; font-size: 0.82rem; margin-bottom: 8px; }
+    .contact-card a { font-weight: 800; text-decoration: none; }
+    .micro-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+    .micro { border-top: 1px solid #ded6c9; padding-top: 12px; color: #5a666f; font-size: .94rem; }
+    footer { padding: 24px 0; background: #11181d; color: #cad2d7; font-size: 0.92rem; }
+    @media (max-width: 820px) {
+      .hero-grid, .grid, .contact-grid, .micro-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { padding-top: 56px; }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <nav class="shell">
+      <div class="brand">Tiffany Apartment</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- ===== HEADER ===== -->
-    <header class="site-header" role="banner">
-        <div class="header-inner">
-            <a href="#" class="logo" aria-label="Tiffany Apartment home">
-                Tiffany Apartment
-                <span>Real Estate</span>
-            </a>
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <line x1="3" y1="6" x2="21" y2="6" />
-                    <line x1="3" y1="12" x2="21" y2="12" />
-                    <line x1="3" y1="18" x2="21" y2="18" />
-                </svg>
-            </button>
-            <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
-                <a href="#services">Services</a>
-                <a href="#why">Why Us</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#contact">Contact</a>
-                <a href="#contact" class="btn btn-primary nav-cta">Request Quote</a>
-            </nav>
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Real Estate Agency / Novi Sad</p>
+          <h1>Tiffany Apartment: clear real estate agency help for your next step</h1>
+          <p class="lead">Contact Tiffany Apartment directly for apartment in Novi Sad. Key trust signal: exceptional 5.0-star rating from customers.</p>
+          <div class="actions">
+            <a class="btn" href="mailto:office@mktiffany.com">Request Quote</a>
+            <a class="btn secondary" href="#services">View Services</a>
+          </div>
+          <div class="micro-grid">
+            <div class="micro">Service area: Novi Sad</div>
+            <div class="micro">Category: Real Estate Agency</div>
+            <div class="micro">Direct contact: office@mktiffany.com</div>
+          </div>
         </div>
-    </header>
-
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="hero" aria-label="Hero banner">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                    5.0 ★ &nbsp; Exceptional Rating
-                </div>
-                <h1>
-                    Your Trusted <span class="highlight">Real Estate</span> Partner in Novi Sad
-                </h1>
-                <p>
-                    Tiffany Apartment delivers fast, professional real estate services with a personal touch.
-                    Whether you need an apartment, a property, or a long-term arrangement — we make it seamless.
-                </p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Request Quote</a>
-                    <a href="#services" class="btn btn-outline">Explore Services</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">5.0</span>
-                        <span class="hero-stat-label">★ Customer Rating</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">50+</span>
-                        <span class="hero-stat-label">Happy Clients</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-number">3</span>
-                        <span class="hero-stat-label">Core Services</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-card">
-                    <div class="hero-card-header">
-                        <div class="hero-card-icon">🏡</div>
-                        <div>
-                            <div class="hero-card-title">Tiffany Apartment</div>
-                            <div class="hero-card-sub">Real Estate Agency</div>
-                        </div>
-                    </div>
-                    <div class="hero-card-list">
-                        <div class="hero-card-item">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-                            Fast &amp; efficient service
-                        </div>
-                        <div class="hero-card-item">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-                            5.0-star customer satisfaction
-                        </div>
-                        <div class="hero-card-item">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-                            Professional &amp; transparent
-                        </div>
-                        <div class="hero-card-item">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
-                            Located in Novi Sad
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <aside class="snapshot" aria-label="Business snapshot">
+          <h2>Business Snapshot</h2>
+          <p><strong>Category:</strong> Real Estate Agency</p>
+          <p><strong>Goal:</strong> Request Quote</p>
+          <p><strong>Address:</strong> Gundulićeva 30, Novi Sad, Serbia</p>
+        </aside>
+      </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
-    <section class="services" id="services" aria-label="Our services">
-        <div class="container">
-            <div class="services-header text-center">
-                <span class="section-label">Our Services</span>
-                <h2>Real Estate Solutions Tailored to You</h2>
-                <p class="text-muted">From apartments to long-term arrangements — we cover every step with care and expertise.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>Apartment</h3>
-                    <p>Find your ideal apartment in Novi Sad. We handle viewings, negotiations, and paperwork so you can move in with confidence.</p>
-                    <span class="service-tag">Apartment</span>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Property</h3>
-                    <p>Comprehensive property services — buying, selling, or consulting. We provide market insights and a smooth experience from start to finish.</p>
-                    <span class="service-tag">Property</span>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📋</div>
-                    <h3>Long Term</h3>
-                    <p>Reliable long-term rental and management solutions. We ensure stable agreements, clear communication, and peace of mind for years ahead.</p>
-                    <span class="service-tag">Long term</span>
-                </div>
-            </div>
+    <section id="services">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Available services from the business profile.</p>
         </div>
+        <div class="grid">
+        <article class="card">
+          <span class="card-kicker">Advisory</span>
+          <h3>Apartment</h3>
+          <p>Apartment is the available real estate agency service listed for Tiffany Apartment. Use the contact details below to ask for current availability.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-kicker">Advisory</span>
+          <h3>Property</h3>
+          <p>Property is the available real estate agency service listed for Tiffany Apartment. Use the contact details below to ask for current availability.</p>
+        </article>
+
+        <article class="card">
+          <span class="card-kicker">Advisory</span>
+          <h3>Long term</h3>
+          <p>Long term is the available real estate agency service listed for Tiffany Apartment. Use the contact details below to ask for current availability.</p>
+        </article>
+        </div>
+      </div>
     </section>
 
-    <!-- ===== WHY CHOOSE US ===== -->
-    <section class="why-choose" id="why" aria-label="Why choose us">
-        <div class="container">
-            <div class="why-grid">
-                <div class="why-content">
-                    <span class="section-label">Why Choose Us</span>
-                    <h2>Built on Trust, Driven by Results</h2>
-                    <p>We believe real estate is personal. That's why every client receives dedicated attention, transparent advice, and a service that goes beyond expectations.</p>
-                    <div class="why-list">
-                        <div class="why-item">
-                            <div class="why-item-icon">⭐</div>
+    <section class="proof">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Why Choose Us</h2>
+          <p>Helpful signals before you call, book, or request details.</p>
+        </div>
+        <div class="grid">
+        <article class="proof-item">
+          <strong>Exceptional 5.0-star rating from customers</strong>
+          <span>A useful signal when comparing local real estate agency providers in Novi Sad.</span>
+        </article>
+
+        <article class="proof-item">
+          <strong>Fast and efficient service</strong>
+          <span>A useful signal when comparing local real estate agency providers in Novi Sad.</span>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Reviews</h2>
+          <p>Recurring themes from the available review information.</p>
+        </div>
+        <div class="review-box">Recurring review themes: Kind, Friendly, Recommend, Excellent, Great.</div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-band">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Call, email, or use the address below.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card"><span>Phone</span><a href="tel:"></a></div>
+          <div class="contact-card"><span>Email</span><a href="mailto:office@mktiffany.com">office@mktiffany.com</a></div>
+          <div class="contact-card"><span>Address</span>Gundulićeva 30, Novi Sad, Serbia</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">&copy; 2026 Tiffany Apartment. Real Estate Agency in Novi Sad.</div>
+  </footer>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        var target = document.querySelector(link.getAttribute("href"));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  </script>
+</body>
+</html>

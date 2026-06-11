@@ -8,7 +8,7 @@ Primetili smo da se bavite attorney delatnošću, sa uslugama: professional atto
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nsdrimtim21.github.io/novi-sad-business-sites/advokat-jovana-savić/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/advokat-jovana-savi%C4%87/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

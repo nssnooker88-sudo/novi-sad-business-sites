@@ -8,7 +8,7 @@ Primetili smo da se bavite locksmith delatnošću, sa uslugama: spare keys na ad
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nsdrimtim21.github.io/novi-sad-business-sites/detelina-ključ-auto-ključevi-ključar-oštrač-noževi-makazetag/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/detelina-klju%C4%8D-auto-klju%C4%8Devi-klju%C4%8Dar-o%C5%A1tra%C4%8D-no%C5%BEevi-makazetag/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

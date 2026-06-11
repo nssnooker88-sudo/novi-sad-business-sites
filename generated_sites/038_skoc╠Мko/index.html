@@ -1,1053 +1,276 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>SKOČKO – Restaurant Novi Sad | Dinner & Fine Dining</title>
-    <meta name="description" content="SKOČKO – trusted by over 1287 satisfied clients. Experience fast, efficient service and an unforgettable dinner in Novi Sad. Call now 021 511071.">
-    <meta property="og:title" content="SKOČKO – Restaurant Novi Sad | Dinner & Fine Dining">
-    <meta property="og:description" content="Trusted by over 1287 satisfied clients. Fast, efficient service. Enjoy a warm dinner at SKOČKO in Novi Sad. Call now 021 511071.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://skocko.rs">
-    <meta property="og:locale" content="en_RS">
-    <meta name="keywords" content="SKOČKO, Restaurant Novi Sad, Restaurant restaurant, best restaurant in Novi Sad, restaurant services Serbia, professional restaurant">
-
-    <style>
-        /* ===== RESET & BASE ===== */
-        *,
-        *::before,
-        *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --color-primary: #C73E1D;
-            --color-primary-dark: #A32F14;
-            --color-primary-deeper: #7A220E;
-            --color-accent: #F5A623;
-            --color-accent-light: #FDEBD0;
-            --color-bg: #FDF8F3;
-            --color-bg-alt: #F9EFE6;
-            --color-dark: #2D1B14;
-            --color-dark-soft: #4A342B;
-            --color-text: #3D2B24;
-            --color-text-light: #7A6A63;
-            --color-white: #FFFFFF;
-            --color-cream: #FFF8F2;
-            --color-gold-light: #FCE8C8;
-
-            --font-heading: 'Georgia', 'Times New Roman', serif;
-            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 2rem;
-            --space-lg: 3.5rem;
-            --space-xl: 5.5rem;
-            --space-2xl: 8rem;
-
-            --radius: 16px;
-            --radius-sm: 8px;
-            --shadow-sm: 0 2px 8px rgba(45, 27, 20, 0.06);
-            --shadow-md: 0 8px 32px rgba(45, 27, 20, 0.08);
-            --shadow-lg: 0 20px 60px rgba(45, 27, 20, 0.12);
-            --shadow-button: 0 4px 16px rgba(199, 62, 29, 0.35);
-
-            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.65;
-            overflow-x: hidden;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* ===== TYPOGRAPHY ===== */
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            line-height: 1.2;
-            color: var(--color-dark);
-        }
-
-        .heading-xl {
-            font-size: clamp(2.6rem, 8.5vw, 5.2rem);
-            letter-spacing: -0.02em;
-        }
-
-        .heading-lg {
-            font-size: clamp(2rem, 5.5vw, 3.4rem);
-            letter-spacing: -0.015em;
-        }
-
-        .heading-md {
-            font-size: clamp(1.4rem, 3.2vw, 2rem);
-            letter-spacing: -0.01em;
-        }
-
-        .heading-sm {
-            font-size: clamp(1.1rem, 2vw, 1.35rem);
-            letter-spacing: -0.005em;
-        }
-
-        .text-lg {
-            font-size: clamp(1.05rem, 1.6vw, 1.2rem);
-            line-height: 1.7;
-        }
-
-        .text-body {
-            font-size: clamp(0.95rem, 1.3vw, 1.05rem);
-            line-height: 1.7;
-        }
-
-        .text-sm {
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .text-muted {
-            color: var(--color-text-light);
-        }
-
-        /* ===== CONTAINER ===== */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 var(--space-md);
-        }
-
-        .container--narrow {
-            max-width: 880px;
-        }
-
-        /* ===== BUTTONS ===== */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.7rem;
-            padding: 0.9rem 2.4rem;
-            font-family: var(--font-body);
-            font-size: 1.05rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            letter-spacing: 0.01em;
-        }
-
-        .btn--primary {
-            background: var(--color-primary);
-            color: var(--color-white);
-            box-shadow: var(--shadow-button);
-        }
-
-        .btn--primary:hover {
-            background: var(--color-primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 28px rgba(199, 62, 29, 0.45);
-        }
-
-        .btn--primary:active {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(199, 62, 29, 0.35);
-        }
-
-        .btn--ghost {
-            background: transparent;
-            color: var(--color-dark);
-            border: 2px solid var(--color-dark);
-            box-shadow: none;
-        }
-
-        .btn--ghost:hover {
-            background: var(--color-dark);
-            color: var(--color-white);
-            transform: translateY(-2px);
-        }
-
-        .btn .icon-phone {
-            display: inline-block;
-            width: 1.1em;
-            height: 1.1em;
-            background: currentColor;
-            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E") no-repeat center;
-            mask-size: contain;
-            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E") no-repeat center;
-            -webkit-mask-size: contain;
-        }
-
-        /* ===== HEADER / NAV ===== */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            padding: 0.8rem 0;
-            background: rgba(253, 248, 243, 0.88);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(45, 27, 20, 0.06);
-            transition: var(--transition);
-        }
-
-        .header--scrolled {
-            background: rgba(253, 248, 243, 0.97);
-            box-shadow: 0 2px 24px rgba(45, 27, 20, 0.06);
-        }
-
-        .header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .header__logo {
-            font-family: var(--font-heading);
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            letter-spacing: -0.02em;
-            line-height: 1;
-        }
-
-        .header__logo span {
-            color: var(--color-dark);
-        }
-
-        .header__nav {
-            display: flex;
-            align-items: center;
-            gap: var(--space-md);
-        }
-
-        .header__nav a {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--color-dark-soft);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .header__nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--color-primary);
-            transition: var(--transition);
-            border-radius: 2px;
-        }
-
-        .header__nav a:hover {
-            color: var(--color-primary);
-        }
-
-        .header__nav a:hover::after {
-            width: 100%;
-        }
-
-        .header__nav .btn {
-            padding: 0.55rem 1.6rem;
-            font-size: 0.9rem;
-        }
-
-        .header__hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 4px;
-        }
-
-        .header__hamburger span {
-            display: block;
-            width: 28px;
-            height: 2.5px;
-            background: var(--color-dark);
-            border-radius: 4px;
-            transition: var(--transition);
-        }
-
-        .header__hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .header__hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .header__hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        /* ===== HERO ===== */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 7rem 0 var(--space-xl);
-            background: var(--color-bg);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -20%;
-            width: 70%;
-            height: 120%;
-            background: radial-gradient(ellipse at center, rgba(199, 62, 29, 0.06) 0%, rgba(245, 166, 35, 0.03) 50%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -10%;
-            left: -10%;
-            width: 50%;
-            height: 60%;
-            background: radial-gradient(ellipse at center, rgba(245, 166, 35, 0.05) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-            align-items: center;
-        }
-
-        .hero__content {
-            max-width: 620px;
-        }
-
-        .hero__badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--color-accent-light);
-            color: var(--color-primary-deeper);
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 0.4rem 1.2rem;
-            border-radius: 50px;
-            margin-bottom: var(--space-md);
-            letter-spacing: 0.02em;
-        }
-
-        .hero__badge svg {
-            width: 16px;
-            height: 16px;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 2;
-        }
-
-        .hero__headline {
-            margin-bottom: var(--space-sm);
-        }
-
-        .hero__headline .highlight {
-            color: var(--color-primary);
-        }
-
-        .hero__sub {
-            font-size: clamp(1.05rem, 1.6vw, 1.2rem);
-            color: var(--color-text-light);
-            margin-bottom: var(--space-md);
-            max-width: 520px;
-            line-height: 1.7;
-        }
-
-        .hero__actions {
-            display: flex;
-            gap: var(--space-sm);
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .hero__stats {
-            display: flex;
-            gap: var(--space-lg);
-            margin-top: var(--space-md);
-            padding-top: var(--space-md);
-            border-top: 1px solid rgba(45, 27, 20, 0.08);
-        }
-
-        .hero__stat-number {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            line-height: 1.1;
-        }
-
-        .hero__stat-label {
-            font-size: 0.85rem;
-            color: var(--color-text-light);
-            font-weight: 500;
-        }
-
-        .hero__visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero__visual-frame {
-            width: 100%;
-            max-width: 520px;
-            aspect-ratio: 4/3;
-            border-radius: var(--radius);
-            background: var(--color-bg-alt);
-            position: relative;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .hero__visual-frame::before {
-            content: '☼';
-            font-size: 8rem;
-            position: absolute;
-            top: 10%;
-            right: 15%;
-            opacity: 0.08;
-            color: var(--color-accent);
-            transform: rotate(15deg);
-        }
-
-        .hero__visual-frame::after {
-            content: '✦';
-            font-size: 4rem;
-            position: absolute;
-            bottom: 15%;
-            left: 10%;
-            opacity: 0.06;
-            color: var(--color-primary);
-        }
-
-        .hero__visual-pattern {
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(circle at 30% 40%, rgba(199, 62, 29, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 70% 60%, rgba(245, 166, 35, 0.06) 0%, transparent 50%);
-        }
-
-        .hero__visual-content {
-            position: relative;
-            z-index: 1;
-            padding: var(--space-lg);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            text-align: center;
-        }
-
-        .hero__visual-icon {
-            font-size: 4rem;
-            margin-bottom: var(--space-sm);
-            opacity: 0.3;
-            color: var(--color-primary);
-        }
-
-        .hero__visual-text {
-            font-family: var(--font-heading);
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--color-dark);
-            letter-spacing: 0.02em;
-        }
-
-        .hero__visual-text span {
-            color: var(--color-primary);
-        }
-
-        .hero__visual-tag {
-            font-size: 0.85rem;
-            color: var(--color-text-light);
-            margin-top: 0.3rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        /* ===== SECTION ===== */
-        .section {
-            padding: var(--space-2xl) 0;
-        }
-
-        .section--alt {
-            background: var(--color-bg-alt);
-        }
-
-        .section__header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto var(--space-xl);
-        }
-
-        .section__header .label {
-            display: inline-block;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--color-primary);
-            margin-bottom: var(--space-sm);
-        }
-
-        .section__header p {
-            color: var(--color-text-light);
-            margin-top: var(--space-sm);
-        }
-
-        /* ===== SERVICES ===== */
-        .services__grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: var(--space-md);
-        }
-
-        .service-card {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: var(--space-lg) var(--space-md);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border: 1px solid rgba(45, 27, 20, 0.04);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-md);
-            border-color: rgba(199, 62, 29, 0.1);
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-card__icon {
-            font-size: 3rem;
-            margin-bottom: var(--space-sm);
-            display: block;
-        }
-
-        .service-card__title {
-            font-family: var(--font-heading);
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--color-dark);
-            margin-bottom: 0.4rem;
-        }
-
-        .service-card__desc {
-            color: var(--color-text-light);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .service-card__tag {
-            display: inline-block;
-            margin-top: var(--space-sm);
-            background: var(--color-accent-light);
-            color: var(--color-primary-deeper);
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 0.25rem 1rem;
-            border-radius: 50px;
-            letter-spacing: 0.04em;
-        }
-
-        /* ===== WHY CHOOSE US ===== */
-        .why__grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: var(--space-md);
-        }
-
-        .why-card {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: var(--space-md) var(--space-md) var(--space-lg);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-            border: 1px solid rgba(45, 27, 20, 0.04);
-        }
-
-        .why-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .why-card__number {
-            font-family: var(--font-heading);
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            line-height: 1;
-            margin-bottom: var(--space-xs);
-            opacity: 0.3;
-        }
-
-        .why-card__title {
-            font-family: var(--font-heading);
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--color-dark);
-            margin-bottom: 0.4rem;
-        }
-
-        .why-card__text {
-            color: var(--color-text-light);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* ===== REVIEWS ===== */
-        .reviews__grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: var(--space-md);
-        }
-
-        .review-card {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: var(--space-md);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(45, 27, 20, 0.04);
-            transition: var(--transition);
-        }
-
-        .review-card:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-3px);
-        }
-
-        .review-card__stars {
-            display: flex;
-            gap: 3px;
-            margin-bottom: var(--space-sm);
-        }
-
-        .review-card__stars svg {
-            width: 18px;
-            height: 18px;
-            fill: var(--color-accent);
-            stroke: var(--color-accent);
-            stroke-width: 1;
-        }
-
-        .review-card__text {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: var(--color-dark-soft);
-            font-style: italic;
-            margin-bottom: var(--space-sm);
-        }
-
-        .review-card__author {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--color-text-light);
-        }
-
-        .reviews__summary {
-            text-align: center;
-            margin-top: var(--space-lg);
-            padding: var(--space-md);
-            background: var(--color-white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(45, 27, 20, 0.04);
-        }
-
-        .reviews__summary-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.6rem;
-            margin-top: var(--space-sm);
-        }
-
-        .reviews__summary-tags span {
-            background: var(--color-accent-light);
-            color: var(--color-primary-deeper);
-            font-size: 0.85rem;
-            font-weight: 500;
-            padding: 0.35rem 1.2rem;
-            border-radius: 50px;
-        }
-
-        .reviews__summary p {
-            color: var(--color-text-light);
-            font-size: 0.95rem;
-        }
-
-        /* ===== CONTACT ===== */
-        .contact__grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-            align-items: start;
-        }
-
-        .contact__info {
-            display: flex;
-            flex-direction: column;
-            gap: var(--space-md);
-        }
-
-        .contact__item {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-            padding: var(--space-md);
-            background: var(--color-white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(45, 27, 20, 0.04);
-            transition: var(--transition);
-        }
-
-        .contact__item:hover {
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-
-        .contact__item-icon {
-            flex-shrink: 0;
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: var(--color-accent-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-        }
-
-        .contact__item-content h4 {
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--color-text-light);
-            margin-bottom: 0.15rem;
-        }
-
-        .contact__item-content a,
-        .contact__item-content p {
-            font-size: 1.05rem;
-            font-weight: 500;
-            color: var(--color-dark);
-            transition: var(--transition);
-        }
-
-        .contact__item-content a:hover {
-            color: var(--color-primary);
-        }
-
-        .contact__cta {
-            background: var(--color-white);
-            border-radius: var(--radius);
-            padding: var(--space-lg);
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(45, 27, 20, 0.04);
-            text-align: center;
-        }
-
-        .contact__cta h3 {
-            margin-bottom: var(--space-sm);
-        }
-
-        .contact__cta p {
-            color: var(--color-text-light);
-            margin-bottom: var(--space-md);
-        }
-
-        .contact__cta .btn {
-            font-size: 1.1rem;
-            padding: 1rem 3rem;
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            padding: var(--space-lg) 0 var(--space-md);
-            border-top: 1px solid rgba(45, 27, 20, 0.06);
-            background: var(--color-bg);
-        }
-
-        .footer__inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: var(--space-sm);
-        }
-
-        .footer__logo {
-            font-family: var(--font-heading);
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--color-primary);
-        }
-
-        .footer__copy {
-            font-size: 0.85rem;
-            color: var(--color-text-light);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 1024px) {
-            .hero .container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero__content {
-                max-width: 100%;
-            }
-
-            .hero__sub {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero__actions {
-                justify-content: center;
-            }
-
-            .hero__stats {
-                justify-content: center;
-            }
-
-            .hero__visual {
-                display: none;
-            }
-
-            .contact__grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-md);
-            }
-        }
-
-        @media (max-width: 768px) {
-            :root {
-                --space-xl: 3.5rem;
-                --space-2xl: 5rem;
-                --space-lg: 2.5rem;
-                --space-md: 1.5rem;
-            }
-
-            .header__nav {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(253, 248, 243, 0.98);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                flex-direction: column;
-                padding: var(--space-md);
-                gap: var(--space-sm);
-                border-bottom: 1px solid rgba(45, 27, 20, 0.06);
-                box-shadow: 0 12px 40px rgba(45, 27, 20, 0.08);
-            }
-
-            .header__nav.open {
-                display: flex;
-            }
-
-            .header__nav a {
-                font-size: 1.05rem;
-                padding: 0.5rem 0;
-            }
-
-            .header__nav .btn {
-                width: 100%;
-                justify-content: center;
-                margin-top: 0.4rem;
-            }
-
-            .header__hamburger {
-                display: flex;
-            }
-
-            .hero__stats {
-                gap: var(--space-md);
-                flex-wrap: wrap;
-            }
-
-            .services__grid {
-                grid-template-columns: 1fr;
-            }
-
-            .why__grid {
-                grid-template-columns: 1fr;
-            }
-
-            .reviews__grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer__inner {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero__actions {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .hero__actions .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .contact__item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
-
-        /* ===== ANIMATIONS ===== */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-up {
-            animation: fadeUp 0.8s ease forwards;
-        }
-
-        .animate-delay-1 {
-            animation-delay: 0.1s;
-        }
-        .animate-delay-2 {
-            animation-delay: 0.2s;
-        }
-        .animate-delay-3 {
-            animation-delay: 0.3s;
-        }
-        .animate-delay-4 {
-            animation-delay: 0.4s;
-        }
-
-        /* ===== UTILITIES ===== */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKOČKO | Restaurant in Novi Sad</title>
+  <meta name="description" content="SKOČKO offers restaurant services in Novi Sad. Contact by phone or email.">
+  <meta property="og:title" content="SKOČKO">
+  <meta property="og:description" content="Restaurant services in Novi Sad with direct contact information.">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: #231711;
+      background: #fff7ed;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .shell { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,247,237,.94);
+      border-bottom: 1px solid #ead8c1;
+      backdrop-filter: blur(14px);
+    }
+    nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand { font-weight: 800; letter-spacing: 0; }
+    .nav-links { display: flex; gap: 18px; font-size: 0.94rem; color: #44515a; }
+    .nav-links a { text-decoration: none; }
+    .hero {
+      padding: 86px 0 72px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.9), rgba(254,215,170,.64)),
+        linear-gradient(145deg, transparent 0 52%, rgba(180,81,29,.12) 52% 100%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 42px;
+      align-items: center;
+    }
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #b4511d;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+    h1 {
+      margin: 0;
+      max-width: 780px;
+      font-size: clamp(2.3rem, 5vw, 4.9rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+    .lead {
+      max-width: 680px;
+      margin: 22px 0 0;
+      color: #44515a;
+      font-size: 1.12rem;
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      background: #7f2d12;
+      color: #fff;
+    }
+    .btn.secondary { background: #fff; color: #231711; border: 1px solid #ead8c1; }
+    .snapshot {
+      background: #ffffff;
+      border: 1px solid #ead8c1;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 18px 50px rgba(25, 31, 35, 0.08);
+    }
+    .snapshot h2 { margin: 0 0 14px; font-size: 1.15rem; }
+    .snapshot p { margin: 0 0 12px; color: #44515a; }
+    section { padding: 68px 0; }
+    .section-head { max-width: 720px; margin-bottom: 28px; }
+    .section-head h2 { margin: 0 0 10px; font-size: clamp(1.7rem, 3vw, 2.5rem); }
+    .section-head p { margin: 0; color: #5a666f; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card, .proof-item {
+      background: #fff;
+      border: 1px solid #ead8c1;
+      border-radius: 8px;
+      padding: 22px;
+    }
+    .card-kicker {
+      display: block;
+      color: #b4511d;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .card h3 { margin: 0 0 10px; font-size: 1.16rem; }
+    .card p, .proof-item span { color: #5a666f; }
+    .proof {
+      background: #351f16;
+      color: #fff;
+    }
+    .proof .section-head p, .proof-item span { color: #c7d0d5; }
+    .proof-item { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); }
+    .proof-item strong { display: block; margin-bottom: 8px; }
+    .review-box {
+      background: #fff;
+      border-left: 5px solid #b4511d;
+      padding: 26px;
+      border-radius: 8px;
+      color: #44515a;
+      font-size: 1.08rem;
+    }
+    .contact-band {
+      background: #9a3412;
+      color: #fff;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 20px;
+      overflow-wrap: anywhere;
+    }
+    .contact-card span { display: block; color: #d7edf4; font-size: 0.82rem; margin-bottom: 8px; }
+    .contact-card a { font-weight: 800; text-decoration: none; }
+    .micro-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+    .micro { border-top: 1px solid #ead8c1; padding-top: 12px; color: #5a666f; font-size: .94rem; }
+    footer { padding: 24px 0; background: #11181d; color: #cad2d7; font-size: 0.92rem; }
+    @media (max-width: 820px) {
+      .hero-grid, .grid, .contact-grid, .micro-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { padding-top: 56px; }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <nav class="shell">
+      <div class="brand">SKOČKO</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- ===== HEADER ===== -->
-    <header class="header" id="header">
-        <div class="container">
-            <a href="#" class="header__logo">SKOČKO<span>.</span></a>
-            <nav class="header__nav" id="nav">
-                <a href="#services">Services</a>
-                <a href="#why">Why Us</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#contact">Contact</a>
-                <a href="tel:021511071" class="btn btn--primary">
-                    <span class="icon-phone" aria-hidden="true"></span>
-                    Call Now
-                </a>
-            </nav>
-            <button class="header__hamburger" id="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">Restaurant / Novi Sad</p>
+          <h1>SKOČKO: food in Novi Sad with direct ordering by phone</h1>
+          <p class="lead">Contact SKOČKO directly for dinner in Novi Sad. Key trust signal: trusted by over 1287 satisfied clients.</p>
+          <div class="actions">
+            <a class="btn" href="tel:021511071">Call Now</a>
+            <a class="btn secondary" href="#services">View Services</a>
+          </div>
+          <div class="micro-grid">
+            <div class="micro">Service area: Novi Sad</div>
+            <div class="micro">Category: Restaurant</div>
+            <div class="micro">Direct contact: 021 511071</div>
+          </div>
         </div>
-    </header>
+        <aside class="snapshot" aria-label="Business snapshot">
+          <h2>Business Snapshot</h2>
+          <p><strong>Category:</strong> Restaurant</p>
+          <p><strong>Goal:</strong> Call Now</p>
+          <p><strong>Address:</strong> 9, Rumenačka 21000, Novi Sad 21000, Serbia</p>
+        </aside>
+      </div>
+    </section>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="hero__content animate-fade-up">
-                <div class="hero__badge">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18
+    <section id="services">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Available services from the business profile.</p>
+        </div>
+        <div class="grid">
+        <article class="card">
+          <span class="card-kicker">Offer</span>
+          <h3>Dinner</h3>
+          <p>Dinner is the available restaurant service listed for SKOČKO. Use the contact details below to ask for current availability.</p>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Why Choose Us</h2>
+          <p>Helpful signals before you call, book, or request details.</p>
+        </div>
+        <div class="grid">
+        <article class="proof-item">
+          <strong>Trusted by over 1287 satisfied clients</strong>
+          <span>A useful signal when comparing local restaurant providers in Novi Sad.</span>
+        </article>
+
+        <article class="proof-item">
+          <strong>Fast and efficient service</strong>
+          <span>A useful signal when comparing local restaurant providers in Novi Sad.</span>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Reviews</h2>
+          <p>Recurring themes from the available review information.</p>
+        </div>
+        <div class="review-box">Recurring review themes: Kind, Recommend, Great, Fast, Love.</div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-band">
+      <div class="shell">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p>Call, email, or use the address below.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card"><span>Phone</span><a href="tel:021511071">021 511071</a></div>
+          <div class="contact-card"><span>Email</span><a href="mailto:skockorestoran@gmail.com">skockorestoran@gmail.com</a></div>
+          <div class="contact-card"><span>Address</span>9, Rumenačka 21000, Novi Sad 21000, Serbia</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">&copy; 2026 SKOČKO. Restaurant in Novi Sad.</div>
+  </footer>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        var target = document.querySelector(link.getAttribute("href"));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  </script>
+</body>
+</html>

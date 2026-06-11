@@ -8,7 +8,7 @@ Primetili smo da se bavite dental clinic delatnošću, sa uslugama: professional
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nsdrimtim21.github.io/novi-sad-business-sites/dental-district-stomatološka-ordinacija/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/dental-district-stomatolo%C5%A1ka-ordinacija/
 
 Šta dobijate:
 • Moderan, responzivan dizajn

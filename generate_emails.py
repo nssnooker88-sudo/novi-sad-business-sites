@@ -11,6 +11,7 @@ Usage:
 import json
 import os
 import re
+import urllib.parse
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 GENERATED = os.path.join(ROOT, "generated_sites")
@@ -103,12 +104,22 @@ TEMPLATES = {
 
 
 def load_data():
-    """Load slug mapping and lead data for all businesses."""
-    with open(SLUG_PATH, "r", encoding="utf-8") as f:
-        slug_map = json.load(f)
+    """Load slug mapping and lead data for all generated businesses."""
+    slug_map = {}
+    if os.path.exists(SLUG_PATH):
+        with open(SLUG_PATH, "r", encoding="utf-8") as f:
+            slug_map = json.load(f)
 
     businesses = []
-    for folder_name, slug in sorted(slug_map.items()):
+    folder_names = sorted(
+        d for d in os.listdir(GENERATED)
+        if os.path.isdir(os.path.join(GENERATED, d))
+    )
+    for folder_name in folder_names:
+        slug = slug_map.get(folder_name) or re.sub(
+            r"[^a-z0-9]+", "-",
+            folder_name.lower().split("_", 1)[-1]
+        ).strip("-")
         lead_path = os.path.join(GENERATED, folder_name, "lead_data.json")
         data = {}
         if os.path.exists(lead_path):
@@ -124,7 +135,7 @@ def load_data():
             "archetype": data.get("archetype", ""),
             "services": data.get("services", []),
             "usp": data.get("usp", []),
-            "site_url": f"{BASE_URL}/{slug}/",
+            "site_url": f"{BASE_URL}/{urllib.parse.quote(slug)}/",
             "folder": folder_name,
             "slug": slug,
         }
@@ -265,6 +276,7 @@ def generate_all_emails(lang="sr"):
         summary.append({
             "name": biz["name"],
             "email": biz["email"],
+            "folder": biz["folder"],
             "slug": biz["slug"],
             "site_url": biz["site_url"],
             "html_file": f"{safe}.html",

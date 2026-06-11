@@ -8,7 +8,7 @@ Primetili smo da se bavite health delatnošću, sa uslugama: professional health
 
 Pripremili smo za Vas BESPLATAN demo sajt. Pogledajte kako bi mogao da izgleda:
 
-👉 https://nsdrimtim21.github.io/novi-sad-business-sites/iva-dental-care-stomatološka-ordinacija/
+👉 https://nsdrimtim21.github.io/novi-sad-business-sites/iva-dental-care-stomatolo%C5%A1ka-ordinacija/
 
 Šta dobijate:
 • Moderan, responzivan dizajn
